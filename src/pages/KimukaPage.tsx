@@ -82,6 +82,9 @@ export default function KimukaPage() {
     alt: string;
   } | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [apptDate, setApptDate] = useState("");
+  const [dateError, setDateError] = useState("");
+  const today = new Date().toISOString().split("T")[0];
   useReveal();
 
   useEffect(() => {
@@ -534,7 +537,11 @@ export default function KimukaPage() {
                 ],
               },
             ].map((cat, i) => (
-              <div key={i} className="service-category reveal hover-lift">
+              <div
+                key={i}
+                id={i === 0 ? "dialysis" : i === 3 ? "screening" : undefined}
+                className="service-category reveal hover-lift"
+              >
                 <div className="relative h-44 overflow-hidden">
                   <img
                     src={cat.img}
@@ -748,6 +755,10 @@ export default function KimukaPage() {
             className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 reveal space-y-4"
             onSubmit={(e) => {
               e.preventDefault();
+              if (apptDate && apptDate < today) {
+                setDateError("Please select a future date.");
+                return;
+              }
               window.open(
                 "https://wa.me/254753372814?text=Hi%20CKS%20Kimuka%2C%20I%27d%20like%20to%20book%20an%20appointment",
                 "_blank",
@@ -799,7 +810,24 @@ export default function KimukaPage() {
               <label className="block text-xs font-semibold uppercase tracking-wide text-gray-500 mb-1">
                 Preferred Date
               </label>
-              <input type="date" className="appt-input" />
+              <input
+                type="date"
+                className="appt-input"
+                min={today}
+                value={apptDate}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  setApptDate(val);
+                  if (val && val < today) {
+                    setDateError("Please select a future date.");
+                  } else {
+                    setDateError("");
+                  }
+                }}
+              />
+              {dateError && (
+                <p className="mt-1 text-xs font-medium text-red-500">{dateError}</p>
+              )}
             </div>
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wide text-gray-500 mb-1">
@@ -951,7 +979,7 @@ export default function KimukaPage() {
       </div>
 
       <Footer />
-      <MobileCTA phone="+254753372814" whatsapp="254753372814" />
+      <MobileCTA phone="+254753372814" whatsapp="254753372814" homePath="/kimuka" />
 
       {/* LIGHTBOX */}
       {lightboxImg && (

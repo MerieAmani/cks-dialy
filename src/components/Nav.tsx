@@ -58,7 +58,7 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
           <nav role="navigation" aria-label="Main navigation" className="hidden md:flex items-center gap-6">
             {subPage ? (
               <>
-                <a href="#about" className="nav-link">About</a>
+                <a href="/kimuka#about" className="nav-link">About</a>
 
                 {/* Services Dropdown */}
                 <div className="relative" ref={dropdownRef}>
@@ -72,32 +72,32 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
                   {servicesOpen && (
                     <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-xl shadow-xl py-1.5 z-50">
                       <a
-                        href="#services"
+                        href="/kimuka#services"
                         className="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 transition-colors"
                         onClick={() => setServicesOpen(false)}
                       >
                         🏥 All Services
                       </a>
-                      <Link
-                        href="/dialysis"
+                      <a
+                        href="/kimuka#dialysis"
                         className="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 transition-colors"
                         onClick={() => setServicesOpen(false)}
                       >
                         🩺 Dialysis Services
-                      </Link>
-                      <Link
-                        href="/screening"
+                      </a>
+                      <a
+                        href="/kimuka#screening"
                         className="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 transition-colors"
                         onClick={() => setServicesOpen(false)}
                       >
                         🔬 Screening & Diagnostics
-                      </Link>
+                      </a>
                     </div>
                   )}
                 </div>
 
-                <a href="#gallery" className="nav-link">Gallery</a>
-                <a href="#contact" className="nav-link">Contact</a>
+                <a href="/kimuka#gallery" className="nav-link">Gallery</a>
+                <a href="/kimuka#contact" className="nav-link">Contact</a>
                 <Link href="/" className="nav-link-back">← Back to Home</Link>
               </>
             ) : (
@@ -177,12 +177,12 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
           <nav className="flex flex-col gap-2" aria-label="Mobile navigation">
             {subPage ? (
               <>
-                <a href="#about" className="nav-link py-1" onClick={() => setMobileOpen(false)}>About</a>
-                <a href="#services" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Services</a>
-                <Link href="/dialysis" className="nav-link py-0.5 pl-4 text-xs text-gray-500" onClick={() => setMobileOpen(false)}>↳ Dialysis Services</Link>
-                <Link href="/screening" className="nav-link py-0.5 pl-4 text-xs text-gray-500" onClick={() => setMobileOpen(false)}>↳ Screening & Diagnostics</Link>
-                <a href="#gallery" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Gallery</a>
-                <a href="#contact" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Contact</a>
+                <a href="/kimuka#about" className="nav-link py-1" onClick={() => setMobileOpen(false)}>About</a>
+                <a href="/kimuka#services" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Services</a>
+                <a href="/kimuka#dialysis" className="nav-link py-0.5 pl-4 text-xs text-gray-500" onClick={() => setMobileOpen(false)}>↳ Dialysis Services</a>
+                <a href="/kimuka#screening" className="nav-link py-0.5 pl-4 text-xs text-gray-500" onClick={() => setMobileOpen(false)}>↳ Screening & Diagnostics</a>
+                <a href="/kimuka#gallery" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Gallery</a>
+                <a href="/kimuka#contact" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Contact</a>
                 <Link href="/" className="nav-link-back py-1" onClick={() => setMobileOpen(false)}>← Back to Home</Link>
               </>
             ) : (

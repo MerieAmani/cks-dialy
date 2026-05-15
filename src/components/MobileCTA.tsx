@@ -1,6 +1,7 @@
 interface MobileCTAProps {
   phone?: string;
   whatsapp?: string;
+  homePath?: string;
 }
 
 const WaIcon = () => (
@@ -22,7 +23,7 @@ const HomeIcon = () => (
   </svg>
 );
 
-export default function MobileCTA({ phone = "+254757614036", whatsapp = "254757614036" }: MobileCTAProps) {
+export default function MobileCTA({ phone = "+254757614036", whatsapp = "254757614036", homePath = "/" }: MobileCTAProps) {
   return (
     <>
       {/* FLOATING WHATSAPP BUTTON — all pages, above thumb nav */}
@@ -38,7 +39,7 @@ export default function MobileCTA({ phone = "+254757614036", whatsapp = "2547576
 
       {/* GLASSMORPHISM THUMB NAV BAR — mobile only */}
       <nav className="thumb-nav md:hidden" aria-label="Quick actions">
-        <a href="/" className="thumb-nav-item" aria-label="Home">
+        <a href={homePath} className="thumb-nav-item" aria-label="Home">
           <HomeIcon />
           <span>Home</span>
         </a>
