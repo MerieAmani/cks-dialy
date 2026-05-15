@@ -1,0 +1,25 @@
+Act as a Senior React/Vite Developer. Please implement these specific structural and visual fixes. Ensure you preserve my original code and only modify the sections described below.
+
+1. SPECIFIC NAVIGATION LOGIC:
+- Fix Nav Links: Currently, 'Dialysis' and 'Screening' in the Navbar are incorrectly directing users to the general 'Services' section. 
+- Update these links so they direct precisely to their dedicated sections/tabs (e.g., #dialysis-section or #screening-section) within the Kimuka page.
+- Navbar Consistency: Ensure the 'Dialysis' and 'Screening' pages/sections utilize the updated branch Navbar (titled "CKS Kimuka Hospital") rather than the old version.
+
+2. HOMEPAGE TRANSITION EFFECT:
+- Change the homepage slideshow transition to a professional 'Smooth Fade' effect.
+- The transition between images and their corresponding text overlays should be synchronized and fluid, avoiding any abrupt jumps.
+
+3. CONTACT SECTION LAYOUT (Kimuka Page):
+- Refactor the Contact/Location section: Instead of placing the Google Map below the contact details, use a Flexbox or Grid layout to place them side-by-side.
+- Desktop View: Contact Details on the LEFT, Google Map Embed on the RIGHT (50/50 or 40/60 split).
+- Mobile View: Stack them vertically (Details on top, Map below) for better readability.
+
+4. MAP STYLING:
+- Use this iframe: <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4092.5649052489775!2d36.59359888844212!3d-1.3610288717274939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182efd007cb6a3d3%3A0x83b751d300f64ae2!2sCKS%20Kimuka!5e1!3m2!1sen!2ske!4v1778859752015!5m2!1sen!2ske" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+- Ensure the map container fills the right side of the section completely.
+
+5. BOOKING LOGIC & ASSETS:
+- Maintain the 'No Past Dates' logic in the booking form.
+- Ensure all image paths for 'LOGO' and 'MAIN' remain correct after these layout changes.
+
+DO NOT rewrite the entire project. Only modify the Navbar, Hero/Slideshow, and Contact components.

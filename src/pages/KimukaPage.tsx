@@ -891,92 +891,95 @@ export default function KimukaPage() {
         className="py-20 px-4 sm:px-6"
         style={{ background: "var(--silver-100)" }}
       >
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 reveal">
             <p className="section-label">Find Us</p>
             <h2 className="font-display text-3xl text-gray-800 ruled-heading inline-block">
               Contact Kimuka Hospital
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 gap-4 reveal">
-            <a href="tel:+254753372814" className="contact-row">
-              <div
-                className="contact-icon"
-                style={{ background: "var(--teal-50)" }}
-              >
-                <Phone
-                  className="w-5 h-5"
-                  style={{ color: "var(--teal-600)" }}
-                />
-              </div>
-              <div>
-                <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
-                  Phone
-                </p>
-                <p className="font-semibold text-gray-800">0753 372 814</p>
-              </div>
-            </a>
-            <a href="mailto:ckskimuka@gmail.com" className="contact-row">
-              <div className="contact-icon" style={{ background: "#e6f0f8" }}>
-                <Mail className="w-5 h-5" style={{ color: "var(--steel)" }} />
-              </div>
-              <div>
-                <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
-                  Email
-                </p>
-                <p className="font-semibold text-gray-800">
-                  ckskimuka@gmail.com
-                </p>
-              </div>
-            </a>
-            <a
-              href="https://maps.app.goo.gl/zqoKtRmfJsejv3cN9"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-row sm:col-span-2"
-            >
-              <div className="contact-icon" style={{ background: "#fef3c7" }}>
-                <MapPin className="w-5 h-5" style={{ color: "#d97706" }} />
-              </div>
-              <div>
-                <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
-                  Location
-                </p>
-                <p className="font-semibold text-gray-800">
-                  Ngong-Suswa Road, Kimuka Trading Center, next to Dominion
-                  Church, Ngong
-                </p>
-              </div>
-            </a>
-          </div>
 
-          <div className="mt-8 text-center reveal">
-            <a
-              href="https://wa.me/254753372814?text=Hi%20CKS%20Kimuka%2C%20I%27d%20like%20to%20book%20an%20appointment"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-full text-white shadow-lg transition-opacity hover:opacity-90"
-              style={{ background: "#25D366" }}
-            >
-              Book via WhatsApp
-            </a>
+          {/* Side-by-side: details LEFT, map RIGHT — stacked on mobile */}
+          <div className="flex flex-col md:flex-row gap-8 reveal">
+
+            {/* LEFT — Contact details */}
+            <div className="flex flex-col gap-4 md:w-2/5">
+              <a href="tel:+254753372814" className="contact-row">
+                <div
+                  className="contact-icon"
+                  style={{ background: "var(--teal-50)" }}
+                >
+                  <Phone
+                    className="w-5 h-5"
+                    style={{ color: "var(--teal-600)" }}
+                  />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
+                    Phone
+                  </p>
+                  <p className="font-semibold text-gray-800">0753 372 814</p>
+                </div>
+              </a>
+              <a href="mailto:ckskimuka@gmail.com" className="contact-row">
+                <div className="contact-icon" style={{ background: "#e6f0f8" }}>
+                  <Mail className="w-5 h-5" style={{ color: "var(--steel)" }} />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
+                    Email
+                  </p>
+                  <p className="font-semibold text-gray-800">
+                    ckskimuka@gmail.com
+                  </p>
+                </div>
+              </a>
+              <a
+                href="https://maps.app.goo.gl/zqoKtRmfJsejv3cN9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-row"
+              >
+                <div className="contact-icon" style={{ background: "#fef3c7" }}>
+                  <MapPin className="w-5 h-5" style={{ color: "#d97706" }} />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
+                    Location
+                  </p>
+                  <p className="font-semibold text-gray-800">
+                    Ngong-Suswa Road, Kimuka Trading Center, next to Dominion
+                    Church, Ngong
+                  </p>
+                </div>
+              </a>
+              <a
+                href="https://wa.me/254753372814?text=Hi%20CKS%20Kimuka%2C%20I%27d%20like%20to%20book%20an%20appointment"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 text-sm font-semibold px-6 py-3 rounded-full text-white shadow-lg transition-opacity hover:opacity-90 mt-2"
+                style={{ background: "#25D366" }}
+              >
+                Book via WhatsApp
+              </a>
+            </div>
+
+            {/* RIGHT — Embedded map */}
+            <div className="md:w-3/5 rounded-2xl overflow-hidden shadow-lg" style={{ minHeight: "380px" }}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4092.5649052489775!2d36.59359888844212!3d-1.3610288717274939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182efd007cb6a3d3%3A0x83b751d300f64ae2!2sCKS%20Kimuka!5e1!3m2!1sen!2ske!4v1778859752015!5m2!1sen!2ske"
+                width="100%"
+                height="100%"
+                style={{ border: 0, display: "block", minHeight: "380px" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="CKS Kimuka Hospital location map"
+              />
+            </div>
           </div>
         </div>
       </section>
-
-      {/* KIMUKA MAP STRIP */}
-      <div className="w-full" style={{ lineHeight: 0 }}>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4092.5649052489775!2d36.59359888844212!3d-1.3610288717274939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182efd007cb6a3d3%3A0x83b751d300f64ae2!2sCKS%20Kimuka!5e1!3m2!1sen!2ske!4v1778859752015!5m2!1sen!2ske"
-          width="100%"
-          height="450"
-          style={{ border: 0, display: "block" }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="CKS Kimuka Hospital location map"
-        />
-      </div>
 
       <Footer />
       <MobileCTA phone="+254753372814" whatsapp="254753372814" homePath="/kimuka" />

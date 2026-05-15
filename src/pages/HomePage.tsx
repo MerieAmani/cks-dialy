@@ -175,58 +175,60 @@ export default function HomePage() {
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-28 md:py-36">
-          {heroSlides.map((s, i) => (
-            <div
-              key={i}
-              className="max-w-2xl text-white transition-all duration-700"
-              style={{
-                opacity: i === slide ? 1 : 0,
-                transform: i === slide ? "translateY(0)" : "translateY(12px)",
-                position: i === slide ? "relative" : "absolute",
-                pointerEvents: i === slide ? "auto" : "none",
-                top: i === slide ? "auto" : 0,
-              }}
-              aria-hidden={i !== slide}
-            >
-              <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-teal-300">
-                Nairobi & Kajiado County
-              </p>
-              <h1
-                id={i === 0 ? "hero-heading" : undefined}
-                className="font-display text-4xl md:text-5xl lg:text-6xl leading-tight mb-6"
+          {/* Fixed-height container prevents layout shifts during slide transitions */}
+          <div className="relative" style={{ minHeight: "300px" }}>
+            {heroSlides.map((s, i) => (
+              <div
+                key={i}
+                className="absolute inset-0 max-w-2xl text-white"
+                style={{
+                  opacity: i === slide ? 1 : 0,
+                  transform: i === slide ? "translateY(0)" : "translateY(16px)",
+                  transition: "opacity 900ms ease, transform 900ms ease",
+                  pointerEvents: i === slide ? "auto" : "none",
+                }}
+                aria-hidden={i !== slide}
               >
-                {s.heading.split("\n").map((line, li) => (
-                  <span key={li}>
-                    {li === 1 ? <span className="text-teal-300">{line}</span> : line}
-                    {li === 0 && <br />}
-                  </span>
-                ))}
-              </h1>
-              <p className="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
-                {s.subtext}
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href="https://wa.me/254757614036?text=Hi%20CKS%2C%20I%27d%20like%20to%20book%20an%20appointment"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-full text-white shadow-lg transition-opacity hover:opacity-90"
-                  style={{ background: "var(--teal-600)" }}
+                <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-teal-300">
+                  Nairobi & Kajiado County
+                </p>
+                <h1
+                  id={i === 0 ? "hero-heading" : undefined}
+                  className="font-display text-4xl md:text-5xl lg:text-6xl leading-tight mb-6"
                 >
-                  <Calendar className="w-4 h-4" />
-                  Book a Consultation
-                </a>
-                <a
-                  href="#branches"
-                  className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-full border-2 text-white transition-all hover:bg-white/10"
-                  style={{ borderColor: "rgba(255,255,255,0.6)" }}
-                >
-                  <MapPin className="w-4 h-4" />
-                  Our Branches
-                </a>
+                  {s.heading.split("\n").map((line, li) => (
+                    <span key={li}>
+                      {li === 1 ? <span className="text-teal-300">{line}</span> : line}
+                      {li === 0 && <br />}
+                    </span>
+                  ))}
+                </h1>
+                <p className="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
+                  {s.subtext}
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="https://wa.me/254757614036?text=Hi%20CKS%2C%20I%27d%20like%20to%20book%20an%20appointment"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-full text-white shadow-lg transition-opacity hover:opacity-90"
+                    style={{ background: "var(--teal-600)" }}
+                  >
+                    <Calendar className="w-4 h-4" />
+                    Book a Consultation
+                  </a>
+                  <a
+                    href="#branches"
+                    className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-full border-2 text-white transition-all hover:bg-white/10"
+                    style={{ borderColor: "rgba(255,255,255,0.6)" }}
+                  >
+                    <MapPin className="w-4 h-4" />
+                    Our Branches
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         {/* Slide dots */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
