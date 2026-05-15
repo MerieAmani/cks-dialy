@@ -29,7 +29,7 @@ export default function ScreeningPage() {
 
   return (
     <div className="font-sans">
-      <Nav subPage subPageTitle="Screening & Diagnostics" />
+      <Nav subPage isKimuka subPageTitle="Screening & Diagnostics" />
 
       {/* HERO */}
       <section
