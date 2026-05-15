@@ -240,21 +240,21 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
                   Services
                 </a>
                 <a
-                  href="/kimuka#dialysis"
+                  href="/dialysis"
                   className="nav-link py-0.5 pl-4 text-xs text-gray-500"
                   onClick={() => setMobileOpen(false)}
                 >
                   ↳ Dialysis Services
                 </a>
                 <a
-                  href="/kimuka#screening"
+                  href="/screening"
                   className="nav-link py-0.5 pl-4 text-xs text-gray-500"
                   onClick={() => setMobileOpen(false)}
                 >
                   ↳ Screening & Diagnostics
                 </a>
                 <a
-                  href="/kimuka#gallery"
+                  href="/gallery"
                   className="nav-link py-1"
                   onClick={() => setMobileOpen(false)}
                 >
