@@ -29,7 +29,7 @@ export default function DialysisPage() {
 
   return (
     <div className="font-sans">
-      <Nav subPage isKimuka subPageTitle="Dialysis Services" />
+      <Nav subPage subPageTitle="Dialysis Services" />
 
       {/* HERO */}
       <section
