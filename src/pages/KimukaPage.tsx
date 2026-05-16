@@ -380,6 +380,138 @@ export default function KimukaPage() {
         </div>
       </section>
 
+      {/* CORE VALUES & OBJECTIVES */}
+      <section className="py-20 px-4 sm:px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14 reveal">
+            <p className="section-label">What Drives Us</p>
+            <h2 className="font-display text-3xl md:text-4xl text-gray-800 ruled-heading inline-block">
+              Core Values & Objectives
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-10">
+            {/* CORE VALUES */}
+            <div className="reveal">
+              <h3
+                className="font-display text-xl text-gray-800 mb-6 flex items-center gap-2"
+              >
+                <span
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                  style={{ background: "var(--teal-600)" }}
+                >
+                  ♥
+                </span>
+                Our Core Values
+              </h3>
+              <div className="grid gap-4">
+                {[
+                  {
+                    value: "Patient Dignity",
+                    desc: "Every patient is treated with compassion, respect, and empathy — regardless of background, means, or condition.",
+                  },
+                  {
+                    value: "Clinical Excellence",
+                    desc: "We uphold the highest standards in renal care, emergency medicine, and all disciplines across our hospital.",
+                  },
+                  {
+                    value: "Accessibility",
+                    desc: "Quality healthcare must be affordable and reachable for every family in Kimuka and Kajiado County.",
+                  },
+                  {
+                    value: "Integrity",
+                    desc: "Transparent, honest, and ethical conduct guides every clinical decision and administrative interaction.",
+                  },
+                  {
+                    value: "Community Focus",
+                    desc: "We invest in the health of the communities we serve through outreach campaigns, education, and free medical camps.",
+                  },
+                  {
+                    value: "Continuous Improvement",
+                    desc: "We embrace innovation, technology, and ongoing professional development to advance patient outcomes.",
+                  },
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start gap-3 p-4 rounded-xl border border-teal-100 bg-teal-50"
+                  >
+                    <span
+                      className="text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center text-white flex-shrink-0 mt-0.5"
+                      style={{ background: "var(--teal-600)" }}
+                    >
+                      {i + 1}
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-gray-800 mb-0.5">{item.value}</p>
+                      <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* STRATEGIC OBJECTIVES */}
+            <div className="reveal">
+              <h3
+                className="font-display text-xl text-gray-800 mb-6 flex items-center gap-2"
+              >
+                <span
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                  style={{ background: "var(--steel)" }}
+                >
+                  ◎
+                </span>
+                Strategic Objectives
+              </h3>
+              <div className="grid gap-4">
+                {[
+                  {
+                    obj: "24-Hour Accessible Care",
+                    desc: "Provide round-the-clock, high-quality kidney care and emergency services to every resident of Kajiado County.",
+                  },
+                  {
+                    obj: "SHA Accreditation & Coverage",
+                    desc: "Maintain SHA accreditation and expand insurance partnerships to ensure full cover for all eligible patients.",
+                  },
+                  {
+                    obj: "Capacity Expansion",
+                    desc: "Grow dialysis capacity and recruit additional nephrological and nursing expertise to serve a rapidly increasing patient base.",
+                  },
+                  {
+                    obj: "Community Outreach",
+                    desc: "Conduct quarterly health outreach programmes, awareness campaigns, and free medical camps across Kajiado County.",
+                  },
+                  {
+                    obj: "Transplant Partnerships",
+                    desc: "Strengthen collaborative pathways with Aga Khan and MP Shah hospitals for seamless kidney transplant referral and work-up.",
+                  },
+                  {
+                    obj: "Technology & Infrastructure",
+                    desc: "Invest in modern medical technology and hospital infrastructure to match international standards in renal and primary care.",
+                  },
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start gap-3 p-4 rounded-xl border border-blue-100 bg-blue-50"
+                  >
+                    <span
+                      className="text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center text-white flex-shrink-0 mt-0.5"
+                      style={{ background: "var(--steel)" }}
+                    >
+                      {i + 1}
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-gray-800 mb-0.5">{item.obj}</p>
+                      <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* IMPACT */}
       <section
         id="impact"

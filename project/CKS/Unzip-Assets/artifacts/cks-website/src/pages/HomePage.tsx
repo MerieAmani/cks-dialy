@@ -742,7 +742,7 @@ export default function HomePage() {
                 "Jubilee Health",
                 "AAR Healthcare",
                 "CIC Insurance",
-                "Signa Int",
+                "Cigna Int",
                 "KCB",
                 "Old Mutual",
                 "Minet Kenya",

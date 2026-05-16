@@ -314,7 +314,7 @@ export default function DialysisPage() {
                 "Jubilee Health",
                 "AAR Healthcare",
                 "CIC Insurance",
-                "Signa Int",
+                "Cigna Int",
                 "KCB",
                 "Old Mutual",
                 "Minet Kenya",

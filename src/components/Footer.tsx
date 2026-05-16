@@ -137,34 +137,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* INSURANCE PARTNERS */}
-        <div className="border-t border-gray-800 pt-8 pb-6">
-          <p className="text-xs text-gray-500 text-center uppercase tracking-widest mb-5">
-            Insurance Partners & Accepted Covers
-          </p>
-          <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
-            {[
-              { name: "NHIF / SHA", note: "Social Health Authority" },
-              { name: "Jubilee Health", note: "Jubilee Insurance" },
-              { name: "CIC Insurance", note: "CIC Group" },
-              { name: "APA Insurance", note: "APA Apollo" },
-              { name: "Britam", note: "Britam Holdings" },
-              { name: "GA Insurance", note: "GA Life" },
-            ].map((ins) => (
-              <div
-                key={ins.name}
-                className="flex flex-col items-center justify-center p-3 rounded-xl border border-gray-700 bg-gray-800/60 text-center gap-1"
-              >
-                <span className="text-xs font-semibold text-white leading-tight">{ins.name}</span>
-                <span className="text-xs text-gray-500 leading-tight hidden sm:block">{ins.note}</span>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-xs text-gray-500 mt-4">
-            Also accepted: AAR Healthcare · Minet Kenya · Old Mutual · KCB · Signa Int
-          </p>
-        </div>
-
         <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-500">
             © {new Date().getFullYear()} CKS Dialysis Centre. All rights
