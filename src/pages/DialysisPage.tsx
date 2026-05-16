@@ -345,84 +345,144 @@ export default function DialysisPage() {
         </div>
       </section>
 
-      {/* PATIENT CHARTER */}
+      {/* MEDICAL APPROACH · MEDICAL INFORMATION · PATIENT CHARTER */}
       <section
-        className="py-16 px-4 sm:px-6"
+        className="py-20 px-4 sm:px-6"
         style={{ background: "var(--silver-100)" }}
       >
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-10 reveal">
-            <p className="section-label">Patient Rights & Responsibilities</p>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14 reveal">
+            <p className="section-label">Clinical Excellence & Patient Rights</p>
             <h2 className="font-display text-3xl text-gray-800 ruled-heading inline-block">
-              Patient Charter
+              Medical Approach, Information & Patient Charter
             </h2>
-            <p className="mt-4 text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
-              At CKS Kimuka Hospital, we uphold a clear Patient Charter so
-              every person receives dignified, transparent, and safe renal
-              care.
-            </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 reveal">
-              <h3 className="font-display text-lg text-gray-800 mb-4 flex items-center gap-2">
+
+          <div className="grid md:grid-cols-3 gap-6">
+
+            {/* CARD 1 — Medical Approach */}
+            <article className="reveal bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden flex flex-col">
+              <div
+                className="px-6 pt-6 pb-4 border-b border-gray-100"
+                style={{ background: "linear-gradient(135deg,#f0faf9 0%,#e6f7f6 100%)" }}
+              >
                 <span
-                  className="w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl text-white text-lg mb-3"
                   style={{ background: "var(--teal-600)" }}
                 >
-                  ✓
+                  🩺
                 </span>
-                Your Rights as a Patient
-              </h3>
-              <ul className="space-y-3">
-                {[
-                  "Dignity & respect — you will be treated with compassion regardless of background or ability to pay.",
-                  "Transparent clinical oversight — you have the right to know your diagnosis, treatment plan, and progress at all times.",
-                  "Informed consent — no procedure will be performed without your understanding and agreement.",
-                  "Privacy & confidentiality of all medical records and personal information.",
-                  "Safe, high-quality care adhering to Kenya Renal Association and international haemodialysis standards.",
-                  "Direct access to Dr. Jonathan Wala or the on-call clinical team at any point during your treatment.",
-                ].map((right) => (
-                  <li
-                    key={right}
-                    className="flex items-start gap-2 text-sm text-gray-600"
-                  >
-                    <span
-                      className="mt-0.5 flex-shrink-0"
-                      style={{ color: "var(--teal-600)" }}
-                    >
-                      •
-                    </span>
-                    {right}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 reveal">
-              <h3 className="font-display text-lg text-gray-800 mb-4 flex items-center gap-2">
-                <span className="w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0 bg-blue-500">
-                  !
+                <h3 className="font-display text-xl text-gray-800">Medical Approach</h3>
+              </div>
+              <div className="px-6 py-5 flex-1">
+                <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                  CKS Kimuka Hospital employs a multidisciplinary, patient-centred renal care methodology overseen by{" "}
+                  <strong>Dr. Jonathan Wala</strong>, Nephrologist and President of the Kenya Renal Association. Each treatment plan is individually prescribed, evidence-based, and continuously reviewed.
+                </p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Since September 2024, our dedicated renal nursing team has delivered specialised care with demonstrated leadership and deep compassion — ensuring every patient feels seen, safe, and supported at every session.
+                </p>
+                <ul className="mt-4 space-y-2">
+                  {[
+                    "Individualised dialysis prescriptions",
+                    "Weekly nephrologist review of labs & vitals",
+                    "Monthly kidney function tests (creatinine, GFR, electrolytes)",
+                    "Coordinated care with specialist hospitals",
+                  ].map((pt) => (
+                    <li key={pt} className="flex items-start gap-2 text-xs text-gray-500">
+                      <span className="mt-0.5 flex-shrink-0" style={{ color: "var(--teal-600)" }}>✓</span>
+                      {pt}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+
+            {/* CARD 2 — Medical Information */}
+            <article className="reveal bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden flex flex-col">
+              <div
+                className="px-6 pt-6 pb-4 border-b border-gray-100"
+                style={{ background: "linear-gradient(135deg,#eff6ff 0%,#e0effe 100%)" }}
+              >
+                <span
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl text-white text-lg mb-3 bg-blue-500"
+                >
+                  🏥
                 </span>
-                Your Responsibilities
-              </h3>
-              <ul className="space-y-3">
-                {[
-                  "Attend all scheduled dialysis sessions and notify us promptly if you cannot make an appointment.",
-                  "Follow the prescribed renal diet and medication regime between sessions.",
-                  "Provide accurate and complete health information to your care team at all times.",
-                  "Treat all clinical staff and fellow patients with mutual respect and courtesy.",
-                  "Report any changes in your symptoms, medications, or general health status immediately.",
-                  "Settle agreed financial obligations or SHA co-payments in a timely manner.",
-                ].map((resp) => (
-                  <li
-                    key={resp}
-                    className="flex items-start gap-2 text-sm text-gray-600"
-                  >
-                    <span className="text-blue-400 mt-0.5 flex-shrink-0">•</span>
-                    {resp}
-                  </li>
-                ))}
-              </ul>
-            </div>
+                <h3 className="font-display text-xl text-gray-800">Medical Information</h3>
+              </div>
+              <div className="px-6 py-5 flex-1">
+                <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                  Our clinical portfolio covers the full spectrum of kidney care — from routine haemodialysis to complex pre-transplant work-ups, performed in close collaboration with{" "}
+                  <strong>Aga Khan University Hospital</strong> and <strong>MP Shah Hospital</strong> for seamless surgical referral pathways.
+                </p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Emergency renal support is available around the clock, with an on-call clinician reachable 24 hours a day. Catheter insertion, management, and fistula care are performed under strict infection-control protocols.
+                </p>
+                <ul className="mt-4 space-y-2">
+                  {[
+                    "Pre-transplant evaluation & referral coordination",
+                    "24/7 emergency renal & clinical support",
+                    "Haemodialysis catheter management & fistula care",
+                    "Renal diet consultation at every session",
+                  ].map((pt) => (
+                    <li key={pt} className="flex items-start gap-2 text-xs text-gray-500">
+                      <span className="mt-0.5 flex-shrink-0 text-blue-500">✓</span>
+                      {pt}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+
+            {/* CARD 3 — Patient Charter & Rights */}
+            <article className="reveal bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden flex flex-col">
+              <div
+                className="px-6 pt-6 pb-4 border-b border-gray-100"
+                style={{ background: "linear-gradient(135deg,#fef9ec 0%,#fef3c7 100%)" }}
+              >
+                <span
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl text-white text-lg mb-3 bg-amber-500"
+                >
+                  📋
+                </span>
+                <h3 className="font-display text-xl text-gray-800">Patient Charter & Rights</h3>
+              </div>
+              <div className="px-6 py-5 flex-1">
+                <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                  Every patient at CKS Kimuka Hospital is entitled to dignified, transparent, and safe care. Our Patient Charter sets clear expectations between our team and every individual we serve.
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    {
+                      title: "Dignity & Respect in Care",
+                      desc: "Compassionate treatment regardless of background, means, or condition.",
+                    },
+                    {
+                      title: "Safety & Comfort",
+                      desc: "High-quality care adhering to Kenya Renal Association and international standards, with comfortable facilities at every session.",
+                    },
+                    {
+                      title: "Right to Information",
+                      desc: "Full access to your diagnosis, treatment plan, and progress at all times. Informed consent before every procedure.",
+                    },
+                    {
+                      title: "Transparent Clinical Oversight",
+                      desc: "Direct access to Dr. Jonathan Wala or the on-call clinical team. Privacy and confidentiality of all medical records guaranteed.",
+                    },
+                  ].map((item) => (
+                    <li key={item.title} className="flex items-start gap-2">
+                      <span className="mt-1 flex-shrink-0 text-amber-500">◆</span>
+                      <div>
+                        <p className="text-xs font-semibold text-gray-700">{item.title}</p>
+                        <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+
           </div>
         </div>
       </section>
