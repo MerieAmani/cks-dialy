@@ -548,7 +548,7 @@ export default function KimukaPage() {
             <p className="text-white/70 max-w-lg mx-auto text-sm leading-relaxed">
               From our very first dialysis session to a fully operational
               24-hour renal care unit — the fastest healthcare scale-up in the
-              Kajiado County region. [Ask for the exact detail]
+              Kajiado County region.
             </p>
           </div>
 
@@ -557,7 +557,7 @@ export default function KimukaPage() {
               className="impact-card reveal text-white"
               style={{ background: "linear-gradient(135deg,#2d5f80,#4a7fa5)" }}
             >
-              <div className="text-5xl font-display font-bold mb-2">237</div>
+              <div className="text-5xl font-display font-bold mb-2">237+</div>
               <div className="text-sm font-semibold opacity-90 mb-1">
                 Monthly Patients
               </div>

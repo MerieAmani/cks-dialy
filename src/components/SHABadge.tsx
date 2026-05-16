@@ -18,15 +18,6 @@ export default function SHABadge() {
             </p>
           </div>
         </div>
-        <a
-          href="https://wa.me/254757614036?text=Hi%20CKS%2C%20I%27d%20like%20to%20verify%20my%20SHA%20cover"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs font-semibold text-white px-4 py-2 rounded-full hover:opacity-90 transition-opacity flex-shrink-0 whitespace-nowrap"
-          style={{ background: "var(--teal-600)" }}
-        >
-          Verify SHA Cover →
-        </a>
       </div>
     </div>
   );

@@ -106,7 +106,7 @@ const faqs = [
   },
   {
     q: "Does CKS Dialysis accept SHA?",
-    a: "Yes. SHA covers 80% of dialysis costs for eligible patients. We also accept most private health insurance schemes.",
+    a: "Yes. SHA covers 80% of costs for eligible patients. We also accept most private health insurance schemes.",
   },
   {
     q: "Is parking available at CKS branches?",
@@ -285,7 +285,7 @@ export default function HomePage() {
           <div>
             <div className="font-display text-3xl font-bold">24/7</div>
             <div className="text-xs font-medium opacity-80 mt-0.5 uppercase tracking-widest">
-              Kimuka Hospital
+              Hospital
             </div>
           </div>
         </div>
@@ -774,35 +774,22 @@ export default function HomePage() {
             <p className="section-label text-center">
               Accepted Insurance Providers
             </p>
-            <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 mt-6">
+            <div className="flex flex-wrap justify-center gap-3 mt-4">
               {[
-                { name: "SHA", label: "Social Health Authority", logo: "/images/insurance/SHA.jpg" },
-                { name: "Jubilee Health", label: "Jubilee Health Insurance", logo: "/images/insurance/Jubilee.jpg" },
-                { name: "AAR Healthcare", label: "AAR Healthcare", logo: "/images/insurance/AAR.png" },
-                { name: "CIC Insurance", label: "CIC Group", logo: null },
-                { name: "Cigna International", label: "Cigna Healthcare", logo: "/images/insurance/Cigna.png" },
-                { name: "KCB Insurance", label: "KCB Insurance", logo: "/images/insurance/KCB.png" },
-                { name: "Old Mutual", label: "Old Mutual Kenya", logo: "/images/insurance/OldMutual.png" },
-                { name: "Minet Kenya", label: "Minet — Secure Tomorrow", logo: "/images/insurance/Minet.png" },
-                { name: "APA Insurance", label: "APA Insurance", logo: "/images/insurance/APA.png" },
+                "SHA",
+                "Jubilee Health",
+                "AAR Healthcare",
+                "CIC Insurance",
+                "Cigna Int",
+                "KCB",
+                "Old Mutual",
+                "Minet Kenya",
+                "APA Insurance",
+                ,
               ].map((ins) => (
-                <div
-                  key={ins.name}
-                  className="flex flex-col items-center gap-2 p-4 bg-white border border-gray-200 rounded-xl hover:border-teal-300 hover:shadow-sm transition-all text-center"
-                >
-                  {ins.logo ? (
-                    <img
-                      src={ins.logo}
-                      alt={ins.label}
-                      className="h-12 w-full object-contain"
-                    />
-                  ) : (
-                    <div className="h-12 flex items-center justify-center w-full bg-green-700 rounded-lg">
-                      <span className="text-sm font-bold text-white tracking-wide">CIC</span>
-                    </div>
-                  )}
-                  <span className="text-xs text-gray-500 leading-tight">{ins.name}</span>
-                </div>
+                <span key={ins} className="insurer-badge">
+                  {ins}
+                </span>
               ))}
             </div>
           </div>

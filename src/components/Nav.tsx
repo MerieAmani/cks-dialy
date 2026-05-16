@@ -35,7 +35,7 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
                 alt="CKS logo"
                 className="w-10 h-10 rounded-lg object-cover"
               />
-              <div className="leading-tight hidden sm:block">
+              <div className="leading-tight">
                 <span className="block font-display font-bold text-lg text-gray-800 leading-none">CKS</span>
                 <span className="block text-xs font-medium tracking-wide" style={{ color: "var(--teal-600)" }}>
                   {brandSub}
@@ -57,17 +57,17 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
                 <Link href="/kimuka" className="nav-link whitespace-nowrap">Kimuka Home</Link>
                 <a href="/#about" className="nav-link">About</a>
                 <a href="/kimuka#services" className="nav-link">Services</a>
-                <a href="/kimuka#dialysis" className="nav-link">Dialysis</a>
-                <a href="/kimuka#screening" className="nav-link">Screening</a>
+                <a href="/dialysis" className="nav-link">Dialysis</a>
+                <a href="/screening" className="nav-link">Screening</a>
                 <a href="/#branches" className="nav-link whitespace-nowrap">Our Branches</a>
                 <a href="/kimuka#contact" className="nav-link">Contact</a>
-                <a href="/kimuka#gallery" className="nav-link">Gallery</a>
+                <a href="/gallery" className="nav-link">Gallery</a>
               </>
             ) : subPage ? (
               /* Non-Kimuka sub-page nav (Dialysis, Screening, etc.) */
               <>
                 <Link href="/" className="nav-link-back">← Back to Home</Link>
-                <a href="#services" className="nav-link">Services</a>
+                <a href="/kimuka#services" className="nav-link">Services</a>
                 <Link href="/dialysis" className="nav-link">Dialysis</Link>
                 <Link href="/screening" className="nav-link">Screening</Link>
                 <Link href="/gallery" className="nav-link">Gallery</Link>
@@ -81,7 +81,7 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
                 <Link href="/dialysis" className="nav-link">Dialysis</Link>
                 <Link href="/screening" className="nav-link">Screening</Link>
                 <a href="/#branches" className="nav-link whitespace-nowrap">Our Branches</a>
-                <a href="/contact" className="nav-link">Contact</a>
+                <a href="/#contact" className="nav-link">Contact</a>
                 <Link href="/gallery" className="nav-link">Gallery</Link>
               </>
             )}
@@ -117,8 +117,8 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
             {subPage && isKimuka ? (
               /* Kimuka mobile — double home */
               <>
-                <Link href="/" className="nav-link py-1 font-semibold" onClick={() => setMobileOpen(false)}>← Main Home (CKS Dialysis Center)</Link>
-                <Link href="/kimuka" className="nav-link py-1 font-semibold" onClick={() => setMobileOpen(false)}>⌂ Kimuka Home</Link>
+                <Link href="/" className="nav-link py-1 font-semibold" onClick={() => setMobileOpen(false)}>← CKS Dialysis Center</Link>
+                <Link href="/kimuka" className="nav-link py-1 font-semibold" onClick={() => setMobileOpen(false)}>⌂ CKS Kimuka Hospital</Link>
                 <a href="/#about" className="nav-link py-1" onClick={() => setMobileOpen(false)}>About</a>
                 <a href="/kimuka#services" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Services</a>
                 <a href="/dialysis" className="nav-link py-0.5 pl-4 text-xs text-gray-500" onClick={() => setMobileOpen(false)}>Dialysis Services</a>
@@ -130,7 +130,7 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
             ) : subPage ? (
               /* Non-Kimuka sub-page mobile */
               <>
-                <Link href="/" className="nav-link py-1 font-semibold" onClick={() => setMobileOpen(false)}>← Back to Home</Link>
+                <Link href="/" className="nav-link py-1 font-semibold" onClick={() => setMobileOpen(false)}>← CKS Dialysis Center</Link>
                 <Link href="/dialysis" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Dialysis</Link>
                 <Link href="/screening" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Screening</Link>
                 <Link href="/gallery" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Gallery</Link>
