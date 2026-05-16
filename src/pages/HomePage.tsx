@@ -13,6 +13,11 @@ import {
   CheckCircle,
   ChevronDown,
   ArrowRight,
+  Utensils,
+  Wifi,
+  Tv,
+  Armchair,
+  Car,
 } from "lucide-react";
 import Nav from "@/components/Nav";
 import SHABadge from "@/components/SHABadge";
@@ -750,18 +755,26 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {[
-              { emoji: "🍽️", label: "Free Breakfast & Lunch" },
-              { emoji: "📶", label: "Free Wi-Fi" },
-              { emoji: "📺", label: "TV Entertainment" },
-              { emoji: "🛋️", label: "Electric Recliners" },
-              { emoji: "🏥", label: "SHA Accredited" },
-              { emoji: "🅿️", label: "Free Parking" },
+              { Icon: Utensils, label: "Free Breakfast & Lunch" },
+              { Icon: Wifi, label: "Free Wi-Fi" },
+              { Icon: Tv, label: "TV Entertainment" },
+              { Icon: Armchair, label: "Electric Recliners" },
+              { Icon: null, label: "SHA Accredited", isSHA: true },
+              { Icon: Car, label: "Free Parking" },
             ].map((a) => (
               <div
                 key={a.label}
                 className="reveal flex flex-col items-center gap-3 p-5 bg-gray-50 border border-gray-200 rounded-xl text-center hover:border-teal-300 hover:bg-teal-50/50 transition-all"
               >
-                <span className="text-3xl">{a.emoji}</span>
+                {a.isSHA ? (
+                  <img
+                    src="/images/GOKsha.jpg"
+                    alt="SHA — Social Health Authority"
+                    className="h-8 w-auto mx-auto object-contain"
+                  />
+                ) : (
+                  a.Icon && <a.Icon className="w-6 h-6" style={{ color: "var(--teal-600)" }} />
+                )}
                 <span className="text-xs font-medium text-gray-600">
                   {a.label}
                 </span>

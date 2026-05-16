@@ -8,6 +8,9 @@ import {
   Calendar,
   ArrowRight,
   ChevronDown,
+  Stethoscope,
+  Microscope,
+  Camera,
 } from "lucide-react";
 import Nav from "@/components/Nav";
 import SHABadge from "@/components/SHABadge";
@@ -829,10 +832,10 @@ export default function KimukaPage() {
               className="group flex items-center gap-4 p-5 bg-white border border-gray-200 rounded-2xl hover:border-teal-300 hover:shadow-lg transition-all"
             >
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
+                className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
                 style={{ background: "var(--teal-50)" }}
               >
-                🩺
+                <Stethoscope className="w-6 h-6" style={{ color: "var(--teal-600)" }} />
               </div>
               <div>
                 <h3 className="font-display text-base text-gray-800 font-semibold mb-1">
@@ -849,10 +852,10 @@ export default function KimukaPage() {
               className="group flex items-center gap-4 p-5 bg-white border border-gray-200 rounded-2xl hover:border-teal-300 hover:shadow-lg transition-all"
             >
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
+                className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
                 style={{ background: "#fef3c7" }}
               >
-                🔬
+                <Microscope className="w-6 h-6 text-amber-600" />
               </div>
               <div>
                 <h3 className="font-display text-base text-gray-800 font-semibold mb-1">
@@ -869,10 +872,10 @@ export default function KimukaPage() {
               className="group flex items-center gap-4 p-5 bg-white border border-gray-200 rounded-2xl hover:border-teal-300 hover:shadow-lg transition-all"
             >
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
+                className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
                 style={{ background: "#f3e8ff" }}
               >
-                📸
+                <Camera className="w-6 h-6 text-purple-600" />
               </div>
               <div>
                 <h3 className="font-display text-base text-gray-800 font-semibold mb-1">
@@ -889,10 +892,10 @@ export default function KimukaPage() {
               className="group flex items-center gap-4 p-5 bg-white border border-gray-200 rounded-2xl hover:border-teal-300 hover:shadow-lg transition-all"
             >
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
+                className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
                 style={{ background: "#d1fae5" }}
               >
-                📞
+                <Phone className="w-6 h-6 text-emerald-600" />
               </div>
               <div>
                 <h3 className="font-display text-base text-gray-800 font-semibold mb-1">

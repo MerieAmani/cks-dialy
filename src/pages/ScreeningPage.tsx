@@ -198,7 +198,6 @@ export default function ScreeningPage() {
               {
                 title: "Laboratory Services",
                 color: "linear-gradient(135deg,#c0392b,#e74c3c)",
-                emoji: "🔬",
                 img: "/images/laboratory.jpeg",
                 imgAlt: "CKS Kimuka laboratory scientists conducting tests",
                 items: [
@@ -216,7 +215,6 @@ export default function ScreeningPage() {
               {
                 title: "HIV & Sexual Health",
                 color: "linear-gradient(135deg,#7b1fa2,#9c27b0)",
-                emoji: "🔴",
                 img: "https://images.unsplash.com/photo-1736325680518-397f54bd1086?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 imgAlt:
                   "HIV testing and sexual health services at CKS Kimuka Hospital",
@@ -236,7 +234,6 @@ export default function ScreeningPage() {
               {
                 title: "Imaging & Radiology",
                 color: "linear-gradient(135deg,#e67e22,#f39c12)",
-                emoji: "📡",
                 img: "https://images.unsplash.com/photo-1763198302249-db661c45bf7d?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 imgAlt: "Ultrasound and radiology imaging services",
                 items: [
@@ -250,7 +247,6 @@ export default function ScreeningPage() {
               {
                 title: "Cardiac Screening",
                 color: "linear-gradient(135deg,#2d5f80,#4a7fa5)",
-                emoji: "❤️",
                 img: "https://images.unsplash.com/photo-1460672985063-6764ac8b9c74?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 imgAlt: "ECG and cardiac screening services at CKS",
                 items: [
@@ -265,7 +261,6 @@ export default function ScreeningPage() {
               {
                 title: "Kidney Disease Screening",
                 color: "linear-gradient(135deg,#005c54,#009e96)",
-                emoji: "🫘",
                 img: "https://images.unsplash.com/photo-1650897492524-bbc1adb72626?q=80&w=1211&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 imgAlt: "Kidney disease screening and early detection at CKS",
                 items: [
@@ -280,7 +275,6 @@ export default function ScreeningPage() {
               {
                 title: "Diabetes & Metabolic",
                 color: "linear-gradient(135deg,#6b3fa0,#9b59b6)",
-                emoji: "🩸",
                 img: "https://images.unsplash.com/photo-1685485276223-0bb0226dcca8?q=80&w=1056&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 imgAlt: "Blood glucose and diabetes screening services",
                 items: [
@@ -295,7 +289,6 @@ export default function ScreeningPage() {
               {
                 title: "Maternal & Child Screening",
                 color: "linear-gradient(135deg,#d63384,#e91e8c)",
-                emoji: "👶",
                 img: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=800&q=80",
                 imgAlt:
                   "Maternal and child health screening at CKS Kimuka Hospital",
@@ -312,7 +305,6 @@ export default function ScreeningPage() {
               {
                 title: "Tuberculosis (TB) Screening",
                 color: "linear-gradient(135deg,#bf6000,#e07b00)",
-                emoji: "🫁",
                 img: "https://images.unsplash.com/photo-1758691462445-d03a94aa7656?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 imgAlt:
                   "TB screening and respiratory health at CKS community camp",
@@ -329,7 +321,6 @@ export default function ScreeningPage() {
               {
                 title: "Community Camps",
                 color: "linear-gradient(135deg,#1a6e4a,#27ae60)",
-                emoji: "🌍",
                 img: "/images/camp-doctor-treating.jpg",
                 imgAlt: "CKS community outreach medical camp — Kajiado County",
                 items: [
@@ -359,7 +350,6 @@ export default function ScreeningPage() {
                   className="px-5 py-4 flex items-center gap-3"
                   style={{ background: cat.color }}
                 >
-                  <span className="text-xl">{cat.emoji}</span>
                   <h3 className="font-display text-lg font-semibold text-white">
                     {cat.title}
                   </h3>

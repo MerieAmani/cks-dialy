@@ -1,6 +1,19 @@
 import { useEffect } from "react";
 import { Link } from "wouter";
-import { Phone, Calendar, CheckCircle, ArrowRight } from "lucide-react";
+import {
+  Phone,
+  Calendar,
+  CheckCircle,
+  ArrowRight,
+  Utensils,
+  Wifi,
+  Tv,
+  Armchair,
+  Car,
+  Stethoscope,
+  Building2,
+  ClipboardList,
+} from "lucide-react";
 import Nav from "@/components/Nav";
 import SHABadge from "@/components/SHABadge";
 import Footer from "@/components/Footer";
@@ -263,42 +276,26 @@ export default function DialysisPage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-16">
             {[
-              {
-                emoji: "🍽️",
-                label: "Free Breakfast & Lunch",
-                detail: "Served at every session",
-              },
-              {
-                emoji: "📶",
-                label: "Free Wi-Fi",
-                detail: "Stay connected always",
-              },
-              {
-                emoji: "📺",
-                label: "TV Entertainment",
-                detail: "Flat-screen TV at every chair",
-              },
-              {
-                emoji: "🛋️",
-                label: "Electric Recliners",
-                detail: "Fully adjustable comfort chairs",
-              },
-              {
-                emoji: "🏥",
-                label: "SHA accredited",
-                detail: "100% coverage for eligible",
-              },
-              {
-                emoji: "🅿️",
-                label: "Free Parking",
-                detail: "Ample on-site parking",
-              },
+              { Icon: Utensils, label: "Free Breakfast & Lunch", detail: "Served at every session" },
+              { Icon: Wifi, label: "Free Wi-Fi", detail: "Stay connected always" },
+              { Icon: Tv, label: "TV Entertainment", detail: "Flat-screen TV at every chair" },
+              { Icon: Armchair, label: "Electric Recliners", detail: "Fully adjustable comfort chairs" },
+              { Icon: null, label: "SHA Accredited", detail: "100% coverage for eligible", isSHA: true },
+              { Icon: Car, label: "Free Parking", detail: "Ample on-site parking" },
             ].map((a) => (
               <div
                 key={a.label}
                 className="reveal flex flex-col items-center gap-2 p-4 bg-gray-50 border border-gray-200 rounded-xl text-center hover:border-teal-300 hover:bg-teal-50/50 transition-all"
               >
-                <span className="text-3xl">{a.emoji}</span>
+                {a.isSHA ? (
+                  <img
+                    src="/images/GOKsha.jpg"
+                    alt="SHA — Social Health Authority"
+                    className="h-8 w-auto mx-auto object-contain"
+                  />
+                ) : (
+                  a.Icon && <a.Icon className="w-6 h-6" style={{ color: "var(--teal-600)" }} />
+                )}
                 <span className="text-xs font-semibold text-gray-700">
                   {a.label}
                 </span>
@@ -367,10 +364,10 @@ export default function DialysisPage() {
                 style={{ background: "linear-gradient(135deg,#f0faf9 0%,#e6f7f6 100%)" }}
               >
                 <span
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl text-white text-lg mb-3"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl mb-3"
                   style={{ background: "var(--teal-600)" }}
                 >
-                  🩺
+                  <Stethoscope className="w-5 h-5 text-white" />
                 </span>
                 <h3 className="font-display text-xl text-gray-800">Medical Approach</h3>
               </div>
@@ -405,9 +402,9 @@ export default function DialysisPage() {
                 style={{ background: "linear-gradient(135deg,#eff6ff 0%,#e0effe 100%)" }}
               >
                 <span
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl text-white text-lg mb-3 bg-blue-500"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl mb-3 bg-blue-500"
                 >
-                  🏥
+                  <Building2 className="w-5 h-5 text-white" />
                 </span>
                 <h3 className="font-display text-xl text-gray-800">Medical Information</h3>
               </div>
@@ -442,9 +439,9 @@ export default function DialysisPage() {
                 style={{ background: "linear-gradient(135deg,#fef9ec 0%,#fef3c7 100%)" }}
               >
                 <span
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl text-white text-lg mb-3 bg-amber-500"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl mb-3 bg-amber-500"
                 >
-                  📋
+                  <ClipboardList className="w-5 h-5 text-white" />
                 </span>
                 <h3 className="font-display text-xl text-gray-800">Patient Charter & Rights</h3>
               </div>

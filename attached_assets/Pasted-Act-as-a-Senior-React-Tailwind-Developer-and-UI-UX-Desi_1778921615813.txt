@@ -1,0 +1,22 @@
+Act as a Senior React/Tailwind Developer and UI/UX Designer. I need to polish the visual formatting of the site to give it a premium, custom human-designed feel rather than an AI template look. 
+
+Please implement the following styling updates while preserving my existing structural layout and routing logic. Do not rewrite entire core files with placeholder layouts.
+
+1. REMOVE EMOJIS & DE-AI THE DESIGN FORMATTING:
+- Audit all pages (Homepage, Kimuka Branch Homepage, Dialysis, and Screening sections) and REMOVE all generic emojis used as paragraph accents, section headers, or bullet points.
+- Replace the emojis with professional, sleek web design conventions to give the site a high-end medical brand feel:
+  * In Lists/Bullet Sections: Use minimalist, elegant design elements such as custom styled Tailwind dots (e.g., a tiny square or circle colored in primary emerald/slate: `w-1.5 h-1.5 bg-emerald-600 rounded-sm`), subtle chevron icons, or simply clean spacing with bold inline headers.
+  * In Section Subheadings: Instead of prefixing titles with emojis, use subtle layout accents like a thin horizontal line beneath the heading (`border-b border-gray-100`), small uppercase tracking text labels, or contrasting font weights.
+
+2. AMENITIES SECTION - SHA LOGO MAPPING:
+- Locate the "Amenities" section (which lists patient benefits like Free Wi-Fi, breakfast, lunch, etc.).
+- Find the specific line mentioning "SHA Accredited Facility" or "SHA Coverage" inside this list.
+- REMOVE any emoji preceding or accompanying this mention.
+- Replace it by embedding the actual 'GOKsha.jpg' insurance logo asset neatly inline next to the text, or format it as a highly distinctive, branded list item pill that renders the logo image cleanly instead of a text icon.
+
+3. REUSABLE CLEAN FINISH:
+- Ensure that the premium 3-column "medical.jpeg" grid cards (Medical Approach, Medical Information, Patient Charter) retain their professional text alignments and layouts.
+- Double-check that the "Accepted Insurance Providers" grid across both the main homepage and the Kimuka branch layout continues to successfully render the 9 correct uploaded image assets without breaking.
+- Maintain the double-home navigation links on the Kimuka branch menu layout exactly as currently established.
+
+DO NOT break any existing build setups, API routing, or form validations. Focus entirely on upgrading the typography, icon choices, and removing the AI aesthetic.
