@@ -49,8 +49,8 @@ const kimukaSlides = [
     subtext: "Comprehensive antenatal care, safe deliveries, immunization, and family planning — compassionate care for mothers and children across Kajiado County.",
   },
   {
-    bg: "/images/building-signage.jpg",
-    alt: "CKS Kimuka Hospital signage on Ngong-Suswa Road",
+    bg: "/images/kimukacks.jpeg",
+    alt: "CKS Kimuka Hospital Logo",
     heading: "Diagnostics &\nLaboratory",
     subtext: "Full lab services, ultrasound, ECG, and imaging available around the clock — right in the heart of Kimuka Trading Center, Ngong.",
   },

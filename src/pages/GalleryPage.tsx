@@ -28,6 +28,11 @@ const featuredImages = [
     category: "Hospital",
   },
   {
+    src: "/images/clinicaldirector.jpeg",
+    alt: "CKS Clinical Director",
+    category: "Team",
+  },
+  {
     src: "images/admindirector.jpeg",
     alt: "CKS Admin Director",
     category: "Team",
@@ -51,6 +56,11 @@ const featuredImages = [
     src: "/images/facility-equipment.jpg",
     alt: "CKS Kimuka Bed & Wheelchair",
     category: "Facilities",
+  },
+  {
+    src: "/images/cksleadership.jpeg",
+    alt: "CKS Leadership",
+    category: "Team",
   },
   {
     src: "/images/facility-waiting-area.jpg",
@@ -93,6 +103,11 @@ const featuredImages = [
     category: "Events",
   },
   {
+    src: "/images/Admindirector+clinicaldirector.jpeg",
+    alt: "CKS Leadership",
+    category: "Team",
+  },
+  {
     src: "/images/wkd-march-ngong-town.jpg",
     alt: "World Kidney Day march through Ngong Town, March 2025",
     category: "Events",
@@ -106,6 +121,11 @@ const featuredImages = [
     src: "/images/img1.jpg",
     alt: "CKS Kimuka Hospital WKD march",
     category: "Facilities",
+  },
+  {
+    src: "/images/ckscakecutting.jpeg",
+    alt: "CKS Cake Cutting",
+    category: "Team",
   },
   {
     src: "/images/img2.jpg",
