@@ -1,0 +1,31 @@
+Act as a Senior React/Vite Developer and UX Designer. I have uploaded the complete project zip. Please unzip it and apply the following structural updates, content additions, and layout configurations. Strictly preserve my existing core styling, layout rules, and component logic. Do not rewrite entire files with placeholder code.
+
+1. NAVBAR NAVIGATION ORDER & BRANCH BRANDING:
+- Rearrange the Navbar links so 'Dialysis' and 'Screening' sit precisely between 'Services' and 'Our Branches'. Order: Home -> About -> Services -> Dialysis -> Screening -> Our Branches -> Contact -> Gallery.
+- Main Homepage (Root): Title/Logo text must read "CKS Dialysis Center".
+- Kimuka Branch Homepage: Title/Logo text must read "CKS Kimuka Hospital".
+- Both titles must link back to the main root homepage.
+- Ensure 'Dialysis' and 'Screening' links route smoothly to their dedicated sections or pages under the respective branch.
+
+2. INSURANCE LOGOS & SHA ACCREDITATION:
+- Insurance Partners: Add a clean, grid-based "Insurance Partners" section in the footer or right above it. Include high-quality placeholders/logos for major Kenyan insurers (e.g., NHIF/SHA, Jubilee, CIC, APA, Britam, GA Insurance).
+- SHA Visibility: Add a prominent, professionally designed "SHA Accredited Facility" badge or banner on ALL pages. It must be placed high up on the layout, appearing right BEFORE any mentions of 'Services' or 'Branches'.
+
+3. THE DIALYSIS PAGE - ADVANCED MEDICAL CONTENT:
+Expand the Dialysis page content to include the following core sections using clean text strings (no HTML inside properties if stored in data arrays):
+- Medical Approach: Detail a multidisciplinary, patient-centered renal care methodology overseen by Dr. Jonathan Wala (Nephrologist & President of the Kenya Renal Association) and delivered by highly trained renal nurses demonstrating dedicated, compassionate leadership.
+- Medical Information: Detail the clinical offerings, including comprehensive pre-transplant evaluations spearheaded by the lead team (including Dr. Wala) and seamlessly coordinated with partner hospitals (Aga Khan University Hospital and MP Shah Hospital) for transplant surgery access. Mention 24/7 emergency evacuation support.
+- Patient Charter Snippet: Add a concise section outlining basic patient rights and responsibilities, highlighting dignity, transparent clinical oversight, safety, and mutual respect.
+
+4. SEPARATE KIMUKA HOMEPAGE & SLIDESHOW:
+- Ensure Kimuka operates completely as its own independent homepage branch profile (e.g., /kimuka) rather than a simple scroll section.
+- Add an independent, high-quality Slideshow Component to the top of the Kimuka homepage.
+- The Kimuka slideshow must use a synchronized, smooth 'Fade' transition where text overlays (headings/descriptions specific to Kimuka's 24-hour multi-service emergency care, maternal health, and diagnostics) change exactly when the background image shifts.
+- Keep the responsive Google Map strip embedded exclusively on the Kimuka page, positioned side-by-side with the contact details on desktop (Left: Contact Details, Right: Map) and stacked vertically on mobile.
+
+5. GENERAL LAYOUT SANITY:
+- Maintain the 'No Past Dates' selection logic on all booking/appointment inputs.
+- Ensure all static folder paths for 'LOGO' and 'MAIN' assets are perfectly verified so no broken image links occur.
+- Keep the aesthetic, floating-style mobile thumb navigation bar (Home, WhatsApp, Call) active on mobile viewports only.
+
+DO NOT overwrite custom CSS or strip existing content. Only inject these specific enhancements directly into the respective components.

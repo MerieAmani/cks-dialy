@@ -51,10 +51,10 @@ export default function ScreeningPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-24 md:py-32 text-white">
           <div className="max-w-2xl">
             <Link
-              href="/kimuka"
+              href="/"
               className="nav-link-back mb-4 inline-flex text-blue-300 hover:text-white"
             >
-              ← Back to Kimuka Hospital
+              ← Back to Home
             </Link>
             <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-blue-300">
               CKS Kimuka Hospital

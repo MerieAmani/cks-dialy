@@ -15,6 +15,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Nav from "@/components/Nav";
+import SHABadge from "@/components/SHABadge";
 import Footer from "@/components/Footer";
 import MobileCTA from "@/components/MobileCTA";
 
@@ -23,25 +24,29 @@ const heroSlides = [
     bg: "/images/Buruburu.jpeg",
     alt: "CKS Buruburu Dialysis Centre",
     heading: "Expert Kidney Care,\nCloser to Home",
-    subtext: "CKS Dialysis Centre offers world-class haemodialysis and nephrology services at four convenient locations. SHA accepted. Meals included.",
+    subtext:
+      "CKS Dialysis Centre offers world-class haemodialysis and nephrology services at four convenient locations. SHA accredited. Meals included.",
   },
   {
     bg: "/images/cksdialy.jpeg",
     alt: "CKS Pangani Dialysis Centre",
     heading: "Haemodialysis You\nCan Count On",
-    subtext: "Modern machines, experienced nurses, and in-house nephrologist care — three sessions per week at a branch near you.",
+    subtext:
+      "Modern machines, experienced nurses, and in-house nephrologist care — three sessions per week at a branch near you.",
   },
   {
-    bg: "/images/facility-waiting-area.jpg",
+    bg: "/images/homepagefacility.jpeg",
     alt: "Comfortable patient waiting area",
     heading: "Comfort & Care\nEvery Session",
-    subtext: "Electric recliners, free Wi-Fi, meals provided, and TV entertainment — because your comfort matters as much as your treatment.",
+    subtext:
+      "Electric recliners, free Wi-Fi, meals provided, and TV entertainment — because your comfort matters as much as your treatment.",
   },
   {
     bg: "/images/main.jpeg",
     alt: "CKS Dialysis Centre main facility",
     heading: "24-Hour Care at\nCKS Kimuka Hospital",
-    subtext: "Our flagship Kimuka Hospital is open every hour of every day — serving Kajiado County with dialysis, emergency, maternity and more.",
+    subtext:
+      "Our flagship Kimuka Hospital is open every hour of every day — serving Kajiado County with dialysis, emergency, maternity and more.",
   },
 ];
 
@@ -198,7 +203,11 @@ export default function HomePage() {
                 >
                   {s.heading.split("\n").map((line, li) => (
                     <span key={li}>
-                      {li === 1 ? <span className="text-teal-300">{line}</span> : line}
+                      {li === 1 ? (
+                        <span className="text-teal-300">{line}</span>
+                      ) : (
+                        line
+                      )}
                       {li === 0 && <br />}
                     </span>
                   ))}
@@ -245,6 +254,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <SHABadge />
 
       {/* STATS BAR */}
       <div
@@ -503,7 +514,7 @@ export default function HomePage() {
                       CKS Buruburu
                     </h3>
                     <p className="text-sm opacity-80 mt-1">
-                      Buruburu Phase 5, House 431, Nairobi
+                      The Point Mall, Rabai Road, Nairobi
                     </p>
                   </div>
                   <MapPin className="w-8 h-8 opacity-40 flex-shrink-0" />
@@ -743,7 +754,7 @@ export default function HomePage() {
               { emoji: "📶", label: "Free Wi-Fi" },
               { emoji: "📺", label: "TV Entertainment" },
               { emoji: "🛋️", label: "Electric Recliners" },
-              { emoji: "🏥", label: "SHA Accepted" },
+              { emoji: "🏥", label: "SHA Accredited" },
               { emoji: "🅿️", label: "Free Parking" },
             ].map((a) => (
               <div
@@ -765,16 +776,16 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap justify-center gap-3 mt-4">
               {[
-                "SHA (NHIF)",
+                "SHA",
                 "Jubilee Health",
                 "AAR Healthcare",
                 "CIC Insurance",
-                "Resolution Health",
-                "Britam Health",
-                "Madison Health",
+                "Signa Int",
+                "KCB",
+                "Old Mutual",
                 "Minet Kenya",
-                "GA Health",
                 "APA Insurance",
+                ,
               ].map((ins) => (
                 <span key={ins} className="insurer-badge">
                   {ins}

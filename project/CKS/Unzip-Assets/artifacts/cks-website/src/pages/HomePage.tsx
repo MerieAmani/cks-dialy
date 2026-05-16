@@ -28,7 +28,7 @@ const heroSlides = [
     alt: "CKS Pangani",
   },
   {
-    bg: "/images/facility-waiting-area.jpg",
+    bg: "/images/homepagefacility.jpeg",
     alt: "Comfortable patient waiting area",
   },
   { bg: "/images/main.jpeg", alt: "CKS Dialysis Centre main facility" },
@@ -179,7 +179,7 @@ export default function HomePage() {
             <p className="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
               CKS Dialysis Centre offers world-class haemodialysis and
               nephrology services at four convenient locations across Nairobi
-              and Kajiado County. SHA accepted. Meals included.
+              and Kajiado County. SHA accredited. Meals included.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
@@ -428,7 +428,7 @@ export default function HomePage() {
                       Hours
                     </p>
                     <p className="font-medium text-gray-700">
-                      Mon–Sat, 7am–6pm
+                      Mon–Sat, 6am–6pm
                     </p>
                   </div>
                 </div>
@@ -476,7 +476,7 @@ export default function HomePage() {
                       CKS Buruburu
                     </h3>
                     <p className="text-sm opacity-80 mt-1">
-                      Buruburu Phase 5, House 431, Nairobi
+                      The Point Mall, Rabai Road, Nairobi
                     </p>
                   </div>
                   <MapPin className="w-8 h-8 opacity-40 flex-shrink-0" />
@@ -500,7 +500,7 @@ export default function HomePage() {
                       Hours
                     </p>
                     <p className="font-medium text-gray-700">
-                      Mon–Sat, 7am–6pm
+                      Mon–Sat, 6am–6pm
                     </p>
                   </div>
                 </div>
@@ -572,7 +572,7 @@ export default function HomePage() {
                       Hours
                     </p>
                     <p className="font-medium text-gray-700">
-                      Mon–Sat, 7am–6pm
+                      Mon–Fri, 9am–5pm
                     </p>
                   </div>
                 </div>
@@ -738,16 +738,16 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap justify-center gap-3 mt-4">
               {[
-                "SHA (NHIF)",
+                "SHA",
                 "Jubilee Health",
                 "AAR Healthcare",
                 "CIC Insurance",
-                "Resolution Health",
-                "Britam Health",
-                "Madison Health",
+                "Signa Int",
+                "KCB",
+                "Old Mutual",
                 "Minet Kenya",
-                "GA Health",
                 "APA Insurance",
+                ,
               ].map((ins) => (
                 <span key={ins} className="insurer-badge">
                   {ins}

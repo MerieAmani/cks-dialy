@@ -21,15 +21,24 @@ export default function Nav({ subPage = false, subPageTitle }: NavProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-4">
-            <Link href="/" className="flex items-center gap-3" aria-label="CKS Dialysis — go to homepage">
+            <Link
+              href="/"
+              className="flex items-center gap-3"
+              aria-label="CKS Dialysis — go to homepage"
+            >
               <img
                 src="/images/logo.jpeg"
                 alt="CKS Dialysis Centre logo"
                 className="w-10 h-10 rounded-lg object-cover"
               />
               <div className="leading-tight">
-                <span className="block font-display font-bold text-lg text-gray-800 leading-none">CKS</span>
-                <span className="block text-xs font-medium tracking-wide" style={{ color: "var(--teal-600)" }}>
+                <span className="block font-display font-bold text-lg text-gray-800 leading-none">
+                  CKS
+                </span>
+                <span
+                  className="block text-xs font-medium tracking-wide"
+                  style={{ color: "var(--teal-600)" }}
+                >
                   Dialysis Centre
                 </span>
               </div>
@@ -37,30 +46,59 @@ export default function Nav({ subPage = false, subPageTitle }: NavProps) {
             {subPage && subPageTitle && (
               <>
                 <span className="hidden sm:block text-gray-300 text-lg">/</span>
-                <span className="hidden sm:block text-sm font-semibold text-gray-700">{subPageTitle}</span>
+                <span className="hidden sm:block text-sm font-semibold text-gray-700">
+                  {subPageTitle}
+                </span>
               </>
             )}
           </div>
 
-          <nav role="navigation" aria-label="Main navigation" className="hidden md:flex items-center gap-6">
+          <nav
+            role="navigation"
+            aria-label="Main navigation"
+            className="hidden md:flex items-center gap-6"
+          >
             {subPage ? (
               <>
-                <a href="#about" className="nav-link">About</a>
-                <a href="#services" className="nav-link">Services</a>
-                <a href="#gallery" className="nav-link">Gallery</a>
-                <a href="#contact" className="nav-link">Contact</a>
+                <a href="#about" className="nav-link">
+                  About Us
+                </a>
+                <a href="#services" className="nav-link">
+                  Our Services
+                </a>
+                <a href="#gallery" className="nav-link">
+                  Gallery
+                </a>
+                <a href="#contact" className="nav-link">
+                  Contact
+                </a>
                 <Link href="/" className="nav-link-back">
                   ← Back to Home
                 </Link>
               </>
             ) : (
               <>
-                <a href="#home" className={`nav-link ${isActive("/") ? "active" : ""}`}>Home</a>
-                <a href="#services" className="nav-link">Services</a>
-                <a href="#branches" className="nav-link">Our Branches</a>
-                <a href="#faq" className="nav-link">FAQ</a>
-                <a href="#contact" className="nav-link">Contact</a>
-                <Link href="/gallery" className="nav-link">Gallery</Link>
+                <a
+                  href="#home"
+                  className={`nav-link ${isActive("/") ? "active" : ""}`}
+                >
+                  Home
+                </a>
+                <a href="#services" className="nav-link">
+                  Our Services
+                </a>
+                <a href="#branches" className="nav-link">
+                  Our Branches
+                </a>
+                <a href="#faq" className="nav-link">
+                  FAQ
+                </a>
+                <a href="#contact" className="nav-link">
+                  Contact
+                </a>
+                <Link href="/gallery" className="nav-link">
+                  Gallery
+                </Link>
               </>
             )}
           </nav>
@@ -83,7 +121,11 @@ export default function Nav({ subPage = false, subPageTitle }: NavProps) {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
-            {mobileOpen ? <X className="w-5 h-5 text-gray-700" /> : <Menu className="w-5 h-5 text-gray-700" />}
+            {mobileOpen ? (
+              <X className="w-5 h-5 text-gray-700" />
+            ) : (
+              <Menu className="w-5 h-5 text-gray-700" />
+            )}
           </button>
         </div>
       </div>
@@ -93,20 +135,86 @@ export default function Nav({ subPage = false, subPageTitle }: NavProps) {
           <nav className="flex flex-col gap-3" aria-label="Mobile navigation">
             {subPage ? (
               <>
-                <a href="#about" className="nav-link py-1" onClick={() => setMobileOpen(false)}>About</a>
-                <a href="#services" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Services</a>
-                <a href="#gallery" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Gallery</a>
-                <a href="#contact" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Contact</a>
-                <Link href="/" className="nav-link-back py-1" onClick={() => setMobileOpen(false)}>← Back to Home</Link>
+                <a
+                  href="#about"
+                  className="nav-link py-1"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  About Us
+                </a>
+                <a
+                  href="#services"
+                  className="nav-link py-1"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Our Services
+                </a>
+                <a
+                  href="#gallery"
+                  className="nav-link py-1"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Gallery
+                </a>
+                <a
+                  href="#contact"
+                  className="nav-link py-1"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Contact
+                </a>
+                <Link
+                  href="/"
+                  className="nav-link-back py-1"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  ← Back to Home
+                </Link>
               </>
             ) : (
               <>
-                <a href="#home" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Home</a>
-                <a href="#services" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Services</a>
-                <a href="#branches" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Our Branches</a>
-                <a href="#faq" className="nav-link py-1" onClick={() => setMobileOpen(false)}>FAQ</a>
-                <a href="#contact" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Contact</a>
-                <Link href="/gallery" className="nav-link py-1" onClick={() => setMobileOpen(false)}>Gallery</Link>
+                <a
+                  href="#home"
+                  className="nav-link py-1"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Home
+                </a>
+                <a
+                  href="#services"
+                  className="nav-link py-1"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Our Services
+                </a>
+                <a
+                  href="#branches"
+                  className="nav-link py-1"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Our Branches
+                </a>
+                <a
+                  href="#faq"
+                  className="nav-link py-1"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  FAQ
+                </a>
+                <a
+                  href="#contact"
+                  className="nav-link py-1"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Contact
+                </a>
+                <Link
+                  href="/gallery"
+                  className="nav-link py-1"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Gallery
+                </Link>
               </>
             )}
             <a

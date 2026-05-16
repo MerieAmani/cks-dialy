@@ -10,6 +10,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import Nav from "@/components/Nav";
+import SHABadge from "@/components/SHABadge";
 import Footer from "@/components/Footer";
 import MobileCTA from "@/components/MobileCTA";
 
@@ -27,6 +28,33 @@ function useReveal() {
     return () => io.disconnect();
   }, []);
 }
+
+const kimukaSlides = [
+  {
+    bg: "/images/main.jpeg",
+    alt: "CKS Kimuka Hospital — the heart of Kajiado County healthcare",
+    heading: "24-Hour Emergency\nCare for All",
+    subtext: "CKS Kimuka Hospital is open every hour of every day — emergency care, dialysis, maternity, pharmacy, lab and more. Serving Ngong and Kajiado County without pause.",
+  },
+  {
+    bg: "/images/facility-dialysis-unit.jpg",
+    alt: "Modern haemodialysis unit at CKS Kimuka Hospital",
+    heading: "Advanced Dialysis\nCloser to Home",
+    subtext: "State-of-the-art haemodialysis with in-house nephrologist care and modern machines. SHA covered. Free meals and Wi-Fi included at every session.",
+  },
+  {
+    bg: "/images/camp-doctor-treating.jpg",
+    alt: "Doctor providing compassionate care at CKS Kimuka free medical camp",
+    heading: "Maternal & Child\nHealth Services",
+    subtext: "Comprehensive antenatal care, safe deliveries, immunization, and family planning — compassionate care for mothers and children across Kajiado County.",
+  },
+  {
+    bg: "/images/building-signage.jpg",
+    alt: "CKS Kimuka Hospital signage on Ngong-Suswa Road",
+    heading: "Diagnostics &\nLaboratory",
+    subtext: "Full lab services, ultrasound, ECG, and imaging available around the clock — right in the heart of Kimuka Trading Center, Ngong.",
+  },
+];
 
 const galleryImages = [
   {
@@ -84,8 +112,14 @@ export default function KimukaPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [apptDate, setApptDate] = useState("");
   const [dateError, setDateError] = useState("");
+  const [slide, setSlide] = useState(0);
   const today = new Date().toISOString().split("T")[0];
   useReveal();
+
+  useEffect(() => {
+    const t = setInterval(() => setSlide((s) => (s + 1) % kimukaSlides.length), 5000);
+    return () => clearInterval(t);
+  }, []);
 
   useEffect(() => {
     document.title =
@@ -103,12 +137,12 @@ export default function KimukaPage() {
       a: "Yes — CKS Kimuka Hospital operates 24 hours a day, 7 days a week, 365 days a year, including public holidays.",
     },
     {
-      q: "Does the hospital accept SHA (NHIF)?",
-      a: "Yes. We are a registered SHA healthcare provider. SHA covers 80% of dialysis costs and a significant portion of other services for eligible patients.",
+      q: "Does the hospital accept SHA?",
+      a: "Yes, we are a accredited healthcare provider,  SHA covers 100% dialysis costs including Mwalimu Cover, police PHC.",
     },
     {
-      q: "What dialysis services are available at Kimuka?",
-      a: "We offer round-the-clock haemodialysis with modern machines, in-house nephrologist consultations, and free meals for dialysis patients. Sessions are 4 hours, 3 times per week.",
+      q: "What dialysis services are available?",
+      a: "We offer round-the-clock haemodialysis with modern machines, monthly reno test, blood boosters, in-house nephrologist consultations, and free meals for dialysis patients. Sessions are 4 hours long, 2 times per week.",
     },
     {
       q: "Is there an ambulance service?",
@@ -123,69 +157,119 @@ export default function KimukaPage() {
   return (
     <div className="font-sans">
       <Nav subPage isKimuka />
+      <SHABadge />
 
-      {/* HERO */}
+      {/* HERO SLIDESHOW */}
       <section
         className="relative overflow-hidden"
         style={{ minHeight: "580px" }}
         aria-labelledby="kimuka-hero-heading"
       >
-        <img
-          src="/images/main.jpeg"
-          alt="CKS Kimuka Hospital facility — serving Ngong and Kajiado County"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(135deg, rgba(0,40,35,0.88) 0%, rgba(0,100,94,0.7) 100%)",
-          }}
-        />
+        {/* Background slide images */}
+        <div className="absolute inset-0">
+          {kimukaSlides.map((s, i) => (
+            <img
+              key={i}
+              src={s.bg}
+              alt={s.alt}
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{
+                opacity: i === slide ? 1 : 0,
+                transition: "opacity 900ms ease",
+              }}
+            />
+          ))}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(0,40,35,0.88) 0%, rgba(0,100,94,0.7) 100%)",
+            }}
+          />
+        </div>
+
+        {/* Watermark logo */}
         <img
           src="/images/logo.jpeg"
           alt=""
           aria-hidden="true"
-          className="absolute right-8 bottom-0 w-48 h-48 object-contain opacity-[0.07] pointer-events-none"
+          className="absolute right-8 bottom-0 w-48 h-48 object-contain opacity-[0.07] pointer-events-none z-10"
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-28 md:py-36 text-white">
-          <div className="max-w-2xl">
-            <div className="badge-24h mb-3">⏱ Open 24/7 · 365 Days</div>
-            <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-teal-300">
-              Kimuka, Kajiado County
-            </p>
-            <h1
-              id="kimuka-hero-heading"
-              className="font-display text-4xl md:text-5xl lg:text-6xl leading-tight mb-4"
-            >
-              CKS Kimuka Hospital
-            </h1>
-            <p className="text-white/80 text-lg leading-relaxed mb-3">
-              A full-service 24-hour hospital bringing life-saving care to the
-              heart of Kajiado County.
-            </p>
-            <p className="text-teal-300 font-semibold text-base mb-8">
-              Dialysis · Emergency · Maternity · Pharmacy · Lab · Imaging
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="#appointment"
-                className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-full text-white shadow-lg transition-opacity hover:opacity-90"
-                style={{ background: "var(--teal-600)" }}
+
+        {/* Slide content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-28 md:py-36">
+          <div className="relative" style={{ minHeight: "300px" }}>
+            {kimukaSlides.map((s, i) => (
+              <div
+                key={i}
+                className="absolute inset-0 max-w-2xl text-white"
+                style={{
+                  opacity: i === slide ? 1 : 0,
+                  transform: i === slide ? "translateY(0)" : "translateY(16px)",
+                  transition: "opacity 900ms ease, transform 900ms ease",
+                  pointerEvents: i === slide ? "auto" : "none",
+                }}
+                aria-hidden={i !== slide}
               >
-                <Calendar className="w-4 h-4" />
-                Book Appointment
-              </a>
-              <a
-                href="tel:+254753372814"
-                className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-full border-2 text-white transition-all hover:bg-white/10"
-                style={{ borderColor: "rgba(255,255,255,0.6)" }}
-              >
-                <Phone className="w-4 h-4" />
-                Call Kimuka
-              </a>
-            </div>
+                <div className="badge-24h mb-3">⏱ Open 24/7 · 365 Days</div>
+                <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-teal-300">
+                  Kimuka, Kajiado County
+                </p>
+                <h1
+                  id={i === 0 ? "kimuka-hero-heading" : undefined}
+                  className="font-display text-4xl md:text-5xl lg:text-6xl leading-tight mb-4"
+                >
+                  {s.heading.split("\n").map((line, li) => (
+                    <span key={li}>
+                      {li === 1 ? (
+                        <span className="text-teal-300">{line}</span>
+                      ) : (
+                        line
+                      )}
+                      {li === 0 && <br />}
+                    </span>
+                  ))}
+                </h1>
+                <p className="text-white/80 text-lg leading-relaxed mb-8 max-w-xl">
+                  {s.subtext}
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="#appointment"
+                    className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-full text-white shadow-lg transition-opacity hover:opacity-90"
+                    style={{ background: "var(--teal-600)" }}
+                  >
+                    <Calendar className="w-4 h-4" />
+                    Book Appointment
+                  </a>
+                  <a
+                    href="tel:+254753372814"
+                    className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-full border-2 text-white transition-all hover:bg-white/10"
+                    style={{ borderColor: "rgba(255,255,255,0.6)" }}
+                  >
+                    <Phone className="w-4 h-4" />
+                    Call Kimuka
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
+        </div>
+
+        {/* Navigation dots */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+          {kimukaSlides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setSlide(i)}
+              className="w-2.5 h-2.5 rounded-full transition-all"
+              style={{
+                background: i === slide ? "#fff" : "rgba(255,255,255,0.35)",
+                transform: i === slide ? "scale(1.3)" : "scale(1)",
+              }}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
         </div>
       </section>
 
@@ -199,19 +283,21 @@ export default function KimukaPage() {
           <div>
             <div className="font-display text-3xl font-bold">24/7</div>
             <div className="text-xs font-medium opacity-80 mt-0.5 uppercase tracking-widest">
-              Always Open
+              Services
             </div>
           </div>
           <div>
-            <div className="font-display text-3xl font-bold">1,800%</div>
+            <div className="font-display text-3xl font-bold">Dialysis</div>
             <div className="text-xs font-medium opacity-80 mt-0.5 uppercase tracking-widest">
-              Dialysis Growth
+              Services Available
             </div>
           </div>
           <div>
-            <div className="font-display text-3xl font-bold">237+</div>
+            <div className="font-display text-3xl font-bold">
+              Lab and Pharmacy
+            </div>
             <div className="text-xs font-medium opacity-80 mt-0.5 uppercase tracking-widest">
-              Monthly Patients
+              Available
             </div>
           </div>
           <div>
@@ -235,8 +321,7 @@ export default function KimukaPage() {
             to providing exceptional healthcare in a compassionate and
             patient-centred environment. Serving approximately{" "}
             <strong>36,000 residents</strong> of Kimuka and the wider Kajiado
-            County — including the underserved Maasai community — we are open
-            every hour of every day.
+            County
           </p>
 
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
@@ -276,6 +361,7 @@ export default function KimukaPage() {
                 health support closer to those who need it most.
               </p>
             </div>
+
             <div className="p-6 rounded-2xl border border-blue-100 bg-blue-50">
               <p
                 className="text-xs font-semibold uppercase tracking-wide mb-2"
@@ -380,19 +466,19 @@ export default function KimukaPage() {
               {[
                 {
                   year: "2018 — Foundation",
-                  text: "Dr. Jonathan Wala and Mrs. Alice Wala founded CKS Hospital Ltd, establishing two dialysis units in Pangani (12 beds) and Buruburu (10 beds) in Nairobi.",
+                  text: "Dr. Jonathan Wala and Mrs. Alice Wala established the foundation of CKS, launching dedicated dialysis units in Pangani and Buruburu to provide life-saving, compassionate renal care within Nairobi.",
                 },
                 {
                   year: "2024 — The Vision",
-                  text: "Driven by seeing patients from Kajiado County travel over 100km to Nairobi for dialysis, the founders committed to bringing care closer to home.",
+                  text: "Witnessing exhausted patients and anxious families travel over 100km from rural Kajiado to Nairobi—enduring grueling journeys just to access basic, routine dialysis—the founders committed to bringing dignity and care directly to the doorstep of the community.",
                 },
                 {
                   year: "September 23, 2024 — Kimuka Opens",
-                  text: "CKS Hospital Kimuka opens its doors as a 24-hour multi-service facility, immediately serving the Maasai community and surrounding villages.",
+                  text: "CKS Hospital Kimuka opened its doors as a 24-hour sanctuary of healing. It immediately became a vital lifeline for the surrounding villages, ensuring that critical daytime emergencies and vulnerable midnight medical crises no longer went unanswered.",
                 },
                 {
-                  year: "2025 — Growing Impact",
-                  text: "After hosting two major free medical camps (500+ patients in November 2024; World Kidney Day roadshow in March 2025), the hospital continues expanding across Kajiado County.",
+                  year: "2025 — Deepening Roots",
+                  text: "Moving beyond hospital walls, the team engaged directly with families through extensive free medical camps and regional wellness roadshows, building lasting trust and expanding healthcare access across the entire county.",
                 },
               ].map((item, i, arr) => (
                 <div key={i} className="flex gap-4">
@@ -450,7 +536,7 @@ export default function KimukaPage() {
                 imgAlt:
                   "State-of-the-art haemodialysis unit at CKS Kimuka Hospital",
                 items: [
-                  "24-hour haemodialysis services",
+                  "24-hour haemodialysis services with weekly Blood boosts and Monthly reno tests",
                   "Modern dialysis machines & comfortable beds",
                   "In-house nephrologist consultations",
                   "Monthly kidney function tests",
@@ -470,7 +556,6 @@ export default function KimukaPage() {
                   "24/7 general consultations & treatment",
                   "Accident & trauma care",
                   "Emergency & critical care",
-                  "Night consultations available",
                   "Chronic illness management",
                   "Specialist referral services",
                   "Ambulance services — 24/7",
@@ -504,7 +589,7 @@ export default function KimukaPage() {
                   "HIV rapid testing & VCT",
                   "H. pylori detection",
                   "Hepatitis B & C screening",
-                  "Rheumatoid factor & specialty panels",
+                  "Rheumatoid factor & many more",
                 ],
               },
               {
@@ -529,8 +614,8 @@ export default function KimukaPage() {
                 imgAlt: "In-house 24-hour pharmacy at CKS Kimuka Hospital",
                 items: [
                   "Fully stocked in-house pharmacy — open 24/7",
-                  "Long-term medication for Hypertension",
-                  "Long-term medication for Diabetes",
+                  "Medication for Hypertension",
+                  "Medication for Diabetes",
                   "Essential drugs & emergency supplies",
                   "Affordable prices",
                   "Guidance from licensed pharmacists",
@@ -826,7 +911,9 @@ export default function KimukaPage() {
                 }}
               />
               {dateError && (
-                <p className="mt-1 text-xs font-medium text-red-500">{dateError}</p>
+                <p className="mt-1 text-xs font-medium text-red-500">
+                  {dateError}
+                </p>
               )}
             </div>
             <div>
@@ -901,7 +988,6 @@ export default function KimukaPage() {
 
           {/* Side-by-side: details LEFT, map RIGHT — stacked on mobile */}
           <div className="flex flex-col md:flex-row gap-8 reveal">
-
             {/* LEFT — Contact details */}
             <div className="flex flex-col gap-4 md:w-2/5">
               <a href="tel:+254753372814" className="contact-row">
@@ -965,7 +1051,10 @@ export default function KimukaPage() {
             </div>
 
             {/* RIGHT — Embedded map */}
-            <div className="md:w-3/5 rounded-2xl overflow-hidden shadow-lg" style={{ minHeight: "380px" }}>
+            <div
+              className="md:w-3/5 rounded-2xl overflow-hidden shadow-lg"
+              style={{ minHeight: "380px" }}
+            >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4092.5649052489775!2d36.59359888844212!3d-1.3610288717274939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182efd007cb6a3d3%3A0x83b751d300f64ae2!2sCKS%20Kimuka!5e1!3m2!1sen!2ske!4v1778859752015!5m2!1sen!2ske"
                 width="100%"
@@ -982,7 +1071,11 @@ export default function KimukaPage() {
       </section>
 
       <Footer />
-      <MobileCTA phone="+254753372814" whatsapp="254753372814" homePath="/kimuka" />
+      <MobileCTA
+        phone="+254753372814"
+        whatsapp="254753372814"
+        homePath="/kimuka"
+      />
 
       {/* LIGHTBOX */}
       {lightboxImg && (

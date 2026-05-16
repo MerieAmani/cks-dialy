@@ -51,10 +51,10 @@ export default function DialysisPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-24 md:py-32 text-white">
           <div className="max-w-2xl">
             <Link
-              href="/kimuka"
+              href="/"
               className="nav-link-back mb-4 inline-flex text-teal-300 hover:text-white"
             >
-              ← Back to Kimuka Hospital
+              ← Back to Home
             </Link>
             <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-teal-300">
               CKS Kimuka Hospital
@@ -146,7 +146,7 @@ export default function DialysisPage() {
               </p>
               <div className="flex flex-col gap-3">
                 {[
-                  "SHA accepted — 80% coverage for eligible patients",
+                  "SHA Accredited — 80% coverage for eligible patients",
                   "In-house nephrologist on-call 24 hours",
                   "Individualised dialysis prescriptions",
                   "Comfortable electric recliner chairs",
@@ -283,8 +283,8 @@ export default function DialysisPage() {
               },
               {
                 emoji: "🏥",
-                label: "SHA Accepted",
-                detail: "80% coverage for eligible",
+                label: "SHA Accredited",
+                detail: "100% coverage for eligible",
               },
               {
                 emoji: "🅿️",
@@ -310,16 +310,16 @@ export default function DialysisPage() {
             <p className="section-label">Accepted Insurance</p>
             <div className="flex flex-wrap justify-center gap-3 mt-4">
               {[
-                "SHA (NHIF)",
+                "SHA",
                 "Jubilee Health",
                 "AAR Healthcare",
                 "CIC Insurance",
-                "Resolution Health",
-                "Britam Health",
-                "Madison Health",
+                "Signa Int",
+                "KCB",
+                "Old Mutual",
                 "Minet Kenya",
-                "GA Health",
                 "APA Insurance",
+                ,
               ].map((ins) => (
                 <span key={ins} className="insurer-badge">
                   {ins}

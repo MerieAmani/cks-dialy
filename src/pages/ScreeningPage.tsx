@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import { Phone, Calendar, CheckCircle, ArrowRight } from "lucide-react";
 import Nav from "@/components/Nav";
+import SHABadge from "@/components/SHABadge";
 import Footer from "@/components/Footer";
 import MobileCTA from "@/components/MobileCTA";
 
@@ -30,6 +31,7 @@ export default function ScreeningPage() {
   return (
     <div className="font-sans">
       <Nav subPage subPageTitle="Screening & Diagnostics" />
+      <SHABadge />
 
       {/* HERO */}
       <section
@@ -51,14 +53,11 @@ export default function ScreeningPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-24 md:py-32 text-white">
           <div className="max-w-2xl">
             <Link
-              href="/kimuka"
+              href="/"
               className="nav-link-back mb-4 inline-flex text-blue-300 hover:text-white"
             >
-              ← Back to Kimuka Hospital
+              ← Back to Home
             </Link>
-            <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-blue-300">
-              CKS Kimuka Hospital
-            </p>
             <h1 className="font-display text-4xl md:text-5xl leading-tight mb-4">
               Screening & Diagnostics
             </h1>
@@ -151,7 +150,7 @@ export default function ScreeningPage() {
               <div className="flex flex-col gap-3">
                 {[
                   "Fast turnaround — most results within 24 hours",
-                  "Affordable prices, SHA accepted",
+                  "Affordable prices, SHA accredited",
                   "Expert lab scientists on-site",
                   "Community screening camps — often free",
                   "Results reviewed by our clinical team",

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import { Phone, Calendar, CheckCircle, ArrowRight } from "lucide-react";
 import Nav from "@/components/Nav";
+import SHABadge from "@/components/SHABadge";
 import Footer from "@/components/Footer";
 import MobileCTA from "@/components/MobileCTA";
 
@@ -30,6 +31,7 @@ export default function DialysisPage() {
   return (
     <div className="font-sans">
       <Nav subPage subPageTitle="Dialysis Services" />
+      <SHABadge />
 
       {/* HERO */}
       <section
@@ -51,14 +53,11 @@ export default function DialysisPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-24 md:py-32 text-white">
           <div className="max-w-2xl">
             <Link
-              href="/kimuka"
+              href="/"
               className="nav-link-back mb-4 inline-flex text-teal-300 hover:text-white"
             >
-              ← Back to Kimuka Hospital
+              ← Back to Home
             </Link>
-            <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-teal-300">
-              CKS Kimuka Hospital
-            </p>
             <h1 className="font-display text-4xl md:text-5xl leading-tight mb-4">
               Dialysis & Renal Care
             </h1>
@@ -139,14 +138,17 @@ export default function DialysisPage() {
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Our unit is overseen by <strong>Dr. Jonathan Wala</strong>, a
-                qualified Nephrologist, ensuring every patient receives expert
-                clinical oversight. We have grown our dialysis capacity by{" "}
-                <strong>1,800%+</strong> since September 2024 — a testament to
-                the community's trust and our commitment to expanding access.
+                highly qualified Nephrologist and the{" "}
+                <strong>President of the Kenya Renal Association</strong>,
+                ensuring every patient receives expert clinical oversight.
+                Since September 2024, our specialized care has been
+                compassionately delivered by a team of highly trained renal
+                nurses who demonstrate dedicated leadership and unwavering
+                commitment to our patients.
               </p>
               <div className="flex flex-col gap-3">
                 {[
-                  "SHA accepted — 80% coverage for eligible patients",
+                  "SHA accredited — 100% coverage for eligible patients",
                   "In-house nephrologist on-call 24 hours",
                   "Individualised dialysis prescriptions",
                   "Comfortable electric recliner chairs",
@@ -195,7 +197,7 @@ export default function DialysisPage() {
               {
                 title: "Haemodialysis",
                 img: "https://plus.unsplash.com/premium_photo-1702598804759-8fb687f774fb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                desc: "Modern, 24/7 haemodialysis using state-of-the-art machines. Each session is 4 hours, 3 sessions per week, with individual prescriptions tailored to your clinical needs.",
+                desc: "Modern, 24/7 haemodialysis using state-of-the-art machines. Each session is 4 hours long, 2 sessions per week, with individual prescriptions tailored to your clinical needs.",
               },
               {
                 title: "In-House Nephrologist",
@@ -210,7 +212,7 @@ export default function DialysisPage() {
               {
                 title: "Pre-Transplant Work-Up",
                 img: "https://images.unsplash.com/photo-1685997180450-242a65624238?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                desc: "Comprehensive pre-transplant evaluations for eligible patients, coordinated with our partner hospitals in Nairobi for seamless access to transplant surgery.",
+                desc: "Comprehensive pre-transplant evaluations spearheaded by our lead team—including Dr. Jonathan Wala—and coordinated with Aga Khan and MP Shah hospitals for seamless transplant surgery access.",
               },
               {
                 title: "Catheter Management",
@@ -283,8 +285,8 @@ export default function DialysisPage() {
               },
               {
                 emoji: "🏥",
-                label: "SHA Accepted",
-                detail: "80% coverage for eligible",
+                label: "SHA accredited",
+                detail: "100% coverage for eligible",
               },
               {
                 emoji: "🅿️",
@@ -310,21 +312,102 @@ export default function DialysisPage() {
             <p className="section-label">Accepted Insurance</p>
             <div className="flex flex-wrap justify-center gap-3 mt-4">
               {[
-                "SHA (NHIF)",
+                "SHA",
                 "Jubilee Health",
                 "AAR Healthcare",
                 "CIC Insurance",
-                "Resolution Health",
-                "Britam Health",
-                "Madison Health",
+                "Signa Int",
+                "KCB",
+                "Old Mutual",
                 "Minet Kenya",
-                "GA Health",
                 "APA Insurance",
               ].map((ins) => (
                 <span key={ins} className="insurer-badge">
                   {ins}
                 </span>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PATIENT CHARTER */}
+      <section
+        className="py-16 px-4 sm:px-6"
+        style={{ background: "var(--silver-100)" }}
+      >
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10 reveal">
+            <p className="section-label">Patient Rights & Responsibilities</p>
+            <h2 className="font-display text-3xl text-gray-800 ruled-heading inline-block">
+              Patient Charter
+            </h2>
+            <p className="mt-4 text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
+              At CKS Kimuka Hospital, we uphold a clear Patient Charter so
+              every person receives dignified, transparent, and safe renal
+              care.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 reveal">
+              <h3 className="font-display text-lg text-gray-800 mb-4 flex items-center gap-2">
+                <span
+                  className="w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+                  style={{ background: "var(--teal-600)" }}
+                >
+                  ✓
+                </span>
+                Your Rights as a Patient
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  "Dignity & respect — you will be treated with compassion regardless of background or ability to pay.",
+                  "Transparent clinical oversight — you have the right to know your diagnosis, treatment plan, and progress at all times.",
+                  "Informed consent — no procedure will be performed without your understanding and agreement.",
+                  "Privacy & confidentiality of all medical records and personal information.",
+                  "Safe, high-quality care adhering to Kenya Renal Association and international haemodialysis standards.",
+                  "Direct access to Dr. Jonathan Wala or the on-call clinical team at any point during your treatment.",
+                ].map((right) => (
+                  <li
+                    key={right}
+                    className="flex items-start gap-2 text-sm text-gray-600"
+                  >
+                    <span
+                      className="mt-0.5 flex-shrink-0"
+                      style={{ color: "var(--teal-600)" }}
+                    >
+                      •
+                    </span>
+                    {right}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 reveal">
+              <h3 className="font-display text-lg text-gray-800 mb-4 flex items-center gap-2">
+                <span className="w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0 bg-blue-500">
+                  !
+                </span>
+                Your Responsibilities
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  "Attend all scheduled dialysis sessions and notify us promptly if you cannot make an appointment.",
+                  "Follow the prescribed renal diet and medication regime between sessions.",
+                  "Provide accurate and complete health information to your care team at all times.",
+                  "Treat all clinical staff and fellow patients with mutual respect and courtesy.",
+                  "Report any changes in your symptoms, medications, or general health status immediately.",
+                  "Settle agreed financial obligations or SHA co-payments in a timely manner.",
+                ].map((resp) => (
+                  <li
+                    key={resp}
+                    className="flex items-start gap-2 text-sm text-gray-600"
+                  >
+                    <span className="text-blue-400 mt-0.5 flex-shrink-0">•</span>
+                    {resp}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

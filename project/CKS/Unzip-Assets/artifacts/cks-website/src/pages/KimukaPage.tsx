@@ -100,12 +100,12 @@ export default function KimukaPage() {
       a: "Yes — CKS Kimuka Hospital operates 24 hours a day, 7 days a week, 365 days a year, including public holidays.",
     },
     {
-      q: "Does the hospital accept SHA (NHIF)?",
-      a: "Yes. We are a registered SHA healthcare provider. SHA covers 80% of dialysis costs and a significant portion of other services for eligible patients.",
+      q: "Does the hospital accept SHA?",
+      a: "Yes, we are a accredited healthcare provider,  SHA covers 100% dialysis costs including Mwalimu Cover, police PHC.",
     },
     {
-      q: "What dialysis services are available at Kimuka?",
-      a: "We offer round-the-clock haemodialysis with modern machines, in-house nephrologist consultations, and free meals for dialysis patients. Sessions are 4 hours, 3 times per week.",
+      q: "What dialysis services are available?",
+      a: "We offer round-the-clock haemodialysis with modern machines, monthly reno test, blood boosters, in-house nephrologist consultations, and free meals for dialysis patients. Sessions are 4 hours long, 2 times per week.",
     },
     {
       q: "Is there an ambulance service?",
@@ -200,15 +200,15 @@ export default function KimukaPage() {
             </div>
           </div>
           <div>
-            <div className="font-display text-3xl font-bold">1,800%</div>
+            <div className="font-display text-3xl font-bold">Dialysis</div>
             <div className="text-xs font-medium opacity-80 mt-0.5 uppercase tracking-widest">
-              Dialysis Growth
+              Services Available
             </div>
           </div>
           <div>
-            <div className="font-display text-3xl font-bold">237+</div>
+            <div className="font-display text-3xl font-bold">Lab and Pharmacy</div>
             <div className="text-xs font-medium opacity-80 mt-0.5 uppercase tracking-widest">
-              Monthly Patients
+              Available
             </div>
           </div>
           <div>
@@ -231,9 +231,7 @@ export default function KimukaPage() {
             Your health and well-being are our top priorities. We are dedicated
             to providing exceptional healthcare in a compassionate and
             patient-centred environment. Serving approximately{" "}
-            <strong>36,000 residents</strong> of Kimuka and the wider Kajiado
-            County — including the underserved Maasai community — we are open
-            every hour of every day.
+            <strong>36,000 residents</strong> of Kimuka and the wider Kajiado County
           </p>
 
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
@@ -385,7 +383,7 @@ export default function KimukaPage() {
                 },
                 {
                   year: "September 23, 2024 — Kimuka Opens",
-                  text: "CKS Hospital Kimuka opens its doors as a 24-hour multi-service facility, immediately serving the Maasai community and surrounding villages.",
+                  text: "CKS Hospital Kimuka opens its doors as a 24-hour multi-service facility, immediately serving the residents of the surrounding villages.",
                 },
                 {
                   year: "2025 — Growing Impact",
