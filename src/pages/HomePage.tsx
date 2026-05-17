@@ -107,7 +107,7 @@ const faqs = [
   },
   {
     q: "How long does each haemodialysis session last?",
-    a: "Each session is typically 4 hours and is done 3 times per week at our centres, following your personalised prescription.",
+    a: "Each session is typically 4 hours and is done 2 times per week at our centres, following your personalised prescription.",
   },
   {
     q: "Does CKS Dialysis accept SHA?",
@@ -471,7 +471,7 @@ export default function HomePage() {
                       Hours
                     </p>
                     <p className="font-medium text-gray-700">
-                      Mon–Sat, 7am–6pm
+                      Mon–Sat, 6am–6pm
                     </p>
                   </div>
                 </div>
@@ -492,7 +492,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <a
-                  href="https://maps.app.goo.gl/XmaoZ2va1JMhGRgm9"
+                  href="https://maps.app.goo.gl/Ms9B9yy7nrSwt7Wg8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border-2 transition-colors"
@@ -543,7 +543,7 @@ export default function HomePage() {
                       Hours
                     </p>
                     <p className="font-medium text-gray-700">
-                      Mon–Sat, 7am–6pm
+                      Mon–Sat, 6am–6pm
                     </p>
                   </div>
                 </div>
@@ -564,7 +564,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <a
-                  href="https://maps.app.goo.gl/Fb7sg2E2w5hQ5eaX6"
+                  href="https://maps.app.goo.gl/3Ghv6R24v3sLeKSy9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border-2 transition-colors"
@@ -615,7 +615,7 @@ export default function HomePage() {
                       Hours
                     </p>
                     <p className="font-medium text-gray-700">
-                      Mon–Sat, 7am–6pm
+                      Mon–Fri, 9am–5pm
                     </p>
                   </div>
                 </div>
@@ -636,7 +636,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <a
-                  href="https://maps.app.goo.gl/AgaKhan"
+                  href="https://maps.app.goo.gl/24JUpjpK5bP5njZd6"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border-2 transition-colors"
@@ -725,7 +725,7 @@ export default function HomePage() {
                     Visit Kimuka Hospital
                   </Link>
                   <a
-                    href="https://maps.app.goo.gl/Kimuka"
+                    href="https://maps.app.goo.gl/g83cTMGJGijAjbiR7"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border-2 transition-colors"
@@ -773,7 +773,12 @@ export default function HomePage() {
                     className="h-8 w-auto mx-auto object-contain"
                   />
                 ) : (
-                  a.Icon && <a.Icon className="w-6 h-6" style={{ color: "var(--teal-600)" }} />
+                  a.Icon && (
+                    <a.Icon
+                      className="w-6 h-6"
+                      style={{ color: "var(--teal-600)" }}
+                    />
+                  )
                 )}
                 <span className="text-xs font-medium text-gray-600">
                   {a.label}
@@ -787,15 +792,47 @@ export default function HomePage() {
             <p className="section-label">Accepted Insurance Providers</p>
             <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 mt-6">
               {[
-                { name: "SHA", label: "Social Health Authority", logo: "/images/insurance/SHA.jpg" },
-                { name: "Jubilee Health", label: "Jubilee Health Insurance", logo: "/images/insurance/Jubilee.jpg" },
-                { name: "AAR Healthcare", label: "AAR Healthcare", logo: "/images/insurance/AAR.png" },
+                {
+                  name: "SHA",
+                  label: "Social Health Authority",
+                  logo: "/images/insurance/SHA.jpg",
+                },
+                {
+                  name: "Jubilee Health",
+                  label: "Jubilee Health Insurance",
+                  logo: "/images/insurance/Jubilee.jpg",
+                },
+                {
+                  name: "AAR Healthcare",
+                  label: "AAR Healthcare",
+                  logo: "/images/insurance/AAR.png",
+                },
                 { name: "CIC Insurance", label: "CIC Group", logo: null },
-                { name: "Cigna International", label: "Cigna Healthcare", logo: "/images/insurance/Cigna.png" },
-                { name: "KCB", label: "KCB Insurance", logo: "/images/insurance/KCB.png" },
-                { name: "Old Mutual", label: "Old Mutual Kenya", logo: "/images/insurance/OldMutual.png" },
-                { name: "Minet Kenya", label: "Minet — Secure Tomorrow", logo: "/images/insurance/Minet.png" },
-                { name: "APA Insurance", label: "APA Insurance", logo: "/images/insurance/APA.png" },
+                {
+                  name: "Cigna International",
+                  label: "Cigna Healthcare",
+                  logo: "/images/insurance/Cigna.png",
+                },
+                {
+                  name: "KCB",
+                  label: "KCB Insurance",
+                  logo: "/images/insurance/KCB.png",
+                },
+                {
+                  name: "Old Mutual",
+                  label: "Old Mutual Kenya",
+                  logo: "/images/insurance/OldMutual.png",
+                },
+                {
+                  name: "Minet Kenya",
+                  label: "Minet — Secure Tomorrow",
+                  logo: "/images/insurance/Minet.png",
+                },
+                {
+                  name: "APA Insurance",
+                  label: "APA Insurance",
+                  logo: "/images/insurance/APA.png",
+                },
               ].map((ins) => (
                 <div
                   key={ins.name}
@@ -809,10 +846,14 @@ export default function HomePage() {
                     />
                   ) : (
                     <div className="h-12 flex items-center justify-center w-full bg-green-700 rounded-lg">
-                      <span className="text-sm font-bold text-white tracking-wide">CIC</span>
+                      <span className="text-sm font-bold text-white tracking-wide">
+                        CIC
+                      </span>
                     </div>
                   )}
-                  <span className="text-xs text-gray-500 leading-tight">{ins.name}</span>
+                  <span className="text-xs text-gray-500 leading-tight">
+                    {ins.name}
+                  </span>
                 </div>
               ))}
             </div>

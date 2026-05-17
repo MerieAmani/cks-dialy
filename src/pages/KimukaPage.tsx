@@ -37,25 +37,29 @@ const kimukaSlides = [
     bg: "/images/main.jpeg",
     alt: "CKS Kimuka Hospital — the heart of Kajiado County healthcare",
     heading: "24-Hour Emergency\nCare for All",
-    subtext: "CKS Kimuka Hospital is open every hour of every day — emergency care, dialysis, maternity, pharmacy, lab and more. Serving Ngong and Kajiado County without pause.",
+    subtext:
+      "CKS Kimuka Hospital is open every hour of every day — emergency care, dialysis, maternity, pharmacy, lab and more. Serving Ngong and Kajiado County without pause.",
   },
   {
     bg: "/images/facility-dialysis-unit.jpg",
     alt: "Modern haemodialysis unit at CKS Kimuka Hospital",
     heading: "Advanced Dialysis\nCloser to Home",
-    subtext: "State-of-the-art haemodialysis with in-house nephrologist care and modern machines. SHA covered. Free meals and Wi-Fi included at every session.",
+    subtext:
+      "State-of-the-art haemodialysis with in-house nephrologist care and modern machines. SHA covered. Free meals and Wi-Fi included at every session.",
   },
   {
     bg: "/images/camp-doctor-treating.jpg",
     alt: "Doctor providing compassionate care at CKS Kimuka free medical camp",
     heading: "Maternal & Child\nHealth Services",
-    subtext: "Comprehensive antenatal care, safe deliveries, immunization, and family planning — compassionate care for mothers and children across Kajiado County.",
+    subtext:
+      "Comprehensive antenatal care, safe deliveries, immunization, and family planning — compassionate care for mothers and children across Kajiado County.",
   },
   {
     bg: "/images/kimukacks.jpeg",
     alt: "CKS Kimuka Hospital Logo",
     heading: "Diagnostics &\nLaboratory",
-    subtext: "Full lab services, ultrasound, ECG, and imaging available around the clock — right in the heart of Kimuka Trading Center, Ngong.",
+    subtext:
+      "Full lab services, ultrasound, ECG, and imaging available around the clock — right in the heart of Kimuka Trading Center, Ngong.",
   },
 ];
 
@@ -120,7 +124,10 @@ export default function KimukaPage() {
   useReveal();
 
   useEffect(() => {
-    const t = setInterval(() => setSlide((s) => (s + 1) % kimukaSlides.length), 5000);
+    const t = setInterval(
+      () => setSlide((s) => (s + 1) % kimukaSlides.length),
+      5000,
+    );
     return () => clearInterval(t);
   }, []);
 
@@ -145,7 +152,7 @@ export default function KimukaPage() {
     },
     {
       q: "What dialysis services are available?",
-      a: "We offer round-the-clock haemodialysis with modern machines, monthly reno test, blood boosters, in-house nephrologist consultations, and free meals for dialysis patients. Sessions are 4 hours long, 2 times per week.",
+      a: "We offer round-the-clock haemodialysis with modern machines, Monthly Renal test, blood boosters, in-house nephrologist consultations, and free meals for dialysis patients. Sessions are 4 hours long, 2 times per week.",
     },
     {
       q: "Is there an ambulance service?",
@@ -320,11 +327,12 @@ export default function KimukaPage() {
             Welcome to CKS Kimuka Hospital
           </h2>
           <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mt-6">
-            Your health and well-being are our top priorities. We are dedicated
-            to providing exceptional healthcare in a compassionate and
-            patient-centred environment. Serving approximately{" "}
-            <strong>36,000 residents</strong> of Kimuka and the wider Kajiado
-            County
+            CKS Kimuka Hospital is dedicated to providing
+            compassionate, accessible, and high-quality
+            healthcare services to improve the well-being of
+            our community. Our mission is to empower
+            patients through comprehensive and innovative
+            care.
           </p>
 
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
@@ -358,10 +366,11 @@ export default function KimukaPage() {
                 Our Mission
               </p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                To provide accessible, affordable, and high-quality healthcare
-                to the residents of Kimuka and Kajiado County — bringing
-                specialised kidney care, emergency services, and comprehensive
-                health support closer to those who need it most.
+                To provide compassionate, accessible, and
+                high-quality healthcare services to improve the
+                well-being of our community, empowering
+                patients through comprehensive and innovative
+                care
               </p>
             </div>
 
@@ -373,10 +382,10 @@ export default function KimukaPage() {
                 Our Vision
               </p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                To be the leading community hospital in Kajiado County,
-                recognised for clinical excellence, compassionate care, and
-                transformative impact on the health and well-being of
-                underserved communities across the region.
+                To be a leading healthcare provider in the region,
+                known for excellence in patient care, advanced
+                medical services, and a commitment to
+                community health and well-being.
               </p>
             </div>
           </div>
@@ -396,9 +405,7 @@ export default function KimukaPage() {
           <div className="grid md:grid-cols-2 gap-10">
             {/* CORE VALUES */}
             <div className="reveal">
-              <h3
-                className="font-display text-xl text-gray-800 mb-6 flex items-center gap-2"
-              >
+              <h3 className="font-display text-xl text-gray-800 mb-6 flex items-center gap-2">
                 <span
                   className="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
                   style={{ background: "var(--teal-600)" }}
@@ -410,29 +417,33 @@ export default function KimukaPage() {
               <div className="grid gap-4">
                 {[
                   {
-                    value: "Patient Dignity",
-                    desc: "Every patient is treated with compassion, respect, and empathy — regardless of background, means, or condition.",
+                    value: "Compassion",
+                    desc: "We treat every patient with empathy, respect, and dignity,ensuring their comfort and well-being.",
                   },
                   {
-                    value: "Clinical Excellence",
-                    desc: "We uphold the highest standards in renal care, emergency medicine, and all disciplines across our hospital.",
-                  },
-                  {
-                    value: "Accessibility",
-                    desc: "Quality healthcare must be affordable and reachable for every family in Kimuka and Kajiado County.",
+                    value: "Excellence",
+                    desc: "We strive for the highest standards in healthcare delivery through continuous improvement and innovation.",
                   },
                   {
                     value: "Integrity",
-                    desc: "Transparent, honest, and ethical conduct guides every clinical decision and administrative interaction.",
+                    desc: "We uphold honesty, transparency, and ethical practices inall our operations and interactions.",
                   },
                   {
-                    value: "Community Focus",
-                    desc: "We invest in the health of the communities we serve through outreach campaigns, education, and free medical camps.",
+                    value: "Teamwork",
+                    desc: "We foster collaboration among our dedicated staff todeliver comprehensive and coordinated care.",
                   },
                   {
-                    value: "Continuous Improvement",
-                    desc: "We embrace innovation, technology, and ongoing professional development to advance patient outcomes.",
+                    value: "Patient-Centered Care",
+                    desc: "We prioritize the needs of our patients, ensuringpersonalized and holistic care.",
                   },
+                  {
+                    value: "Commitment to Growth",
+                    desc: "We are dedicated to expanding our services and improving infrastructure to meet the evolving needs of the community.",
+                  },
+      {
+        value: "Community Focus",
+        desc: "We work to address the unique health challenges of our community, promoting wellness and preventive care.",
+      }
                 ].map((item, i) => (
                   <div
                     key={i}
@@ -445,8 +456,12 @@ export default function KimukaPage() {
                       {i + 1}
                     </span>
                     <div>
-                      <p className="text-sm font-semibold text-gray-800 mb-0.5">{item.value}</p>
-                      <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                      <p className="text-sm font-semibold text-gray-800 mb-0.5">
+                        {item.value}
+                      </p>
+                      <p className="text-xs text-gray-600 leading-relaxed">
+                        {item.desc}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -455,9 +470,7 @@ export default function KimukaPage() {
 
             {/* STRATEGIC OBJECTIVES */}
             <div className="reveal">
-              <h3
-                className="font-display text-xl text-gray-800 mb-6 flex items-center gap-2"
-              >
+              <h3 className="font-display text-xl text-gray-800 mb-6 flex items-center gap-2">
                 <span
                   className="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
                   style={{ background: "var(--steel)" }}
@@ -504,8 +517,12 @@ export default function KimukaPage() {
                       {i + 1}
                     </span>
                     <div>
-                      <p className="text-sm font-semibold text-gray-800 mb-0.5">{item.obj}</p>
-                      <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                      <p className="text-sm font-semibold text-gray-800 mb-0.5">
+                        {item.obj}
+                      </p>
+                      <p className="text-xs text-gray-600 leading-relaxed">
+                        {item.desc}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -671,7 +688,7 @@ export default function KimukaPage() {
                 imgAlt:
                   "State-of-the-art haemodialysis unit at CKS Kimuka Hospital",
                 items: [
-                  "24-hour haemodialysis services with weekly Blood boosts and Monthly reno tests",
+                  "24-hour haemodialysis services with weekly Blood boosts and Monthly Renal tests",
                   "Modern dialysis machines & comfortable beds",
                   "In-house nephrologist consultations",
                   "Monthly kidney function tests",
@@ -835,7 +852,10 @@ export default function KimukaPage() {
                 className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
                 style={{ background: "var(--teal-50)" }}
               >
-                <Stethoscope className="w-6 h-6" style={{ color: "var(--teal-600)" }} />
+                <Stethoscope
+                  className="w-6 h-6"
+                  style={{ color: "var(--teal-600)" }}
+                />
               </div>
               <div>
                 <h3 className="font-display text-base text-gray-800 font-semibold mb-1">

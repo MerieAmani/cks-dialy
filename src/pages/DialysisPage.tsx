@@ -119,15 +119,15 @@ export default function DialysisPage() {
             </div>
           </div>
           <div>
-            <div className="font-display text-3xl font-bold">3×</div>
+            <div className="font-display text-3xl font-bold">2×</div>
             <div className="text-xs opacity-80 mt-0.5 uppercase tracking-widest">
               Per Week
             </div>
           </div>
           <div>
-            <div className="font-display text-3xl font-bold">1,800%</div>
+            <div className="font-display text-3xl font-bold">Significant</div>
             <div className="text-xs opacity-80 mt-0.5 uppercase tracking-widest">
-              Capacity Growth
+              Dialysis Growth
             </div>
           </div>
         </div>
@@ -153,11 +153,11 @@ export default function DialysisPage() {
                 Our unit is overseen by <strong>Dr. Jonathan Wala</strong>, a
                 highly qualified Nephrologist and the{" "}
                 <strong>President of the Kenya Renal Association</strong>,
-                ensuring every patient receives expert clinical oversight.
-                Since September 2024, our specialized care has been
-                compassionately delivered by a team of highly trained renal
-                nurses who demonstrate dedicated leadership and unwavering
-                commitment to our patients.
+                ensuring every patient receives expert clinical oversight. Since
+                September 2024, our specialized care has been compassionately
+                delivered by a team of highly trained renal nurses who
+                demonstrate dedicated leadership and unwavering commitment to
+                our patients.
               </p>
               <div className="flex flex-col gap-3">
                 {[
@@ -270,18 +270,43 @@ export default function DialysisPage() {
               Your Comfort Matters
             </h2>
             <p className="mt-4 text-gray-500 max-w-xl mx-auto text-sm">
-              Dialysis sessions are 4 hours long, 3 times a week — we make every
+              Dialysis sessions are 4 hours long, 2 times a week — we make every
               moment as comfortable as possible.
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-16">
             {[
-              { Icon: Utensils, label: "Free Breakfast & Lunch", detail: "Served at every session" },
-              { Icon: Wifi, label: "Free Wi-Fi", detail: "Stay connected always" },
-              { Icon: Tv, label: "TV Entertainment", detail: "Flat-screen TV at every chair" },
-              { Icon: Armchair, label: "Electric Recliners", detail: "Fully adjustable comfort chairs" },
-              { Icon: null, label: "SHA Accredited", detail: "100% coverage for eligible", isSHA: true },
-              { Icon: Car, label: "Free Parking", detail: "Ample on-site parking" },
+              {
+                Icon: Utensils,
+                label: "Free Breakfast & Lunch",
+                detail: "Served at every session",
+              },
+              {
+                Icon: Wifi,
+                label: "Free Wi-Fi",
+                detail: "Stay connected always",
+              },
+              {
+                Icon: Tv,
+                label: "TV Entertainment",
+                detail: "Flat-screen TV at every chair",
+              },
+              {
+                Icon: Armchair,
+                label: "Electric Recliners",
+                detail: "Fully adjustable comfort chairs",
+              },
+              {
+                Icon: null,
+                label: "SHA Accredited",
+                detail: "100% coverage for eligible",
+                isSHA: true,
+              },
+              {
+                Icon: Car,
+                label: "Free Parking",
+                detail: "Ample on-site parking",
+              },
             ].map((a) => (
               <div
                 key={a.label}
@@ -294,7 +319,12 @@ export default function DialysisPage() {
                     className="h-8 w-auto mx-auto object-contain"
                   />
                 ) : (
-                  a.Icon && <a.Icon className="w-6 h-6" style={{ color: "var(--teal-600)" }} />
+                  a.Icon && (
+                    <a.Icon
+                      className="w-6 h-6"
+                      style={{ color: "var(--teal-600)" }}
+                    />
+                  )
                 )}
                 <span className="text-xs font-semibold text-gray-700">
                   {a.label}
@@ -309,15 +339,47 @@ export default function DialysisPage() {
             <p className="section-label">Accepted Insurance Partners</p>
             <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 mt-6">
               {[
-                { name: "SHA", label: "Social Health Authority", logo: "/images/insurance/SHA.jpg" },
-                { name: "Jubilee Health", label: "Jubilee Health Insurance", logo: "/images/insurance/Jubilee.jpg" },
-                { name: "AAR Healthcare", label: "AAR Healthcare", logo: "/images/insurance/AAR.png" },
+                {
+                  name: "SHA",
+                  label: "Social Health Authority",
+                  logo: "/images/insurance/SHA.jpg",
+                },
+                {
+                  name: "Jubilee Health",
+                  label: "Jubilee Health Insurance",
+                  logo: "/images/insurance/Jubilee.jpg",
+                },
+                {
+                  name: "AAR Healthcare",
+                  label: "AAR Healthcare",
+                  logo: "/images/insurance/AAR.png",
+                },
                 { name: "CIC Insurance", label: "CIC Group", logo: null },
-                { name: "Cigna International", label: "Cigna Healthcare", logo: "/images/insurance/Cigna.png" },
-                { name: "KCB Insurance", label: "KCB Insurance", logo: "/images/insurance/KCB.png" },
-                { name: "Old Mutual", label: "Old Mutual Kenya", logo: "/images/insurance/OldMutual.png" },
-                { name: "Minet Kenya", label: "Minet — Secure Tomorrow", logo: "/images/insurance/Minet.png" },
-                { name: "APA Insurance", label: "APA Insurance", logo: "/images/insurance/APA.png" },
+                {
+                  name: "Cigna International",
+                  label: "Cigna Healthcare",
+                  logo: "/images/insurance/Cigna.png",
+                },
+                {
+                  name: "KCB Insurance",
+                  label: "KCB Insurance",
+                  logo: "/images/insurance/KCB.png",
+                },
+                {
+                  name: "Old Mutual",
+                  label: "Old Mutual Kenya",
+                  logo: "/images/insurance/OldMutual.png",
+                },
+                {
+                  name: "Minet Kenya",
+                  label: "Minet — Secure Tomorrow",
+                  logo: "/images/insurance/Minet.png",
+                },
+                {
+                  name: "APA Insurance",
+                  label: "APA Insurance",
+                  logo: "/images/insurance/APA.png",
+                },
               ].map((ins) => (
                 <div
                   key={ins.name}
@@ -331,10 +393,14 @@ export default function DialysisPage() {
                     />
                   ) : (
                     <div className="h-12 flex items-center justify-center w-full bg-green-700 rounded-lg">
-                      <span className="text-sm font-bold text-white tracking-wide">CIC</span>
+                      <span className="text-sm font-bold text-white tracking-wide">
+                        CIC
+                      </span>
                     </div>
                   )}
-                  <span className="text-xs text-gray-500 leading-tight">{ins.name}</span>
+                  <span className="text-xs text-gray-500 leading-tight">
+                    {ins.name}
+                  </span>
                 </div>
               ))}
             </div>
@@ -349,19 +415,22 @@ export default function DialysisPage() {
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14 reveal">
-            <p className="section-label">Clinical Excellence & Patient Rights</p>
+            <p className="section-label">
+              Clinical Excellence & Patient Rights
+            </p>
             <h2 className="font-display text-3xl text-gray-800 ruled-heading inline-block">
               Medical Approach, Information & Patient Charter
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-
             {/* CARD 1 — Medical Approach */}
             <article className="reveal bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden flex flex-col">
               <div
                 className="px-6 pt-6 pb-4 border-b border-gray-100"
-                style={{ background: "linear-gradient(135deg,#f0faf9 0%,#e6f7f6 100%)" }}
+                style={{
+                  background: "linear-gradient(135deg,#f0faf9 0%,#e6f7f6 100%)",
+                }}
               >
                 <span
                   className="inline-flex items-center justify-center w-10 h-10 rounded-xl mb-3"
@@ -369,15 +438,24 @@ export default function DialysisPage() {
                 >
                   <Stethoscope className="w-5 h-5 text-white" />
                 </span>
-                <h3 className="font-display text-xl text-gray-800">Medical Approach</h3>
+                <h3 className="font-display text-xl text-gray-800">
+                  Medical Approach
+                </h3>
               </div>
               <div className="px-6 py-5 flex-1">
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                  CKS Kimuka Hospital employs a multidisciplinary, patient-centred renal care methodology overseen by{" "}
-                  <strong>Dr. Jonathan Wala</strong>, Nephrologist and President of the Kenya Renal Association. Each treatment plan is individually prescribed, evidence-based, and continuously reviewed.
+                  CKS Kimuka Hospital employs a multidisciplinary,
+                  patient-centred renal care methodology overseen by{" "}
+                  <strong>Dr. Jonathan Wala</strong>, Nephrologist and President
+                  of the Kenya Renal Association. Each treatment plan is
+                  individually prescribed, evidence-based, and continuously
+                  reviewed.
                 </p>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Since September 2024, our dedicated renal nursing team has delivered specialised care with demonstrated leadership and deep compassion — ensuring every patient feels seen, safe, and supported at every session.
+                  Since September 2024, our dedicated renal nursing team has
+                  delivered specialised care with demonstrated leadership and
+                  deep compassion — ensuring every patient feels seen, safe, and
+                  supported at every session.
                 </p>
                 <ul className="mt-4 space-y-2">
                   {[
@@ -386,8 +464,16 @@ export default function DialysisPage() {
                     "Monthly kidney function tests (creatinine, GFR, electrolytes)",
                     "Coordinated care with specialist hospitals",
                   ].map((pt) => (
-                    <li key={pt} className="flex items-start gap-2 text-xs text-gray-500">
-                      <span className="mt-0.5 flex-shrink-0" style={{ color: "var(--teal-600)" }}>✓</span>
+                    <li
+                      key={pt}
+                      className="flex items-start gap-2 text-xs text-gray-500"
+                    >
+                      <span
+                        className="mt-0.5 flex-shrink-0"
+                        style={{ color: "var(--teal-600)" }}
+                      >
+                        ✓
+                      </span>
                       {pt}
                     </li>
                   ))}
@@ -399,22 +485,31 @@ export default function DialysisPage() {
             <article className="reveal bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden flex flex-col">
               <div
                 className="px-6 pt-6 pb-4 border-b border-gray-100"
-                style={{ background: "linear-gradient(135deg,#eff6ff 0%,#e0effe 100%)" }}
+                style={{
+                  background: "linear-gradient(135deg,#eff6ff 0%,#e0effe 100%)",
+                }}
               >
-                <span
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl mb-3 bg-blue-500"
-                >
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl mb-3 bg-blue-500">
                   <Building2 className="w-5 h-5 text-white" />
                 </span>
-                <h3 className="font-display text-xl text-gray-800">Medical Information</h3>
+                <h3 className="font-display text-xl text-gray-800">
+                  Medical Information
+                </h3>
               </div>
               <div className="px-6 py-5 flex-1">
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                  Our clinical portfolio covers the full spectrum of kidney care — from routine haemodialysis to complex pre-transplant work-ups, performed in close collaboration with{" "}
-                  <strong>Aga Khan University Hospital</strong> and <strong>MP Shah Hospital</strong> for seamless surgical referral pathways.
+                  Our clinical portfolio covers the full spectrum of kidney care
+                  — from routine haemodialysis to complex pre-transplant
+                  work-ups, performed in close collaboration with{" "}
+                  <strong>Aga Khan University Hospital</strong> and{" "}
+                  <strong>MP Shah Hospital</strong> for seamless surgical
+                  referral pathways.
                 </p>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Emergency renal support is available around the clock, with an on-call clinician reachable 24 hours a day. Catheter insertion, management, and fistula care are performed under strict infection-control protocols.
+                  Emergency renal support is available around the clock, with an
+                  on-call clinician reachable 24 hours a day. Catheter
+                  insertion, management, and fistula care are performed under
+                  strict infection-control protocols.
                 </p>
                 <ul className="mt-4 space-y-2">
                   {[
@@ -423,8 +518,13 @@ export default function DialysisPage() {
                     "Haemodialysis catheter management & fistula care",
                     "Renal diet consultation at every session",
                   ].map((pt) => (
-                    <li key={pt} className="flex items-start gap-2 text-xs text-gray-500">
-                      <span className="mt-0.5 flex-shrink-0 text-blue-500">✓</span>
+                    <li
+                      key={pt}
+                      className="flex items-start gap-2 text-xs text-gray-500"
+                    >
+                      <span className="mt-0.5 flex-shrink-0 text-blue-500">
+                        ✓
+                      </span>
                       {pt}
                     </li>
                   ))}
@@ -436,18 +536,22 @@ export default function DialysisPage() {
             <article className="reveal bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden flex flex-col">
               <div
                 className="px-6 pt-6 pb-4 border-b border-gray-100"
-                style={{ background: "linear-gradient(135deg,#fef9ec 0%,#fef3c7 100%)" }}
+                style={{
+                  background: "linear-gradient(135deg,#fef9ec 0%,#fef3c7 100%)",
+                }}
               >
-                <span
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl mb-3 bg-amber-500"
-                >
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl mb-3 bg-amber-500">
                   <ClipboardList className="w-5 h-5 text-white" />
                 </span>
-                <h3 className="font-display text-xl text-gray-800">Patient Charter & Rights</h3>
+                <h3 className="font-display text-xl text-gray-800">
+                  Patient Charter & Rights
+                </h3>
               </div>
               <div className="px-6 py-5 flex-1">
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                  Every patient at CKS Kimuka Hospital is entitled to dignified, transparent, and safe care. Our Patient Charter sets clear expectations between our team and every individual we serve.
+                  Every patient at CKS Kimuka Hospital is entitled to dignified,
+                  transparent, and safe care. Our Patient Charter sets clear
+                  expectations between our team and every individual we serve.
                 </p>
                 <ul className="space-y-3">
                   {[
@@ -469,17 +573,22 @@ export default function DialysisPage() {
                     },
                   ].map((item) => (
                     <li key={item.title} className="flex items-start gap-2">
-                      <span className="mt-1 flex-shrink-0 text-amber-500">◆</span>
+                      <span className="mt-1 flex-shrink-0 text-amber-500">
+                        ◆
+                      </span>
                       <div>
-                        <p className="text-xs font-semibold text-gray-700">{item.title}</p>
-                        <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
+                        <p className="text-xs font-semibold text-gray-700">
+                          {item.title}
+                        </p>
+                        <p className="text-xs text-gray-500 leading-relaxed">
+                          {item.desc}
+                        </p>
                       </div>
                     </li>
                   ))}
                 </ul>
               </div>
             </article>
-
           </div>
         </div>
       </section>
