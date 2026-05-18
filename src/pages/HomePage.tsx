@@ -50,7 +50,7 @@ const heroSlides = [
   {
     bg: "/images/main.jpeg",
     alt: "CKS Dialysis Centre main facility",
-    heading: "24-Hour Care at\nCKS Kimuka Hospital",
+    heading: "24-Hour Care at\nCKS Hospital Kimuka",
     subtext:
       "Our flagship Kimuka Hospital is open every hour of every day — serving Kajiado County with dialysis, emergency, maternity and more.",
   },
@@ -128,7 +128,7 @@ const faqs = [
   },
   {
     q: "What are your operating hours?",
-    a: "We are open Monday to Saturday, 7:00 AM – 6:00 PM at our Nairobi branches (Pangani, Buruburu, Aga Khan). CKS Kimuka Hospital is open 24 hours, 7 days a week.",
+    a: "We are open Monday to Saturday, 7:00 AM – 6:00 PM at our Nairobi branches (Pangani, Buruburu, Aga Khan). CKS Hospital Kimuka is open 24 hours, 7 days a week.",
   },
   {
     q: "How do I schedule an appointment?",
@@ -829,7 +829,7 @@ export default function HomePage() {
                       Branch 04 — Featured
                     </p>
                     <h3 className="font-display text-2xl font-semibold flex items-center gap-2">
-                      CKS Kimuka Hospital
+                      CKS Hospital Kimuka
                       <span className="text-xs font-normal opacity-70 bg-white/15 border border-white/25 rounded-full px-2 py-0.5 ml-1">
                         Full Hospital
                       </span>

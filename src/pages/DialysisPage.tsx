@@ -55,7 +55,7 @@ export default function DialysisPage() {
       >
         <img
           src="/images/facility-dialysis-unit.jpg"
-          alt="State-of-the-art haemodialysis unit at CKS Kimuka Hospital"
+          alt="State-of-the-art haemodialysis unit at CKS Hospital Kimuka"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div
@@ -246,7 +246,7 @@ export default function DialysisPage() {
               >
                 <img
                   src={card.img}
-                  alt={card.title + " at CKS Kimuka Hospital"}
+                  alt={card.title + " at CKS Hospital Kimuka"}
                   className="w-full h-44 object-cover"
                 />
                 <div className="p-6">

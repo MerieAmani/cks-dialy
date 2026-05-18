@@ -218,7 +218,7 @@ export default function ScreeningPage() {
                 color: "linear-gradient(135deg,#7b1fa2,#9c27b0)",
                 img: "https://images.unsplash.com/photo-1736325680518-397f54bd1086?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 imgAlt:
-                  "HIV testing and sexual health services at CKS Kimuka Hospital",
+                  "HIV testing and sexual health services at CKS Hospital Kimuka",
                 items: [
                   "HIV rapid testing (same-day results)",
                   "Voluntary Counselling & Testing (VCT)",
@@ -292,7 +292,7 @@ export default function ScreeningPage() {
                 color: "linear-gradient(135deg,#d63384,#e91e8c)",
                 img: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=800&q=80",
                 imgAlt:
-                  "Maternal and child health screening at CKS Kimuka Hospital",
+                  "Maternal and child health screening at CKS Hospital Kimuka",
                 items: [
                   "Antenatal blood tests (full panel)",
                   "Cervical cancer screening (VIA)",

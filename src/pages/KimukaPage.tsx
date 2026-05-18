@@ -35,14 +35,14 @@ function useReveal() {
 const kimukaSlides = [
   {
     bg: "/images/main.jpeg",
-    alt: "CKS Kimuka Hospital — the heart of Kajiado County healthcare",
+    alt: "CKS Hospital Kimuka — the heart of Kajiado County healthcare",
     heading: "24-Hour Emergency\nCare for All",
     subtext:
-      "CKS Kimuka Hospital is open every hour of every day — emergency care, dialysis, maternity, pharmacy, lab and more. Serving Ngong and Kajiado County without pause.",
+      "CKS Hospital Kimuka is open every hour of every day — emergency care, dialysis, maternity, pharmacy, lab and more. Serving Ngong and Kajiado County without pause.",
   },
   {
     bg: "/images/facility-dialysis-unit.jpg",
-    alt: "Modern haemodialysis unit at CKS Kimuka Hospital",
+    alt: "Modern haemodialysis unit at CKS Hospital Kimuka",
     heading: "Advanced Dialysis\nCloser to Home",
     subtext:
       "State-of-the-art haemodialysis with in-house nephrologist care and modern machines. SHA covered. Free meals and Wi-Fi included at every session.",
@@ -56,7 +56,7 @@ const kimukaSlides = [
   },
   {
     bg: "/images/kimukacks.jpeg",
-    alt: "CKS Kimuka Hospital Logo",
+    alt: "CKS Hospital Kimuka Logo",
     heading: "Diagnostics &\nLaboratory",
     subtext:
       "Full lab services, ultrasound, ECG, and imaging available around the clock — right in the heart of Kimuka Trading Center, Ngong.",
@@ -66,11 +66,11 @@ const kimukaSlides = [
 const galleryImages = [
   {
     src: "/images/building-anniversary.jpg",
-    alt: "CKS Kimuka Hospital anniversary celebration",
+    alt: "CKS Hospital Kimuka anniversary celebration",
   },
   {
     src: "/images/building-night.jpg",
-    alt: "CKS Kimuka Hospital at night — always open 24/7",
+    alt: "CKS Hospital Kimuka at night — always open 24/7",
   },
   {
     src: "/images/building-signage.jpg",
@@ -90,7 +90,7 @@ const galleryImages = [
   },
   {
     src: "/images/facility-dialysis-unit.jpg",
-    alt: "Modern dialysis unit at CKS Kimuka Hospital",
+    alt: "Modern dialysis unit at CKS Hospital Kimuka",
   },
   {
     src: "/images/facility-equipment.jpg",
@@ -137,7 +137,7 @@ export default function KimukaPage() {
 
   useEffect(() => {
     document.title =
-      "CKS Kimuka Hospital | 24-Hour Multi-Service Hospital · Dialysis, MCH, Emergency Care";
+      "CKS Hospital Kimuka | 24-Hour Multi-Service Hospital · Dialysis, MCH, Emergency Care";
     const close = (e: KeyboardEvent) => {
       if (e.key === "Escape") setLightboxImg(null);
     };
@@ -147,40 +147,56 @@ export default function KimukaPage() {
 
   const faqs = [
     {
-      q: "Is CKS Kimuka Hospital really open 24 hours?",
-      a: "Yes — CKS Kimuka Hospital operates 24 hours a day, 7 days a week, 365 days a year, including public holidays.",
+      q: "Who owns CKS Kimuka Hospital?",
+      a: "CKS Kimuka Hospital is privately owned and managed by a team of experienced healthcare professionals committed to providing quality, affordable, and patient-centered healthcare services.",
     },
     {
-      q: "Does the hospital accept SHA?",
-      a: "Yes, we are an accredited healthcare provider. SHA covers 100% of dialysis costs, including Mwalimu Cover and police PHC.",
+      q: "Are you open 24/7?",
+      a: "Yes. Our outpatient department, casualty, and emergency services are available 24 hours a day, 7 days a week, 365 days a year — including public holidays.",
     },
     {
-      q: "What dialysis services are available?",
-      a: "We offer round-the-clock haemodialysis with modern machines, monthly renal tests, blood boosters, in-house nephrologist consultations, and free meals for dialysis patients. Sessions are 4 hours long, twice per week.",
+      q: "Where are you located?",
+      a: "We are located along Ngong–Suswa Road at Kimuka Trading Center, next to Dominion Church in Kimuka, Kajiado County.",
     },
     {
-      q: "Is there an ambulance service?",
-      a: "Yes. CKS Kimuka Hospital maintains an ambulance for emergency transfers and community outreach, available 24/7.",
+      q: "What services do you offer?",
+      a: "We offer a wide range of healthcare services including outpatient services, emergency and casualty care, dialysis, maternity services, laboratory services, radiology and ultrasound imaging, specialist clinics, daycare procedures, immunization and MCH services, and ambulance evacuation and referral services.",
     },
     {
-      q: "What do you require from patients before they come in?",
-      a: "All patients must present: HIV Ab, Hepatitis Bs Ag, Hepatitis C Ab, Hepatitis B Antibody Titre, a medical report, and flow-charts. All documents must be no more than 4 weeks old and from a recognised hospital or laboratory.",
+      q: "Do you have specialist clinics?",
+      a: "Yes. We offer specialist consultation clinics handled by qualified medical professionals covering a wide range of medical specialties.",
     },
     {
-      q: "What modes of payment do you accept?",
-      a: "Payment is required before each treatment and may be made by SHA, any accredited insurance cover, all major credit cards, cash, cheques, and M-Pesa.",
+      q: "Do you offer maternity services?",
+      a: "Yes. We provide comprehensive maternity care including antenatal care, delivery services, postnatal care, and maternal monitoring.",
+    },
+    {
+      q: "Do you accept SHA and other insurance?",
+      a: "Yes. We are SHA accredited and accept SHA services including the Civil Servants Scheme, Mwalimu Scheme, and Primary Healthcare (PHC). We also accept most major insurance providers.",
+    },
+    {
+      q: "Do I need to book an appointment in advance?",
+      a: "Walk-in patients are welcome at any time. However, for specialist clinics and certain procedures, advance booking is recommended to help minimise waiting time. You can call, WhatsApp, or use the booking form on this page.",
+    },
+    {
+      q: "Is emergency care available 24/7?",
+      a: "Yes. Our emergency and casualty unit operates 24 hours a day for emergency treatment and stabilisation before referrals or transfers when necessary. Ambulance evacuation services are also available around the clock.",
+    },
+    {
+      q: "What payment methods do you accept?",
+      a: "We accept cash, M-Pesa, debit and credit cards, insurance payments, and SHA coverage.",
+    },
+    {
+      q: "Do you offer dialysis services?",
+      a: "Yes. CKS Kimuka Hospital offers haemodialysis services managed by qualified healthcare professionals in a safe, comfortable, and patient-friendly environment. Sessions are 4 hours long, typically twice per week, and include free meals for dialysis patients.",
+    },
+    {
+      q: "What are the requirements to start dialysis?",
+      a: "Before starting dialysis, a patient is required to be assessed by a doctor or nephrologist, have kidney function tests and relevant laboratory investigations done, and receive a formal recommendation for dialysis. Suitable dialysis access (AV fistula or catheter) must be in place. Patients should bring their national ID, SHA card or insurance details, previous medical records and lab results (HIV Ab, Hepatitis Bs Ag, Hepatitis C Ab, Hepatitis B Antibody Titre — all no more than 4 weeks old), and a referral letter from their doctor if available. Our team will guide patients and families through every step of the process.",
     },
     {
       q: "Does dialysis hurt?",
       a: "The process itself is not painful, though you may feel temporary discomfort when the needles are placed into your vascular access (fistula or graft). This generally becomes much easier to tolerate over time.",
-    },
-    {
-      q: "Where exactly is CKS Kimuka Hospital?",
-      a: "We are located on the Ngong-Suswa Road, Kimuka Trading Center, next to Dominion Church, Ngong, Kajiado County.",
-    },
-    {
-      q: "How do I schedule an appointment?",
-      a: "You can call or WhatsApp us directly using the branch number below, use the booking form above, or simply walk in — we are open 24 hours a day, 7 days a week.",
     },
   ];
 
@@ -342,12 +358,12 @@ export default function KimukaPage() {
         <div className="max-w-5xl mx-auto text-center reveal">
           <p className="section-label">Welcome</p>
           <h2 className="font-display text-3xl md:text-4xl text-gray-800 mb-5 ruled-heading inline-block">
-            Welcome to CKS Kimuka Hospital
+            Welcome to CKS Hospital Kimuka
           </h2>
           {/* About description */}
           <div className="text-left max-w-3xl mx-auto mt-8 space-y-5 text-gray-700 text-base leading-relaxed">
             <p>
-              CKS Kimuka Hospital is dedicated to providing compassionate,
+              CKS Hospital Kimuka is dedicated to providing compassionate,
               accessible, and high-quality healthcare services to improve the
               well-being of our community. Our mission is to empower patients
               through comprehensive and innovative care.
@@ -420,7 +436,7 @@ export default function KimukaPage() {
             </div>
 
             <p>
-              At CKS Kimuka Hospital, we are committed to improving community
+              At CKS Hospital Kimuka, we are committed to improving community
               health through compassionate care, professionalism, and reliable
               medical services available 24 hours a day, 7 days a week.
             </p>
@@ -694,7 +710,6 @@ export default function KimukaPage() {
               className="impact-card text-white"
               style={{ background: "linear-gradient(135deg,#1a5c4a,#2d9e7a)" }}
             >
-              <div className="text-5xl font-display font-bold mb-2">🚑</div>
               <div className="text-sm font-semibold opacity-90 mb-1">
                 Emergency & Ambulance
               </div>
@@ -781,7 +796,7 @@ export default function KimukaPage() {
                 color: "linear-gradient(135deg,#005c54,#009e96)",
                 img: "/images/facility-dialysis-unit.jpg",
                 imgAlt:
-                  "State-of-the-art haemodialysis unit at CKS Kimuka Hospital",
+                  "State-of-the-art haemodialysis unit at CKS Hospital Kimuka",
                 items: [
                   "24-hour haemodialysis services with weekly Blood boosts and Monthly Renal tests",
                   "Modern dialysis machines & comfortable beds",
@@ -798,7 +813,7 @@ export default function KimukaPage() {
                 color: "linear-gradient(135deg,#2d5f80,#4a7fa5)",
                 img: "/images/outpatient.jpeg",
                 imgAlt:
-                  "Doctor treating patient at CKS Kimuka Hospital outpatient department",
+                  "Doctor treating patient at CKS Hospital Kimuka outpatient department",
                 items: [
                   "24/7 general consultations & treatment",
                   "Accident & trauma care",
@@ -811,7 +826,7 @@ export default function KimukaPage() {
               {
                 title: "Maternal & Child Health",
                 color: "linear-gradient(135deg,#6b3fa0,#9b59b6)",
-                img: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=800&q=80",
+                img: "/images/mch.jpeg",
                 imgAlt:
                   "Mother and newborn baby — maternal and child health care",
                 items: [
@@ -828,7 +843,7 @@ export default function KimukaPage() {
                 title: "Diagnostics & Laboratory",
                 color: "linear-gradient(135deg,#c0392b,#e74c3c)",
                 img: "/images/laboratory.jpeg",
-                imgAlt: "CKS Kimuka Hospital laboratory and diagnostics team",
+                imgAlt: "CKS Hospital Kimuka laboratory and diagnostics team",
                 items: [
                   "Full laboratory services (haemogram, KFTs, HbA1c)",
                   "Ultrasound — obstetric, pelvic, abdominal",
@@ -843,7 +858,7 @@ export default function KimukaPage() {
                 title: "Specialist Clinics",
                 color: "linear-gradient(135deg,#e67e22,#f39c12)",
                 img: "/images/specializedclinics.jpeg",
-                imgAlt: "Specialist doctor consultation at CKS Kimuka Hospital",
+                imgAlt: "Specialist doctor consultation at CKS Hospital Kimuka",
                 items: [
                   "Nephrology — weekly consultations",
                   "Gynecology — monthly clinic",
@@ -858,7 +873,7 @@ export default function KimukaPage() {
                 title: "Pharmacy",
                 color: "linear-gradient(135deg,#1a6e4a,#27ae60)",
                 img: "/images/pharmacy.jpeg",
-                imgAlt: "In-house 24-hour pharmacy at CKS Kimuka Hospital",
+                imgAlt: "In-house 24-hour pharmacy at CKS Hospital Kimuka",
                 items: [
                   "Fully stocked in-house pharmacy — open 24/7",
                   "Medication for Hypertension",
@@ -1433,7 +1448,7 @@ export default function KimukaPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="CKS Kimuka Hospital location map"
+                title="CKS Hospital Kimuka location map"
               />
             </div>
           </div>

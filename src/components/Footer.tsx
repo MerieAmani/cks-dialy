@@ -51,7 +51,7 @@ export default function Footer() {
                 href="/kimuka"
                 className="text-sm text-gray-400 hover:text-teal-400 transition-colors"
               >
-                CKS Kimuka Hospital
+                CKS Hospital Kimuka
               </Link>
               <Link
                 href="/dialysis"

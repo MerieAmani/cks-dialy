@@ -16,7 +16,7 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
 
   const brandSub = isKimuka ? "Kimuka Hospital" : "Dialysis Center";
   const brandLabel = isKimuka
-    ? "CKS Kimuka Hospital — go to homepage"
+    ? "CKS Hospital Kimuka — go to homepage"
     : "CKS Dialysis Center — go to homepage";
 
   return (
@@ -190,7 +190,7 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
                   className="nav-link py-1 font-semibold"
                   onClick={() => setMobileOpen(false)}
                 >
-                  ⌂ CKS Kimuka Hospital
+                  ⌂ CKS Hospital Kimuka
                 </Link>
                 <a
                   href="/kimuka#about"

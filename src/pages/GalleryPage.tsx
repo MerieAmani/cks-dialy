@@ -39,12 +39,12 @@ const featuredImages = [
   },
   {
     src: "/images/building-night.jpg",
-    alt: "CKS Kimuka Hospital Lit Up",
+    alt: "CKS Hospital Kimuka Lit Up",
     category: "Hospital",
   },
   {
     src: "/images/main.jpeg",
-    alt: "CKS Kimuka Hospital Entrance",
+    alt: "CKS Hospital Kimuka Entrance",
     category: "Facilities",
   },
   {
@@ -76,6 +76,11 @@ const featuredImages = [
     src: "/images/camp-doctor-treating.jpg",
     alt: "Doctor treating patient at CKS free community camp",
     category: "Community",
+  },
+  {
+    src: "/images/ambulance+entry.jpeg",
+    alt: "CKS Hospital Ambulance at the hospital entry",
+    category: "Facilities",
   },
   {
     src: "/images/camp-nurses-lab.jpg",
@@ -119,7 +124,7 @@ const featuredImages = [
   },
   {
     src: "/images/img1.jpg",
-    alt: "CKS Kimuka Hospital WKD march",
+    alt: "CKS Hospital Kimuka WKD march",
     category: "Facilities",
   },
   {
@@ -129,7 +134,7 @@ const featuredImages = [
   },
   {
     src: "/images/img2.jpg",
-    alt: "CKS Kimuka Hospital WKD March",
+    alt: "CKS Hospital Kimuka WKD March",
     category: "Facilities",
   },
   {
@@ -149,27 +154,27 @@ const featuredImages = [
   },
   {
     src: "/images/img6.jpg",
-    alt: "CKS Kimuka Hospital WKD March",
+    alt: "CKS Hospital Kimuka WKD March",
     category: "Community",
   },
   {
     src: "/images/img7.jpg",
-    alt: "CKS Kimuka Hospital WKD March Ngong Town",
+    alt: "CKS Hospital Kimuka WKD March Ngong Town",
     category: "Facilities",
   },
   {
     src: "/images/img8.jpg",
-    alt: "CKS Kimuka Hospital Staff during WKD 2025",
+    alt: "CKS Hospital Kimuka Staff during WKD 2025",
     category: "Team",
   },
   {
     src: "/images/img9.jpg",
-    alt: "CKS Kimuka Hospital Staff",
+    alt: "CKS Hospital Kimuka Staff",
     category: "Team",
   },
   {
     src: "/images/img10.jpg",
-    alt: "CKS Kimuka Hospital WKD 2025",
+    alt: "CKS Hospital Kimuka WKD 2025",
     category: "Community",
   },
   {
@@ -179,22 +184,22 @@ const featuredImages = [
   },
   {
     src: "/images/img12.jpg",
-    alt: "CKS Kimuka Hospital Team -WKD",
+    alt: "CKS Hospital Kimuka Team -WKD",
     category: "Team",
   },
   {
     src: "/images/img13.jpg",
-    alt: "CKS Kimuka Hospital Ambulance",
+    alt: "CKS Hospital Kimuka Ambulance",
     category: "Facilities",
   },
   {
     src: "/images/ambulance.jpeg",
-    alt: "CKS Kimuka Hospital Ambulance",
+    alt: "CKS Hospital Kimuka Ambulance",
     category: "Facilities",
   },
   {
     src: "/images/img15.jpg",
-    alt: "CKS Kimuka Hospital Roadshow",
+    alt: "CKS Hospital Kimuka Roadshow",
     category: "Community",
   },
   {
@@ -228,7 +233,7 @@ const featuredImages = [
 const waImageCount = 99;
 const waImages = Array.from({ length: waImageCount }, (_, i) => ({
   src: `/images/gallery/WhatsApp Image 2026-05-12 at 11.20.52.jpeg`,
-  alt: `CKS Kimuka Hospital — gallery photo ${i + 1}`,
+  alt: `CKS Hospital Kimuka — gallery photo ${i + 1}`,
   category: "Gallery",
 }));
 
