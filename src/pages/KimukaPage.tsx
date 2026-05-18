@@ -147,8 +147,8 @@ export default function KimukaPage() {
 
   const faqs = [
     {
-      q: "Who owns CKS Kimuka Hospital?",
-      a: "CKS Kimuka Hospital is privately owned and managed by a team of experienced healthcare professionals committed to providing quality, affordable, and patient-centered healthcare services.",
+      q: "Who owns CKS Hospital Kimuka?",
+      a: "CKS Hospital Kimuka is privately owned and managed by a team of experienced healthcare professionals committed to providing quality, affordable, and patient-centered healthcare services.",
     },
     {
       q: "Are you open 24/7?",
@@ -188,7 +188,7 @@ export default function KimukaPage() {
     },
     {
       q: "Do you offer dialysis services?",
-      a: "Yes. CKS Kimuka Hospital offers haemodialysis services managed by qualified healthcare professionals in a safe, comfortable, and patient-friendly environment. Sessions are 4 hours long, typically twice per week, and include free meals for dialysis patients.",
+      a: "Yes. CKS Hospital Kimuka offers haemodialysis services managed by qualified healthcare professionals in a safe, comfortable, and patient-friendly environment. Sessions are 4 hours long, typically twice per week, and include free meals for dialysis patients.",
     },
     {
       q: "What are the requirements to start dialysis?",
@@ -323,7 +323,7 @@ export default function KimukaPage() {
       <div
         className="stat-bar py-6 px-4"
         role="region"
-        aria-label="Kimuka Hospital impact"
+        aria-label="Hospital Kimuka impact"
       >
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-white">
           <div>
@@ -449,14 +449,14 @@ export default function KimukaPage() {
               onClick={() =>
                 setLightboxImg({
                   src: "/images/cks-admin.jpeg",
-                  alt: "Dr. Jonathan Wala and Mrs. Alice Wala — CKS Kimuka Hospital administrators",
+                  alt: "Dr. Jonathan Wala and Mrs. Alice Wala — CKS Hospital Kimuka administrators",
                 })
               }
               title="Tap to view full image"
             >
               <img
                 src="/images/cks-admin.jpeg"
-                alt="Dr. Jonathan Wala and Mrs. Alice Wala — CKS Kimuka Hospital administrators"
+                alt="Dr. Jonathan Wala and Mrs. Alice Wala — CKS Hospital Kimuka administrators"
                 className="w-full h-64 sm:h-80 object-cover object-top"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-5 py-4">
@@ -464,7 +464,7 @@ export default function KimukaPage() {
                   Mrs. Alice Wala & Dr. Jonathan Wala
                 </p>
                 <p className="text-white/75 text-xs">
-                  Administrators — CKS Kimuka Hospital
+                  Administrators — CKS Hospital Kimuka
                 </p>
               </div>
             </div>
@@ -1408,7 +1408,7 @@ export default function KimukaPage() {
           <div className="text-center mb-12 reveal">
             <p className="section-label">Find Us</p>
             <h2 className="font-display text-3xl text-gray-800 ruled-heading inline-block">
-              Contact Kimuka Hospital
+              Contact Hospital Kimuka
             </h2>
           </div>
 

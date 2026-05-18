@@ -94,7 +94,7 @@ const featuredImages = [
   },
   {
     src: "/images/team-outside-hospital.jpg",
-    alt: "CKS medical team outside Kimuka Hospital",
+    alt: "CKS medical team outside Hospital Kimuka",
     category: "Team",
   },
   {
@@ -255,7 +255,7 @@ export default function GalleryPage() {
   useReveal();
 
   useEffect(() => {
-    document.title = "Photo Gallery | CKS Dialysis Centre & Kimuka Hospital";
+    document.title = "Photo Gallery | CKS Dialysis Centre & Hospital Kimuka";
   }, []);
 
   const filtered =

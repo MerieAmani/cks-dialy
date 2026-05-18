@@ -14,7 +14,7 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
 
   const isActive = (path: string) => location === path;
 
-  const brandSub = isKimuka ? "Kimuka Hospital" : "Dialysis Center";
+  const brandSub = isKimuka ? "Hospital Kimuka" : "Dialysis Center";
   const brandLabel = isKimuka
     ? "CKS Hospital Kimuka — go to homepage"
     : "CKS Dialysis Center — go to homepage";

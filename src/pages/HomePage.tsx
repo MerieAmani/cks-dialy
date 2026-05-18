@@ -52,7 +52,7 @@ const heroSlides = [
     alt: "CKS Dialysis Centre main facility",
     heading: "24-Hour Care at\nCKS Hospital Kimuka",
     subtext:
-      "Our flagship Kimuka Hospital is open every hour of every day — serving Kajiado County with dialysis, emergency, maternity and more.",
+      "Our flagship Hospital Kimuka is open every hour of every day — serving Kajiado County with dialysis, emergency, maternity and more.",
   },
 ];
 
@@ -364,7 +364,7 @@ export default function HomePage() {
                     color: "var(--teal-600)",
                   }}
                 >
-                  Kimuka Hospital
+                  Hospital Kimuka
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -902,7 +902,7 @@ export default function HomePage() {
                     style={{ background: "var(--teal-600)" }}
                   >
                     <ArrowRight className="w-4 h-4" />
-                    Visit Kimuka Hospital
+                    Visit Hospital Kimuka
                   </Link>
                   <a
                     href="https://maps.app.goo.gl/g83cTMGJGijAjbiR7"
