@@ -117,6 +117,10 @@ export default function KimukaPage() {
     alt: string;
   } | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [apptName, setApptName] = useState("");
+  const [apptPhone, setApptPhone] = useState("");
+  const [apptService, setApptService] = useState("");
+  const [apptNotes, setApptNotes] = useState("");
   const [apptDate, setApptDate] = useState("");
   const [dateError, setDateError] = useState("");
   const [slide, setSlide] = useState(0);
@@ -148,19 +152,35 @@ export default function KimukaPage() {
     },
     {
       q: "Does the hospital accept SHA?",
-      a: "Yes, we are a accredited healthcare provider,  SHA covers 100% dialysis costs including Mwalimu Cover, police PHC.",
+      a: "Yes, we are an accredited healthcare provider. SHA covers 100% of dialysis costs, including Mwalimu Cover and police PHC.",
     },
     {
       q: "What dialysis services are available?",
-      a: "We offer round-the-clock haemodialysis with modern machines, Monthly Renal test, blood boosters, in-house nephrologist consultations, and free meals for dialysis patients. Sessions are 4 hours long, 2 times per week.",
+      a: "We offer round-the-clock haemodialysis with modern machines, monthly renal tests, blood boosters, in-house nephrologist consultations, and free meals for dialysis patients. Sessions are 4 hours long, twice per week.",
     },
     {
       q: "Is there an ambulance service?",
       a: "Yes. CKS Kimuka Hospital maintains an ambulance for emergency transfers and community outreach, available 24/7.",
     },
     {
+      q: "What do you require from patients before they come in?",
+      a: "All patients must present: HIV Ab, Hepatitis Bs Ag, Hepatitis C Ab, Hepatitis B Antibody Titre, a medical report, and flow-charts. All documents must be no more than 4 weeks old and from a recognised hospital or laboratory.",
+    },
+    {
+      q: "What modes of payment do you accept?",
+      a: "Payment is required before each treatment and may be made by SHA, any accredited insurance cover, all major credit cards, cash, cheques, and M-Pesa.",
+    },
+    {
+      q: "Does dialysis hurt?",
+      a: "The process itself is not painful, though you may feel temporary discomfort when the needles are placed into your vascular access (fistula or graft). This generally becomes much easier to tolerate over time.",
+    },
+    {
       q: "Where exactly is CKS Kimuka Hospital?",
       a: "We are located on the Ngong-Suswa Road, Kimuka Trading Center, next to Dominion Church, Ngong, Kajiado County.",
+    },
+    {
+      q: "How do I schedule an appointment?",
+      a: "You can call or WhatsApp us directly using the branch number below, use the booking form above, or simply walk in — we are open 24 hours a day, 7 days a week.",
     },
   ];
 
@@ -999,8 +1019,18 @@ export default function KimukaPage() {
                 setDateError("Please select a future date.");
                 return;
               }
+              const msg = [
+                "Hi CKS Kimuka, I'd like to book an appointment.",
+                `Name: ${apptName}`,
+                `Phone: ${apptPhone}`,
+                `Service: ${apptService}`,
+                apptDate ? `Preferred Date: ${apptDate}` : "",
+                apptNotes ? `Notes: ${apptNotes}` : "",
+              ]
+                .filter(Boolean)
+                .join("\n");
               window.open(
-                "https://wa.me/254753372814?text=Hi%20CKS%20Kimuka%2C%20I%27d%20like%20to%20book%20an%20appointment",
+                `https://wa.me/254753372814?text=${encodeURIComponent(msg)}`,
                 "_blank",
               );
             }}
@@ -1015,6 +1045,8 @@ export default function KimukaPage() {
                   required
                   placeholder="Your full name"
                   className="appt-input"
+                  value={apptName}
+                  onChange={(e) => setApptName(e.target.value)}
                 />
               </div>
               <div>
@@ -1026,6 +1058,8 @@ export default function KimukaPage() {
                   required
                   placeholder="07XX XXX XXX"
                   className="appt-input"
+                  value={apptPhone}
+                  onChange={(e) => setApptPhone(e.target.value)}
                 />
               </div>
             </div>
@@ -1033,7 +1067,12 @@ export default function KimukaPage() {
               <label className="block text-xs font-semibold uppercase tracking-wide text-gray-500 mb-1">
                 Service Needed *
               </label>
-              <select required className="appt-input">
+              <select
+                required
+                className="appt-input"
+                value={apptService}
+                onChange={(e) => setApptService(e.target.value)}
+              >
                 <option value="">Select a service</option>
                 <option>Dialysis / Renal Care</option>
                 <option>General Outpatient</option>
@@ -1078,6 +1117,8 @@ export default function KimukaPage() {
               <textarea
                 placeholder="Any additional information..."
                 className="appt-input"
+                value={apptNotes}
+                onChange={(e) => setApptNotes(e.target.value)}
               />
             </div>
             <button
@@ -1088,6 +1129,45 @@ export default function KimukaPage() {
               Send Appointment Request via WhatsApp
             </button>
           </form>
+        </div>
+      </section>
+
+      {/* Insurance Partners */}
+      <section className="py-16 px-4 sm:px-6" style={{ background: "var(--silver-50)" }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 reveal">
+            <p className="section-label">Accepted Insurance Partners</p>
+            <h2 className="font-display text-2xl md:text-3xl text-gray-800 ruled-heading inline-block">
+              We Accept Your Insurance
+            </h2>
+          </div>
+          <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 reveal">
+            {[
+              { name: "SHA", label: "Social Health Authority", logo: "/images/insurance/SHA.jpg" },
+              { name: "Jubilee Health", label: "Jubilee Health Insurance", logo: "/images/insurance/Jubilee.jpg" },
+              { name: "AAR Healthcare", label: "AAR Healthcare", logo: "/images/insurance/AAR.png" },
+              { name: "CIC Insurance", label: "CIC Group", logo: null },
+              { name: "Cigna", label: "Cigna Healthcare", logo: "/images/insurance/Cigna.png" },
+              { name: "KCB", label: "KCB Insurance", logo: "/images/insurance/KCB.png" },
+              { name: "Old Mutual", label: "Old Mutual Kenya", logo: "/images/insurance/OldMutual.png" },
+              { name: "Minet Kenya", label: "Minet — Secure Tomorrow", logo: "/images/insurance/Minet.png" },
+              { name: "APA Insurance", label: "APA Insurance", logo: "/images/insurance/APA.png" },
+            ].map((ins) => (
+              <div
+                key={ins.name}
+                className="flex flex-col items-center gap-2 p-4 bg-white border border-gray-200 rounded-xl hover:border-teal-300 hover:shadow-sm transition-all text-center"
+              >
+                {ins.logo ? (
+                  <img src={ins.logo} alt={ins.label} className="h-12 w-full object-contain" />
+                ) : (
+                  <div className="h-12 flex items-center justify-center w-full bg-green-700 rounded-lg">
+                    <span className="text-sm font-bold text-white tracking-wide">CIC</span>
+                  </div>
+                )}
+                <span className="text-xs text-gray-500 leading-tight">{ins.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

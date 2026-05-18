@@ -67,7 +67,7 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
                 <Link href="/kimuka" className="nav-link whitespace-nowrap">
                   Kimuka Home
                 </Link>
-                <a href="/#about" className="nav-link">
+                <a href="/kimuka#about" className="nav-link">
                   About Us
                 </a>
                 <a href="/kimuka#services" className="nav-link">
@@ -193,7 +193,7 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
                   ⌂ CKS Kimuka Hospital
                 </Link>
                 <a
-                  href="/#about"
+                  href="/kimuka#about"
                   className="nav-link py-1"
                   onClick={() => setMobileOpen(false)}
                 >

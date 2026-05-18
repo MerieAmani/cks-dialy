@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import {
   Phone,
@@ -13,6 +13,7 @@ import {
   Stethoscope,
   Building2,
   ClipboardList,
+  ChevronDown,
 } from "lucide-react";
 import Nav from "@/components/Nav";
 import SHABadge from "@/components/SHABadge";
@@ -36,9 +37,10 @@ function useReveal() {
 
 export default function DialysisPage() {
   useReveal();
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   useEffect(() => {
     document.title =
-      "Dialysis Services | CKS Kimuka Hospital — 24/7 Haemodialysis";
+      "Dialysis Services | CKS Dialysis Centre — 24/7 Haemodialysis";
   }, []);
 
   return (
@@ -140,10 +142,10 @@ export default function DialysisPage() {
             <div className="reveal">
               <p className="section-label">Our Dialysis Unit</p>
               <h2 className="font-display text-3xl md:text-4xl text-gray-800 ruled-heading mb-6">
-                World-Class Haemodialysis in Kimuka
+                World-Class Haemodialysis at CKS
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                CKS Kimuka Hospital's dialysis unit is the most advanced renal
+                CKS Dialysis Centre's unit is the most advanced renal
                 care facility in Kajiado County. We provide{" "}
                 <strong>24-hour haemodialysis</strong> services using modern,
                 computerised dialysis machines that ensure precise, safe, and
@@ -444,7 +446,7 @@ export default function DialysisPage() {
               </div>
               <div className="px-6 py-5 flex-1">
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                  CKS Kimuka Hospital employs a multidisciplinary,
+                  CKS Dialysis Centre employs a multidisciplinary,
                   patient-centred renal care methodology overseen by{" "}
                   <strong>Dr. Jonathan Wala</strong>, Nephrologist and President
                   of the Kenya Renal Association. Each treatment plan is
@@ -549,7 +551,7 @@ export default function DialysisPage() {
               </div>
               <div className="px-6 py-5 flex-1">
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                  Every patient at CKS Kimuka Hospital is entitled to dignified,
+                  Every patient at CKS Dialysis Centre is entitled to dignified,
                   transparent, and safe care. Our Patient Charter sets clear
                   expectations between our team and every individual we serve.
                 </p>
@@ -626,6 +628,79 @@ export default function DialysisPage() {
               <Phone className="w-4 h-4" />
               Call 0753 372 814
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 px-4 sm:px-6 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12 reveal">
+            <p className="section-label">Common Questions</p>
+            <h2 className="font-display text-3xl md:text-4xl text-gray-800 ruled-heading inline-block">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div className="divide-y divide-gray-200">
+            {[
+              {
+                q: "What do you require from patients before they come in?",
+                a: "All patients must present: HIV Ab, Hepatitis Bs Ag, Hepatitis C Ab, Hepatitis B Antibody Titre, a medical report, and flow-charts. All documents must be no more than 4 weeks old and from a recognised hospital or laboratory. Additional medical summaries may be requested by the doctor.",
+              },
+              {
+                q: "What modes of payment do you accept?",
+                a: "Payment is required before each treatment and may be made by SHA, any accredited insurance cover, all major credit cards, cash, cheques, and M-Pesa.",
+              },
+              {
+                q: "Will dialysis cure my kidney disease?",
+                a: "In cases of sudden (acute) kidney failure, dialysis may be temporary. For chronic kidney disease, it is a lifelong requirement unless a successful kidney transplant is performed.",
+              },
+              {
+                q: "Does dialysis hurt?",
+                a: "The process itself is not painful, though you may feel temporary discomfort when the needles are placed into your vascular access (fistula or graft). This generally becomes much easier to tolerate over time.",
+              },
+              {
+                q: "Can I still work or travel while on dialysis?",
+                a: "Yes. Many patients continue to work and travel. Some opt for at-home dialysis, which offers more flexible scheduling and easier accommodation for travel plans.",
+              },
+              {
+                q: "What diet and fluid restrictions will I have?",
+                a: "Patients are typically required to restrict fluid intake (often to less than 1 litre daily) and limit the consumption of phosphorus, potassium, sodium, and protein.",
+              },
+              {
+                q: "Can I eat or drink during dialysis?",
+                a: "Outside food and drinks are usually restricted in-centre, as your care team will help you manage your diet around your treatment slots.",
+              },
+              {
+                q: "What preparation is needed before starting haemodialysis?",
+                a: "A surgeon must first create a secure access to your bloodstream. There are three types: AV Fistula (the gold standard — connects an artery to a vein and needs time to mature), AV Graft (a synthetic tube for patients whose vessels are unsuitable for a fistula), and Catheter (a temporary option for urgent cases while a permanent access heals).",
+              },
+              {
+                q: "How do I schedule an appointment?",
+                a: "You can book by calling or WhatsApping your preferred branch directly, using the online booking form on our Kimuka page, or simply walking into any of our four branches — Pangani, Buruburu, Aga Khan, and Kimuka.",
+              },
+            ].map((faq, i) => (
+              <div key={i} className="faq-item">
+                <button
+                  className="faq-trigger"
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  aria-expanded={openFaq === i}
+                >
+                  <span>{faq.q}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 flex-shrink-0 transition-transform ${openFaq === i ? "rotate-180" : ""}`}
+                    style={{ color: "var(--teal-600)" }}
+                  />
+                </button>
+                {openFaq === i && (
+                  <div className="pb-4">
+                    <p className="text-sm text-gray-500 leading-relaxed">
+                      {faq.a}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>

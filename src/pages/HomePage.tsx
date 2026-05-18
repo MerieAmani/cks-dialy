@@ -13,6 +13,7 @@ import {
   CheckCircle,
   ChevronDown,
   ArrowRight,
+  MessageCircle,
   Utensils,
   Wifi,
   Tv,
@@ -102,28 +103,36 @@ const testimonials = [
 
 const faqs = [
   {
-    q: "When is dialysis needed?",
-    a: "Dialysis is needed when your kidneys retain only 10–15% function. Symptoms like nausea, swelling, and fatigue indicate it is time. Your nephrologist will determine the right moment.",
+    q: "What do you require from patients before they come in?",
+    a: "All patients must present: HIV Ab, Hepatitis Bs Ag, Hepatitis C Ab, Hepatitis B Antibody Titre, a medical report, and flow-charts. All documents must be no more than 4 weeks old and from a recognised hospital or laboratory. Additional medical summaries may be requested by the doctor.",
   },
   {
-    q: "How long does each haemodialysis session last?",
-    a: "Each session is typically 4 hours and is done 2 times per week at our centres, following your personalised prescription.",
+    q: "What modes of payment do you accept?",
+    a: "Payment is required before each treatment and may be made by SHA, any accredited insurance cover, all major credit cards, cash, cheques, and M-Pesa.",
   },
   {
-    q: "Does CKS Dialysis accept SHA?",
-    a: "Yes. SHA covers 80% of costs for eligible patients. We also accept most private health insurance schemes.",
+    q: "Will dialysis cure my kidney disease?",
+    a: "In cases of sudden (acute) kidney failure, dialysis may be temporary. For chronic kidney disease, it is a lifelong requirement unless a successful kidney transplant is performed.",
   },
   {
-    q: "Is parking available at CKS branches?",
-    a: "Yes. All four CKS branches — Pangani, Buruburu, Aga Khan, and Kimuka — have dedicated parking for patients and visitors.",
+    q: "Does dialysis hurt?",
+    a: "The process itself is not painful, though you may feel temporary discomfort when the needles are placed into your vascular access (fistula or graft). This generally becomes much easier to tolerate over time.",
+  },
+  {
+    q: "Can I still work or travel while on dialysis?",
+    a: "Yes. Many patients continue to work and travel. Some opt for at-home dialysis, which offers more flexible scheduling and easier accommodation for travel plans.",
+  },
+  {
+    q: "What preparation is needed before starting haemodialysis?",
+    a: "A surgeon must first create a secure access to your bloodstream. There are three types: AV Fistula (the gold standard — connects an artery to a vein and needs time to mature), AV Graft (a synthetic tube for patients whose vessels are unsuitable for a fistula), and Catheter (a temporary option for urgent cases while a permanent access heals).",
   },
   {
     q: "What are your operating hours?",
-    a: "We are open Monday to Saturday, 7:00 AM – 6:00 PM at our Nairobi branches. CKS Kimuka Hospital is open 24 hours, 7 days a week.",
+    a: "We are open Monday to Saturday, 7:00 AM – 6:00 PM at our Nairobi branches (Pangani, Buruburu, Aga Khan). CKS Kimuka Hospital is open 24 hours, 7 days a week.",
   },
   {
-    q: "What meals are provided during dialysis?",
-    a: "Breakfast and lunch are provided at every dialysis session at no extra cost to the patient.",
+    q: "How do I schedule an appointment?",
+    a: "You can book by calling or WhatsApping your preferred branch directly, using the online booking form on our Kimuka page, or simply walking into any of our four branches — Pangani, Buruburu, Aga Khan, and Kimuka.",
   },
 ];
 
@@ -491,19 +500,31 @@ export default function HomePage() {
                     </span>
                   ))}
                 </div>
-                <a
-                  href="https://maps.app.goo.gl/Ms9B9yy7nrSwt7Wg8"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border-2 transition-colors"
-                  style={{
-                    borderColor: "var(--teal-600)",
-                    color: "var(--teal-600)",
-                  }}
-                >
-                  <Navigation className="w-4 h-4" />
-                  Get Directions
-                </a>
+                <div className="flex flex-wrap gap-2">
+                  <a
+                    href="https://maps.app.goo.gl/Ms9B9yy7nrSwt7Wg8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border-2 transition-colors"
+                    style={{
+                      borderColor: "var(--teal-600)",
+                      color: "var(--teal-600)",
+                    }}
+                  >
+                    <Navigation className="w-4 h-4" />
+                    Get Directions
+                  </a>
+                  <a
+                    href="https://wa.me/254757614036?text=Hi%20CKS%20Pangani%2C%20I%27d%20like%20to%20book%20an%20appointment"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full text-white transition-opacity hover:opacity-90"
+                    style={{ background: "#25D366" }}
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    WhatsApp
+                  </a>
+                </div>
               </div>
             </article>
 
@@ -563,19 +584,31 @@ export default function HomePage() {
                     </span>
                   ))}
                 </div>
-                <a
-                  href="https://maps.app.goo.gl/3Ghv6R24v3sLeKSy9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border-2 transition-colors"
-                  style={{
-                    borderColor: "var(--teal-600)",
-                    color: "var(--teal-600)",
-                  }}
-                >
-                  <Navigation className="w-4 h-4" />
-                  Get Directions
-                </a>
+                <div className="flex flex-wrap gap-2">
+                  <a
+                    href="https://maps.app.goo.gl/3Ghv6R24v3sLeKSy9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border-2 transition-colors"
+                    style={{
+                      borderColor: "var(--teal-600)",
+                      color: "var(--teal-600)",
+                    }}
+                  >
+                    <Navigation className="w-4 h-4" />
+                    Get Directions
+                  </a>
+                  <a
+                    href="https://wa.me/254717385797?text=Hi%20CKS%20Buruburu%2C%20I%27d%20like%20to%20book%20an%20appointment"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full text-white transition-opacity hover:opacity-90"
+                    style={{ background: "#25D366" }}
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    WhatsApp
+                  </a>
+                </div>
               </div>
             </article>
 
@@ -635,19 +668,31 @@ export default function HomePage() {
                     </span>
                   ))}
                 </div>
-                <a
-                  href="https://maps.app.goo.gl/24JUpjpK5bP5njZd6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border-2 transition-colors"
-                  style={{
-                    borderColor: "var(--teal-600)",
-                    color: "var(--teal-600)",
-                  }}
-                >
-                  <Navigation className="w-4 h-4" />
-                  Get Directions
-                </a>
+                <div className="flex flex-wrap gap-2">
+                  <a
+                    href="https://maps.app.goo.gl/24JUpjpK5bP5njZd6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border-2 transition-colors"
+                    style={{
+                      borderColor: "var(--teal-600)",
+                      color: "var(--teal-600)",
+                    }}
+                  >
+                    <Navigation className="w-4 h-4" />
+                    Get Directions
+                  </a>
+                  <a
+                    href="https://wa.me/254790602291?text=Hi%20CKS%20Aga%20Khan%2C%20I%27d%20like%20to%20book%20an%20appointment"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full text-white transition-opacity hover:opacity-90"
+                    style={{ background: "#25D366" }}
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    WhatsApp
+                  </a>
+                </div>
               </div>
             </article>
 
@@ -724,6 +769,16 @@ export default function HomePage() {
                     <ArrowRight className="w-4 h-4" />
                     Visit Kimuka Hospital
                   </Link>
+                  <a
+                    href="https://wa.me/254753372814?text=Hi%20CKS%20Kimuka%2C%20I%27d%20like%20to%20book%20an%20appointment"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full text-white transition-opacity hover:opacity-90"
+                    style={{ background: "#25D366" }}
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    WhatsApp
+                  </a>
                   <a
                     href="https://maps.app.goo.gl/g83cTMGJGijAjbiR7"
                     target="_blank"

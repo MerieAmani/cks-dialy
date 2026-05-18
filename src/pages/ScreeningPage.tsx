@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "wouter";
-import { Phone, Calendar, CheckCircle, ArrowRight } from "lucide-react";
+import { Phone, Calendar, CheckCircle, ArrowRight, ChevronDown } from "lucide-react";
 import Nav from "@/components/Nav";
 import SHABadge from "@/components/SHABadge";
 import Footer from "@/components/Footer";
@@ -23,9 +23,10 @@ function useReveal() {
 
 export default function ScreeningPage() {
   useReveal();
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   useEffect(() => {
     document.title =
-      "Screening & Diagnostics | CKS Kimuka Hospital — Early Detection Saves Lives";
+      "Screening & Diagnostics | CKS — Early Detection Saves Lives";
   }, []);
 
   return (
@@ -64,7 +65,7 @@ export default function ScreeningPage() {
             <p className="text-white/80 text-lg leading-relaxed mb-8">
               Early detection saves lives. Our comprehensive diagnostics lab,
               imaging suite, and screening clinics bring specialist-grade
-              testing to your doorstep in Kimuka.
+              testing available across all CKS branches.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
@@ -142,7 +143,7 @@ export default function ScreeningPage() {
                 most people never receive routine health screening.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                CKS Kimuka Hospital is changing that. Our full-service
+                CKS Dialysis Centre is changing that. Our full-service
                 diagnostics lab and imaging suite provide{" "}
                 <strong>rapid, accurate, and affordable testing</strong> — so
                 you can take action before conditions become life-threatening.
@@ -501,6 +502,102 @@ export default function ScreeningPage() {
         </div>
       </section>
 
+      {/* Insurance Partners */}
+      <section className="py-16 px-4 sm:px-6" style={{ background: "var(--silver-50)" }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 reveal">
+            <p className="section-label">Accepted Insurance Partners</p>
+            <h2 className="font-display text-2xl md:text-3xl text-gray-800 ruled-heading inline-block">
+              We Accept Your Insurance
+            </h2>
+          </div>
+          <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 reveal">
+            {[
+              { name: "SHA", label: "Social Health Authority", logo: "/images/insurance/SHA.jpg" },
+              { name: "Jubilee Health", label: "Jubilee Health Insurance", logo: "/images/insurance/Jubilee.jpg" },
+              { name: "AAR Healthcare", label: "AAR Healthcare", logo: "/images/insurance/AAR.png" },
+              { name: "CIC Insurance", label: "CIC Group", logo: null },
+              { name: "Cigna", label: "Cigna Healthcare", logo: "/images/insurance/Cigna.png" },
+              { name: "KCB", label: "KCB Insurance", logo: "/images/insurance/KCB.png" },
+              { name: "Old Mutual", label: "Old Mutual Kenya", logo: "/images/insurance/OldMutual.png" },
+              { name: "Minet Kenya", label: "Minet — Secure Tomorrow", logo: "/images/insurance/Minet.png" },
+              { name: "APA Insurance", label: "APA Insurance", logo: "/images/insurance/APA.png" },
+            ].map((ins) => (
+              <div
+                key={ins.name}
+                className="flex flex-col items-center gap-2 p-4 bg-white border border-gray-200 rounded-xl hover:border-teal-300 hover:shadow-sm transition-all text-center"
+              >
+                {ins.logo ? (
+                  <img src={ins.logo} alt={ins.label} className="h-12 w-full object-contain" />
+                ) : (
+                  <div className="h-12 flex items-center justify-center w-full bg-green-700 rounded-lg">
+                    <span className="text-sm font-bold text-white tracking-wide">CIC</span>
+                  </div>
+                )}
+                <span className="text-xs text-gray-500 leading-tight">{ins.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 px-4 sm:px-6 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12 reveal">
+            <p className="section-label">Common Questions</p>
+            <h2 className="font-display text-3xl md:text-4xl text-gray-800 ruled-heading inline-block">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div className="divide-y divide-gray-200">
+            {[
+              {
+                q: "What do you require from patients before they come in?",
+                a: "All patients must present: HIV Ab, Hepatitis Bs Ag, Hepatitis C Ab, Hepatitis B Antibody Titre, a medical report, and flow-charts. All documents must be no more than 4 weeks old and from a recognised hospital or laboratory. Additional medical summaries may be requested by the doctor.",
+              },
+              {
+                q: "What modes of payment do you accept?",
+                a: "Payment is required before each treatment and may be made by SHA, any accredited insurance cover, all major credit cards, cash, cheques, and M-Pesa.",
+              },
+              {
+                q: "Will dialysis cure my kidney disease?",
+                a: "In cases of sudden (acute) kidney failure, dialysis may be temporary. For chronic kidney disease, it is a lifelong requirement unless a successful kidney transplant is performed.",
+              },
+              {
+                q: "Does dialysis hurt?",
+                a: "The process itself is not painful, though you may feel temporary discomfort when the needles are placed into your vascular access (fistula or graft). This generally becomes much easier to tolerate over time.",
+              },
+              {
+                q: "How do I schedule an appointment?",
+                a: "You can book by calling or WhatsApping your preferred branch directly, using the online booking form on our Kimuka page, or simply walking into any of our four branches — Pangani, Buruburu, Aga Khan, and Kimuka.",
+              },
+            ].map((faq, i) => (
+              <div key={i} className="faq-item">
+                <button
+                  className="faq-trigger"
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  aria-expanded={openFaq === i}
+                >
+                  <span>{faq.q}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 flex-shrink-0 transition-transform ${openFaq === i ? "rotate-180" : ""}`}
+                    style={{ color: "var(--teal-600)" }}
+                  />
+                </button>
+                {openFaq === i && (
+                  <div className="pb-4">
+                    <p className="text-sm text-gray-500 leading-relaxed">
+                      {faq.a}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section
         className="py-16 px-4 sm:px-6"
@@ -515,7 +612,7 @@ export default function ScreeningPage() {
           </h2>
           <p className="text-white/70 text-sm mb-8 leading-relaxed">
             Early detection is the most powerful tool you have. Book your
-            screening at CKS Kimuka Hospital today — walk-ins welcome,
+            screening at CKS today — walk-ins welcome,
             appointments preferred.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
