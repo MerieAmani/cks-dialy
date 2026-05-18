@@ -324,9 +324,9 @@ export default function HomePage() {
               <p className="text-gray-600 leading-relaxed mb-6">
                 Over the last five years, CKS Dialysis Centre has partnered with several hospitals to
                 fill in this crucial gap in the management of haemodialysis patients. We currently run
-                our flagship dialysis unit located at KCDF House 5th floor in Pangani, Nairobi and
-                Buruburu Phase 5 House 431, Nairobi. Our patients can also find us at Aga Khan
-                Doctor's Plaza.
+                our flagship dialysis unit located at KCDF House 5th floor in Pangani, Nairobi;
+                Buruburu Phase 5 House 431, Nairobi; Aga Khan Doctor's Plaza; and our Kimuka branch
+                in Kajiado County — open 24 hours, 365 days a year.
               </p>
 
               <div className="space-y-4 mb-6">
