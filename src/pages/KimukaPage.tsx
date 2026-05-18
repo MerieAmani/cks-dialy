@@ -442,7 +442,26 @@ export default function KimukaPage() {
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
+          {/* Administrators photo */}
+          <div className="mt-10 max-w-3xl mx-auto">
+            <div
+              className="relative rounded-2xl overflow-hidden cursor-zoom-in"
+              onClick={() => setLightboxImg({ src: "/images/cks-admin.jpeg", alt: "Dr. Jonathan Wala and Mrs. Alice Wala — CKS Kimuka Hospital administrators" })}
+              title="Tap to view full image"
+            >
+              <img
+                src="/images/cks-admin.jpeg"
+                alt="Dr. Jonathan Wala and Mrs. Alice Wala — CKS Kimuka Hospital administrators"
+                className="w-full h-64 sm:h-80 object-cover object-top"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-5 py-4">
+                <p className="text-white text-sm font-semibold">Mrs. Alice Wala & Dr. Jonathan Wala</p>
+                <p className="text-white/75 text-xs">Administrators — CKS Kimuka Hospital</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
             <div className="p-5 rounded-xl border border-gray-200 bg-gray-50 text-center">
               <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">
                 Founded
@@ -906,7 +925,11 @@ export default function KimukaPage() {
                 id={i === 0 ? "dialysis" : i === 3 ? "screening" : undefined}
                 className="service-category reveal hover-lift"
               >
-                <div className="relative h-44 overflow-hidden">
+                <div
+                  className="relative h-44 overflow-hidden cursor-zoom-in"
+                  onClick={() => setLightboxImg({ src: cat.img, alt: cat.imgAlt })}
+                  title="Tap to view full image"
+                >
                   <img
                     src={cat.img}
                     alt={cat.imgAlt}
@@ -916,6 +939,11 @@ export default function KimukaPage() {
                       (e.target as HTMLImageElement).style.display = "none";
                     }}
                   />
+                  <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors duration-200 flex items-center justify-center">
+                    <span className="opacity-0 hover:opacity-100 transition-opacity duration-200 bg-black/50 text-white text-xs font-medium px-3 py-1 rounded-full">
+                      View full image
+                    </span>
+                  </div>
                 </div>
                 <div
                   className="px-5 py-4 flex items-center gap-3"
