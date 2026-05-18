@@ -227,6 +227,51 @@ const featuredImages = [
     alt: "CKS Kimuka Dialysis Facility",
     category: "Facilities",
   },
+  {
+    src: "/images/teambuilding1.jpeg",
+    alt: "CKS staff team building activity — harness training",
+    category: "Team Building Event",
+  },
+  {
+    src: "/images/teambuilding2.jpeg",
+    alt: "CKS staff getting ready for team building challenge",
+    category: "Team Building Event",
+  },
+  {
+    src: "/images/teambuilding3.jpeg",
+    alt: "CKS team members preparing for outdoor activity",
+    category: "Team Building Event",
+  },
+  {
+    src: "/images/teambuilding4.jpeg",
+    alt: "CKS staff trio smiling at team building event",
+    category: "Team Building Event",
+  },
+  {
+    src: "/images/teambuilding5.jpeg",
+    alt: "CKS team receiving safety briefing from instructor",
+    category: "Team Building Event",
+  },
+  {
+    src: "/images/teambuilding6.jpeg",
+    alt: "CKS team learning rope techniques during team building",
+    category: "Team Building Event",
+  },
+  {
+    src: "/images/teambuilding7.jpeg",
+    alt: "CKS staff members in harness gear at adventure park",
+    category: "Team Building Event",
+  },
+  {
+    src: "/images/teambuilding8.jpeg",
+    alt: "CKS staff member with helmet and harness at team event",
+    category: "Team Building Event",
+  },
+  {
+    src: "/images/teambuilding9.jpeg",
+    alt: "CKS staff and family at team building adventure park",
+    category: "Team Building Event",
+  },
 ];
 
 // Build gallery images list with named images + WhatsApp images
@@ -247,6 +292,7 @@ const categories = [
   "Community",
   "Team",
   "Events",
+  "Team Building Event",
 ];
 
 export default function GalleryPage() {
