@@ -655,39 +655,51 @@ export default function KimukaPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <div
               className="impact-card reveal text-white"
               style={{ background: "linear-gradient(135deg,#2d5f80,#4a7fa5)" }}
             >
-              <div className="text-5xl font-display font-bold mb-2">237+</div>
+              <div className="text-5xl font-display font-bold mb-2">24/7</div>
               <div className="text-sm font-semibold opacity-90 mb-1">
-                Monthly Patients
+                We Operate 24/7
               </div>
-              <div className="text-xs opacity-70">As of June 2025</div>
+              <div className="text-xs opacity-70">Open every day of the year</div>
             </div>
             <div
               className="impact-card reveal text-white"
               style={{ background: "linear-gradient(135deg,#007269,#26bdb5)" }}
             >
-              <div className="text-5xl font-display font-bold mb-2">500+</div>
+              <div className="text-5xl font-display font-bold mb-2">10+</div>
               <div className="text-sm font-semibold opacity-90 mb-1">
-                Free Camp Patients
+                Specialist Clinics
               </div>
               <div className="text-xs opacity-70">
-                November 2024 medical outreach
+                Covering a wide range of medical specialties
               </div>
             </div>
             <div
-              className="impact-card reveal text-white sm:col-span-2 lg:col-span-1"
+              className="impact-card reveal text-white"
               style={{ background: "linear-gradient(135deg,#3a6e8c,#009e96)" }}
             >
-              <div className="text-5xl font-display font-bold mb-2">36K</div>
+              <div className="text-5xl font-display font-bold mb-2">6+</div>
               <div className="text-sm font-semibold opacity-90 mb-1">
-                People Served
+                Dialysis Bed Capacity
               </div>
               <div className="text-xs opacity-70">
-                Kimuka & surrounding villages
+                Professional haemodialysis under qualified supervision
+              </div>
+            </div>
+            <div
+              className="impact-card reveal text-white"
+              style={{ background: "linear-gradient(135deg,#1a5c4a,#2d9e7a)" }}
+            >
+              <div className="text-5xl font-display font-bold mb-2">🚑</div>
+              <div className="text-sm font-semibold opacity-90 mb-1">
+                Emergency & Ambulance
+              </div>
+              <div className="text-xs opacity-70">
+                24-hour casualty unit with ambulance evacuation services
               </div>
             </div>
           </div>
