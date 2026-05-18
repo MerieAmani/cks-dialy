@@ -454,7 +454,7 @@ export default function DialysisPage() {
                   reviewed.
                 </p>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Since September 2024, our dedicated renal nursing team has
+                  Since the founding of CKS, our dedicated renal nursing team has
                   delivered specialised care with demonstrated leadership and
                   deep compassion — ensuring every patient feels seen, safe, and
                   supported at every session.
