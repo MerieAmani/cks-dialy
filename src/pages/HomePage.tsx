@@ -308,32 +308,45 @@ export default function HomePage() {
       {/* ABOUT */}
       <section id="about" className="py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* LEFT: About + Vision + Mission */}
             <div className="reveal">
               <p className="section-label">Our Story</p>
               <h2 className="font-display text-3xl md:text-4xl text-gray-800 ruled-heading mb-6">
                 About CKS Dialysis Centre
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                CKS Dialysis Centre is Kenya's growing network of dedicated
-                kidney care and multi-service medical facilities. Founded with a
-                mission to bring world-class renal care closer to patients, we
-                operate four branches across Nairobi and Kajiado County —
-                Pangani, Buruburu, Aga Khan, and Kimuka.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Our dialysis programme is led by{" "}
-                <strong>Dr. Jonathan Wala</strong>, Nephrologist and President
-                of the Kenya Renal Association, ensuring every patient receives
-                expert clinical oversight. We are proud to be{" "}
-                <strong>SHA-accredited</strong>, making quality kidney care
-                accessible to more Kenyans.
+                CKS Dialysis Centre is a Health Care Provider managed by our in-house Nephrologist,{" "}
+                <strong>Dr. Jonathan Wala</strong>, who has extensive experience in the management of
+                Chronic Kidney Disease patients in Haemodialysis. Our objectives are patient-centric
+                and are geared towards a Holistic Management of the dialysis patient.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                At our Kimuka branch, we go even further — offering 24-hour
-                emergency care, maternity services, diagnostics, pharmacy, and
-                specialist clinics, all under one roof in Kajiado County.
+                Over the last five years, CKS Dialysis Centre has partnered with several hospitals to
+                fill in this crucial gap in the management of haemodialysis patients. We currently run
+                our flagship dialysis unit located at KCDF House 5th floor in Pangani, Nairobi and
+                Buruburu Phase 5 House 431, Nairobi. Our patients can also find us at Aga Khan
+                Doctor's Plaza.
               </p>
+
+              <div className="space-y-4 mb-6">
+                <div className="rounded-xl border border-teal-100 bg-teal-50 p-4">
+                  <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: "var(--teal-600)" }}>Our Vision</p>
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    At CKS Dialysis Centre, we strive to become a World Class Provider of Renal
+                    Services to improve the Survival and Quality of Life of our Patients.
+                  </p>
+                </div>
+                <div className="rounded-xl border border-blue-100 bg-blue-50 p-4">
+                  <p className="text-xs font-bold uppercase tracking-widest mb-1 text-blue-700">Our Mission</p>
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    Our Dedicated Staff work round the clock to provide Affordable and Holistic
+                    services to our Kidney Patients, enabling them to enjoy better Quality of Life
+                    and Live Longer.
+                  </p>
+                </div>
+              </div>
+
               <div className="flex flex-wrap gap-3">
                 <a
                   href="/#branches"
@@ -356,47 +369,54 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4 reveal">
-              {[
-                {
-                  value: "4",
-                  label: "Branches",
-                  sub: "Pangani · Buruburu · Aga Khan · Kimuka",
-                },
-                {
-                  value: "24/7",
-                  label: "Always Open",
-                  sub: "Kimuka branch never closes",
-                },
-                {
-                  value: "SHA",
-                  label: "Accredited",
-                  sub: "Covers dialysis costs for eligible patients",
-                },
-                {
-                  value: "Dr. Wala",
-                  label: "Leading Nephrologist",
-                  sub: "President, Kenya Renal Association",
-                },
-              ].map((stat) => (
-                <div
-                  key={stat.label}
-                  className="bg-gray-50 border border-gray-200 rounded-2xl p-5 hover:border-teal-300 hover:bg-teal-50/30 transition-all"
-                >
-                  <div
-                    className="font-display text-2xl font-bold mb-1"
-                    style={{ color: "var(--teal-600)" }}
-                  >
-                    {stat.value}
-                  </div>
-                  <div className="text-sm font-semibold text-gray-700 mb-0.5">
-                    {stat.label}
-                  </div>
-                  <div className="text-xs text-gray-400 leading-tight">
-                    {stat.sub}
-                  </div>
+
+            {/* RIGHT: Core Values + Objectives */}
+            <div className="reveal space-y-6">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "var(--teal-600)" }}>Core Values</p>
+                <div className="space-y-3">
+                  {[
+                    "Quality Renal Services that meet World Class Standards.",
+                    "Holistic approach to the Management of our patients that combines all Aspects of Care.",
+                    "Affordable Renal Services that are accessible to Kenyans.",
+                  ].map((val, i) => (
+                    <div key={i} className="flex items-start gap-3 p-3 rounded-xl border border-teal-100 bg-teal-50">
+                      <span
+                        className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5"
+                        style={{ background: "var(--teal-600)" }}
+                      >
+                        {i + 1}
+                      </span>
+                      <p className="text-sm text-gray-700 leading-relaxed">{val}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              <div>
+                <p className="text-xs font-bold uppercase tracking-widest mb-1 text-gray-500">Objectives</p>
+                <p className="text-xs text-gray-500 mb-3">At CKS Dialysis Centre, we aim our efforts at achieving the following:</p>
+                <div className="space-y-2">
+                  {[
+                    "Good and Quality Dialysis Services.",
+                    "Warm, friendly and homely environment for both the patients and members of staff.",
+                    "Pre-transplant Evaluation and Transition to Transplantation for eligible patients.",
+                    "Professional and Evidence-based Management of all facets of care for end stage kidney disease patients.",
+                    "Proper and prompt Counselling of end stage kidney disease patients regarding viable options of management, including haemodialysis, peritoneal dialysis and transplantation.",
+                    "Continued professional development of our members of staff to ensure quality service provision.",
+                  ].map((obj, i) => (
+                    <div key={i} className="flex items-start gap-3 p-3 rounded-xl border border-gray-200 bg-gray-50">
+                      <span
+                        className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5"
+                        style={{ background: "var(--steel)" }}
+                      >
+                        {i + 1}
+                      </span>
+                      <p className="text-sm text-gray-700 leading-relaxed">{obj}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
