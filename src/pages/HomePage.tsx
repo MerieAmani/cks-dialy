@@ -419,6 +419,59 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+
+          {/* Leadership */}
+          <div className="mt-16">
+            <p className="text-xs font-bold uppercase tracking-widest mb-6 text-center" style={{ color: "var(--teal-600)" }}>Leadership & Governance</p>
+            <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+              <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                <img
+                  src="/images/clinicaldirector.jpeg"
+                  alt="Dr. Jonathan Wala — Medical Director, CKS Group of Hospitals"
+                  className="w-full h-56 object-cover object-top"
+                />
+                <div className="p-5">
+                  <p className="text-xs font-semibold uppercase tracking-wide mb-1" style={{ color: "var(--teal-600)" }}>Medical Director</p>
+                  <p className="font-semibold text-gray-800 mb-1">Dr. Jonathan Wala</p>
+                  <p className="text-xs text-gray-500 leading-relaxed">
+                    Nephrologist and President of the Kenya Renal Association. Co-founder of the CKS Group of Hospitals and the medical visionary behind its growth in renal care across Kenya.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                <img
+                  src="/images/admindirector.jpeg"
+                  alt="Alice Sakuda — Group CEO, CKS Group of Hospitals"
+                  className="w-full h-56 object-cover object-top"
+                />
+                <div className="p-5">
+                  <p className="text-xs font-semibold uppercase tracking-wide mb-1" style={{ color: "var(--steel)" }}>Group Chief Executive Officer</p>
+                  <p className="font-semibold text-gray-800 mb-1">Alice Sakuda</p>
+                  <p className="text-xs text-gray-500 leading-relaxed">
+                    Accomplished healthcare administrator and co-founder of CKS Group of Hospitals. She leads the strategic growth, operations, and expansion of the organisation across Kenya.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Company Profile Download */}
+          <div className="mt-10 max-w-3xl mx-auto rounded-2xl border border-teal-100 bg-teal-50 p-6 flex flex-col sm:flex-row items-center gap-4">
+            <div className="flex-1">
+              <p className="font-semibold text-gray-800 mb-1">Want to read more about us?</p>
+              <p className="text-sm text-gray-500 leading-relaxed">Download our Company Profile for a detailed story about CKS Group of Hospitals — our history, services, and leadership.</p>
+            </div>
+            <a
+              href="/CKS-Company-Profile.pdf"
+              download="CKS-Company-Profile.pdf"
+              className="flex-shrink-0 inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full text-white transition-opacity hover:opacity-90 whitespace-nowrap"
+              style={{ background: "var(--teal-600)" }}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Company Profile
+            </a>
+          </div>
+
         </div>
       </section>
 

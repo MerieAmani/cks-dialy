@@ -442,34 +442,6 @@ export default function KimukaPage() {
             </p>
           </div>
 
-          {/* Administrators photo */}
-          <div className="mt-10 max-w-3xl mx-auto">
-            <div
-              className="relative rounded-2xl overflow-hidden cursor-zoom-in"
-              onClick={() =>
-                setLightboxImg({
-                  src: "/images/cks-admin.jpeg",
-                  alt: "Dr. Jonathan Wala and Mrs. Alice Wala — CKS Hospital Kimuka administrators",
-                })
-              }
-              title="Tap to view full image"
-            >
-              <img
-                src="/images/cks-admin.jpeg"
-                alt="Dr. Jonathan Wala and Mrs. Alice Wala — CKS Hospital Kimuka administrators"
-                className="w-full h-64 sm:h-80 object-cover object-top"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-5 py-4">
-                <p className="text-white text-sm font-semibold">
-                  Mrs. Alice Wala & Dr. Jonathan Wala
-                </p>
-                <p className="text-white/75 text-xs">
-                  Administrators — CKS Hospital Kimuka
-                </p>
-              </div>
-            </div>
-          </div>
-
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
             <div className="p-5 rounded-xl border border-gray-200 bg-gray-50 text-center">
               <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">
