@@ -387,7 +387,7 @@ export default function KimukaPage() {
               <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
                 {[
                   "Maternity services",
-                  "Dialysis unit",
+                  "Dialysis services",
                   "Laboratory services",
                   "Radiology and ultrasound services",
                   "Daycare services",
@@ -446,7 +446,12 @@ export default function KimukaPage() {
           <div className="mt-10 max-w-3xl mx-auto">
             <div
               className="relative rounded-2xl overflow-hidden cursor-zoom-in"
-              onClick={() => setLightboxImg({ src: "/images/cks-admin.jpeg", alt: "Dr. Jonathan Wala and Mrs. Alice Wala — CKS Kimuka Hospital administrators" })}
+              onClick={() =>
+                setLightboxImg({
+                  src: "/images/cks-admin.jpeg",
+                  alt: "Dr. Jonathan Wala and Mrs. Alice Wala — CKS Kimuka Hospital administrators",
+                })
+              }
               title="Tap to view full image"
             >
               <img
@@ -455,8 +460,12 @@ export default function KimukaPage() {
                 className="w-full h-64 sm:h-80 object-cover object-top"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-5 py-4">
-                <p className="text-white text-sm font-semibold">Mrs. Alice Wala & Dr. Jonathan Wala</p>
-                <p className="text-white/75 text-xs">Administrators — CKS Kimuka Hospital</p>
+                <p className="text-white text-sm font-semibold">
+                  Mrs. Alice Wala & Dr. Jonathan Wala
+                </p>
+                <p className="text-white/75 text-xs">
+                  Administrators — CKS Kimuka Hospital
+                </p>
               </div>
             </div>
           </div>
@@ -699,7 +708,9 @@ export default function KimukaPage() {
               <div className="text-sm font-semibold opacity-90 mb-1">
                 We Operate 24/7
               </div>
-              <div className="text-xs opacity-70">Open every day of the year</div>
+              <div className="text-xs opacity-70">
+                Open every day of the year
+              </div>
             </div>
             <div
               className="impact-card text-white"
@@ -738,28 +749,40 @@ export default function KimukaPage() {
             </div>
           </div>
 
-          {/* Timeline */}
+          {/* Our Story */}
           <div className="max-w-3xl mx-auto bg-white border border-gray-200 rounded-2xl p-6 md:p-8 reveal">
-            <h3 className="font-display text-xl text-gray-800 mb-5">
+            <h3 className="font-display text-xl text-gray-800 mb-2">
               Our Story
             </h3>
+            <p className="text-sm text-gray-500 leading-relaxed mb-6">
+              CKS Group of Hospitals comprises two healthcare entities: CKS Dialysis Center Limited and CKS Hospital Kimuka. The group was founded by Dr. Jonathan Wala and Alice Sakuda with a vision of expanding access to affordable, quality, and specialised healthcare services across Kenya — particularly in renal care and rural healthcare delivery.
+            </p>
+
             <div className="space-y-5">
               {[
                 {
-                  year: "2018 — Foundation",
-                  text: "Dr. Jonathan Wala and Mrs. Alice Wala established the foundation of CKS, launching dedicated dialysis units in Pangani and Buruburu to provide life-saving, compassionate renal care within Nairobi.",
+                  year: "2016 — First Dialysis Centre",
+                  text: "The journey began with the establishment of the Pangani Dialysis Unit under CKS Dialysis Center Limited — a 12-bed facility built to respond to the growing burden of chronic kidney disease and the increasing demand for accessible dialysis services in Kenya.",
                 },
                 {
-                  year: "2024 — The Vision",
-                  text: "Witnessing exhausted patients and anxious families travel over 100km from rural Kajiado to Nairobi—enduring grueling journeys just to access basic, routine dialysis—the founders committed to bringing dignity and care directly to the doorstep of the community.",
+                  year: "2016 — Buruburu Expansion",
+                  text: "The same year, the organisation expanded renal care through the Buruburu Dialysis Unit, a 10-bed facility that further strengthened access to life-saving dialysis treatment within Nairobi and surrounding regions.",
                 },
                 {
-                  year: "September 23, 2024 — Kimuka Opens",
-                  text: "CKS Hospital Kimuka opened its doors as a 24-hour sanctuary of healing. It immediately became a vital lifeline for the surrounding villages, ensuring that critical daytime emergencies and vulnerable midnight medical crises no longer went unanswered.",
+                  year: "2024 — Identifying the Gap",
+                  text: "The founders identified a major healthcare gap: patients from rural Kajiado County were travelling over 100 km multiple times every week to access dialysis in Nairobi. One patient's five-year journey from the region — undergoing dialysis at Pangani continuously — directly inspired the decision to bring care closer to home.",
                 },
                 {
-                  year: "2025 — Deepening Roots",
-                  text: "Moving beyond hospital walls, the team engaged directly with families through extensive free medical camps and regional wellness roadshows, building lasting trust and expanding healthcare access across the entire county.",
+                  year: "October 2024 — Kimuka Opens",
+                  text: "CKS Kimuka Hospital officially opened its doors in Kimuka, immediately improving healthcare accessibility for residents who had previously travelled long distances for treatment. One of the region's earliest patients became among the hospital's first dialysis beneficiaries — a symbol of the organisation's mission made real.",
+                },
+                {
+                  year: "March 2025 — MCH Unit Launched",
+                  text: "The hospital expanded further with the launch of the Maternal and Child Health (MCH) Unit, offering antenatal and postnatal care, maternity and delivery services, immunisation, child wellness clinics, and family planning and reproductive health services.",
+                },
+                {
+                  year: "2025 — Community Outreach",
+                  text: "As part of its commitment to community empowerment, the hospital organised two major free medical camps, promoting preventive healthcare, early disease screening, health education, and access to treatment for vulnerable populations across the region.",
                 },
               ].map((item, i, arr) => (
                 <div key={i} className="flex gap-4">
@@ -789,6 +812,39 @@ export default function KimukaPage() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Leadership */}
+          <div className="max-w-3xl mx-auto mt-8 bg-white border border-gray-200 rounded-2xl p-6 md:p-8 reveal">
+            <h3 className="font-display text-xl text-gray-800 mb-2">
+              Leadership & Governance
+            </h3>
+            <p className="text-sm text-gray-500 leading-relaxed mb-6">
+              CKS Group of Hospitals is led by an experienced team of healthcare professionals and administrators committed to excellence in healthcare service delivery.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-5">
+              <div className="p-5 rounded-xl border border-teal-100 bg-teal-50">
+                <p className="text-xs font-semibold uppercase tracking-wide mb-1" style={{ color: "var(--teal-600)" }}>
+                  Medical Director
+                </p>
+                <p className="font-semibold text-gray-800 mb-1">Dr. Jonathan Wala</p>
+                <p className="text-xs text-gray-600 leading-relaxed">
+                  Nephrologist and President of the Kenya Renal Association. Dr. Wala has played a significant role in advancing dialysis and kidney care services across Kenya, and is the co-founder and medical visionary behind the CKS Group of Hospitals.
+                </p>
+              </div>
+              <div className="p-5 rounded-xl border border-blue-100 bg-blue-50">
+                <p className="text-xs font-semibold uppercase tracking-wide mb-1" style={{ color: "var(--steel)" }}>
+                  Group Chief Executive Officer
+                </p>
+                <p className="font-semibold text-gray-800 mb-1">Alice Sakuda</p>
+                <p className="text-xs text-gray-600 leading-relaxed">
+                  An accomplished healthcare administrator with extensive experience in healthcare management and operations. Alice has been central to the strategic growth, operational leadership, and expansion of the CKS Group of Hospitals.
+                </p>
+              </div>
+            </div>
+            <p className="text-xs text-gray-500 leading-relaxed mt-5 text-center">
+              Together, Dr. Jonathan Wala and Alice Sakuda are the founders and visionaries behind the continued growth of the organisation — driven by a shared commitment to improving access to specialised and affordable healthcare for underserved communities across Kenya.
+            </p>
           </div>
         </div>
       </section>
@@ -831,8 +887,7 @@ export default function KimukaPage() {
                 title: "Outpatient & Emergency",
                 color: "linear-gradient(135deg,#2d5f80,#4a7fa5)",
                 img: "/images/outpatient.jpeg",
-                imgAlt:
-                  "Doctor treating patient at CKS Hospital Kimuka outpatient department",
+                imgAlt: "CKS Hospital Kimuka outpatient department",
                 items: [
                   "24/7 general consultations & treatment",
                   "Accident & trauma care",
@@ -862,7 +917,7 @@ export default function KimukaPage() {
                 title: "Diagnostics & Laboratory",
                 color: "linear-gradient(135deg,#c0392b,#e74c3c)",
                 img: "/images/laboratory.jpeg",
-                imgAlt: "CKS Hospital Kimuka laboratory and diagnostics team",
+                imgAlt: "CKS Hospital Kimuka laboratory",
                 items: [
                   "Full laboratory services (haemogram, KFTs, HbA1c)",
                   "Ultrasound — obstetric, pelvic, abdominal",
@@ -927,7 +982,9 @@ export default function KimukaPage() {
               >
                 <div
                   className="relative h-44 overflow-hidden cursor-zoom-in"
-                  onClick={() => setLightboxImg({ src: cat.img, alt: cat.imgAlt })}
+                  onClick={() =>
+                    setLightboxImg({ src: cat.img, alt: cat.imgAlt })
+                  }
                   title="Tap to view full image"
                 >
                   <img
