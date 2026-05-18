@@ -793,6 +793,22 @@ export default function KimukaPage() {
                   "Guidance from licensed pharmacists",
                 ],
               },
+              {
+                title: "Screening & Diagnostics",
+                color: "linear-gradient(135deg,#2d5f80,#4a7fa5)",
+                img: "/images/camp-anniversary-screening.jpg",
+                imgAlt: "CKS Kimuka comprehensive health screening and diagnostics",
+                items: [
+                  "Comprehensive health screening programmes",
+                  "HIV testing, VCT & counselling",
+                  "Blood glucose & hypertension screening",
+                  "Cervical & breast cancer screening",
+                  "Hepatitis B & C testing",
+                  "Renal function (creatinine, GFR) screening",
+                  "Community outreach & free medical camps",
+                  "Early detection diagnostics",
+                ],
+              },
             ].map((cat, i) => (
               <div
                 key={i}

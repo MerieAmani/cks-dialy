@@ -421,6 +421,100 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ABOUT */}
+      <section id="about" className="py-20 px-4 sm:px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="reveal">
+              <p className="section-label">Our Story</p>
+              <h2 className="font-display text-3xl md:text-4xl text-gray-800 ruled-heading mb-6">
+                About CKS Dialysis Centre
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                CKS Dialysis Centre is Kenya's growing network of dedicated
+                kidney care and multi-service medical facilities. Founded with a
+                mission to bring world-class renal care closer to patients, we
+                operate four branches across Nairobi and Kajiado County —
+                Pangani, Buruburu, Aga Khan, and Kimuka.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Our dialysis programme is led by{" "}
+                <strong>Dr. Jonathan Wala</strong>, Nephrologist and President
+                of the Kenya Renal Association, ensuring every patient receives
+                expert clinical oversight. We are proud to be{" "}
+                <strong>SHA-accredited</strong>, making quality kidney care
+                accessible to more Kenyans.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                At our Kimuka branch, we go even further — offering 24-hour
+                emergency care, maternity services, diagnostics, pharmacy, and
+                specialist clinics, all under one roof in Kajiado County.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="/#branches"
+                  className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full text-white transition-opacity hover:opacity-90"
+                  style={{ background: "var(--teal-600)" }}
+                >
+                  <MapPin className="w-4 h-4" />
+                  Our Branches
+                </a>
+                <Link
+                  href="/kimuka"
+                  className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full border-2 transition-colors"
+                  style={{
+                    borderColor: "var(--teal-600)",
+                    color: "var(--teal-600)",
+                  }}
+                >
+                  Kimuka Hospital
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4 reveal">
+              {[
+                {
+                  value: "4",
+                  label: "Branches",
+                  sub: "Pangani · Buruburu · Aga Khan · Kimuka",
+                },
+                {
+                  value: "24/7",
+                  label: "Always Open",
+                  sub: "Kimuka branch never closes",
+                },
+                {
+                  value: "SHA",
+                  label: "Accredited",
+                  sub: "Covers dialysis costs for eligible patients",
+                },
+                {
+                  value: "Dr. Wala",
+                  label: "Leading Nephrologist",
+                  sub: "President, Kenya Renal Association",
+                },
+              ].map((stat) => (
+                <div
+                  key={stat.label}
+                  className="bg-gray-50 border border-gray-200 rounded-2xl p-5 hover:border-teal-300 hover:bg-teal-50/30 transition-all"
+                >
+                  <div className="font-display text-2xl font-bold mb-1" style={{ color: "var(--teal-600)" }}>
+                    {stat.value}
+                  </div>
+                  <div className="text-sm font-semibold text-gray-700 mb-0.5">
+                    {stat.label}
+                  </div>
+                  <div className="text-xs text-gray-400 leading-tight">
+                    {stat.sub}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* BRANCHES */}
       <section
         id="branches"
@@ -466,14 +560,26 @@ export default function HomePage() {
                 <div className="grid grid-cols-2 gap-3 text-sm mb-5">
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
-                      Phone
+                      Phone / WhatsApp
                     </p>
-                    <a
-                      href="tel:+254757614036"
-                      className="font-medium text-gray-700 hover:text-teal-600 transition-colors"
-                    >
-                      0757 614 036
-                    </a>
+                    <div className="flex items-center gap-2 flex-wrap mt-0.5">
+                      <a
+                        href="tel:+254757614036"
+                        className="font-medium text-gray-700 hover:text-teal-600 transition-colors"
+                      >
+                        0757 614 036
+                      </a>
+                      <a
+                        href="https://wa.me/254757614036?text=Hi%20CKS%20Pangani%2C%20I%27d%20like%20to%20book%20an%20appointment"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full text-white"
+                        style={{ background: "#25D366" }}
+                      >
+                        <MessageCircle className="w-3 h-3" />
+                        WA
+                      </a>
+                    </div>
                   </div>
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
@@ -514,16 +620,6 @@ export default function HomePage() {
                     <Navigation className="w-4 h-4" />
                     Get Directions
                   </a>
-                  <a
-                    href="https://wa.me/254757614036?text=Hi%20CKS%20Pangani%2C%20I%27d%20like%20to%20book%20an%20appointment"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full text-white transition-opacity hover:opacity-90"
-                    style={{ background: "#25D366" }}
-                  >
-                    <MessageCircle className="w-4 h-4" />
-                    WhatsApp
-                  </a>
                 </div>
               </div>
             </article>
@@ -550,14 +646,26 @@ export default function HomePage() {
                 <div className="grid grid-cols-2 gap-3 text-sm mb-5">
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
-                      Phone
+                      Phone / WhatsApp
                     </p>
-                    <a
-                      href="tel:+254717385797"
-                      className="font-medium text-gray-700 hover:text-teal-600 transition-colors"
-                    >
-                      0717 385 797
-                    </a>
+                    <div className="flex items-center gap-2 flex-wrap mt-0.5">
+                      <a
+                        href="tel:+254717385797"
+                        className="font-medium text-gray-700 hover:text-teal-600 transition-colors"
+                      >
+                        0717 385 797
+                      </a>
+                      <a
+                        href="https://wa.me/254717385797?text=Hi%20CKS%20Buruburu%2C%20I%27d%20like%20to%20book%20an%20appointment"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full text-white"
+                        style={{ background: "#25D366" }}
+                      >
+                        <MessageCircle className="w-3 h-3" />
+                        WA
+                      </a>
+                    </div>
                   </div>
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
@@ -598,16 +706,6 @@ export default function HomePage() {
                     <Navigation className="w-4 h-4" />
                     Get Directions
                   </a>
-                  <a
-                    href="https://wa.me/254717385797?text=Hi%20CKS%20Buruburu%2C%20I%27d%20like%20to%20book%20an%20appointment"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full text-white transition-opacity hover:opacity-90"
-                    style={{ background: "#25D366" }}
-                  >
-                    <MessageCircle className="w-4 h-4" />
-                    WhatsApp
-                  </a>
                 </div>
               </div>
             </article>
@@ -634,14 +732,26 @@ export default function HomePage() {
                 <div className="grid grid-cols-2 gap-3 text-sm mb-5">
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
-                      Phone
+                      Phone / WhatsApp
                     </p>
-                    <a
-                      href="tel:+254790602291"
-                      className="font-medium text-gray-700 hover:text-teal-600 transition-colors"
-                    >
-                      0790 602 291
-                    </a>
+                    <div className="flex items-center gap-2 flex-wrap mt-0.5">
+                      <a
+                        href="tel:+254790602291"
+                        className="font-medium text-gray-700 hover:text-teal-600 transition-colors"
+                      >
+                        0790 602 291
+                      </a>
+                      <a
+                        href="https://wa.me/254790602291?text=Hi%20CKS%20Aga%20Khan%2C%20I%27d%20like%20to%20book%20an%20appointment"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full text-white"
+                        style={{ background: "#25D366" }}
+                      >
+                        <MessageCircle className="w-3 h-3" />
+                        WA
+                      </a>
+                    </div>
                   </div>
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
@@ -681,16 +791,6 @@ export default function HomePage() {
                   >
                     <Navigation className="w-4 h-4" />
                     Get Directions
-                  </a>
-                  <a
-                    href="https://wa.me/254790602291?text=Hi%20CKS%20Aga%20Khan%2C%20I%27d%20like%20to%20book%20an%20appointment"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full text-white transition-opacity hover:opacity-90"
-                    style={{ background: "#25D366" }}
-                  >
-                    <MessageCircle className="w-4 h-4" />
-                    WhatsApp
                   </a>
                 </div>
               </div>
@@ -739,14 +839,26 @@ export default function HomePage() {
                 <div className="grid grid-cols-2 gap-3 text-sm mb-5">
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
-                      Phone
+                      Phone / WhatsApp
                     </p>
-                    <a
-                      href="tel:+254753372814"
-                      className="font-medium text-gray-700 hover:text-teal-600 transition-colors"
-                    >
-                      0753 372 814
-                    </a>
+                    <div className="flex items-center gap-2 flex-wrap mt-0.5">
+                      <a
+                        href="tel:+254753372814"
+                        className="font-medium text-gray-700 hover:text-teal-600 transition-colors"
+                      >
+                        0753 372 814
+                      </a>
+                      <a
+                        href="https://wa.me/254753372814?text=Hi%20CKS%20Kimuka%2C%20I%27d%20like%20to%20book%20an%20appointment"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full text-white"
+                        style={{ background: "#25D366" }}
+                      >
+                        <MessageCircle className="w-3 h-3" />
+                        WA
+                      </a>
+                    </div>
                   </div>
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
@@ -769,16 +881,6 @@ export default function HomePage() {
                     <ArrowRight className="w-4 h-4" />
                     Visit Kimuka Hospital
                   </Link>
-                  <a
-                    href="https://wa.me/254753372814?text=Hi%20CKS%20Kimuka%2C%20I%27d%20like%20to%20book%20an%20appointment"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full text-white transition-opacity hover:opacity-90"
-                    style={{ background: "#25D366" }}
-                  >
-                    <MessageCircle className="w-4 h-4" />
-                    WhatsApp
-                  </a>
                   <a
                     href="https://maps.app.goo.gl/g83cTMGJGijAjbiR7"
                     target="_blank"
