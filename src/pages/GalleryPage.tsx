@@ -178,6 +178,11 @@ const featuredImages = [
     category: "Community",
   },
   {
+    src: "/images/ckswkd.jpeg",
+    alt: "CKS Hospital Kimuka WKD 2025",
+    category: "Community",
+  },
+  {
     src: "/images/img11.jpg",
     alt: "World Kidney Day March 2025",
     category: "Community",
@@ -271,6 +276,136 @@ const featuredImages = [
     src: "/images/teambuilding9.jpeg",
     alt: "CKS staff and family at team building adventure park",
     category: "Team Building Event",
+  },
+  {
+    src: "/images/teambuilding10.jpeg",
+    alt: "CKS staff",
+    category: "Team Building Event",
+  },
+  {
+    src: "/images/teambuilding11.jpeg",
+    alt: "CKS staff",
+    category: "Team Building Event",
+  },
+  {
+    src: "/images/teambuilding12.jpeg",
+    alt: "CKS staff",
+    category: "Team Building Event",
+  },
+  {
+    src: "/images/teambuilding13.jpeg",
+    alt: "CKS",
+    category: "Team Building Event",
+  },
+  {
+    src: "/images/teambuilding14.jpeg",
+    alt: "CKS staff",
+    category: "Team Building Event",
+  },
+  {
+    src: "/images/team1.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team2.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team3.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team4.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team5.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team6.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team7.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team8.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team9.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team10.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team11.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team12.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team13.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team14.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team15.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team16.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team17.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team18.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team19.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team20.jpeg",
+    alt: "CKS staff",
+    category: "Team",
+  },
+  {
+    src: "/images/team21.jpeg",
+    alt: "CKS staff",
+    category: "Team",
   },
 ];
 
