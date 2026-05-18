@@ -657,7 +657,7 @@ export default function KimukaPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <div
-              className="impact-card reveal text-white"
+              className="impact-card text-white"
               style={{ background: "linear-gradient(135deg,#2d5f80,#4a7fa5)" }}
             >
               <div className="text-5xl font-display font-bold mb-2">24/7</div>
@@ -667,7 +667,7 @@ export default function KimukaPage() {
               <div className="text-xs opacity-70">Open every day of the year</div>
             </div>
             <div
-              className="impact-card reveal text-white"
+              className="impact-card text-white"
               style={{ background: "linear-gradient(135deg,#007269,#26bdb5)" }}
             >
               <div className="text-5xl font-display font-bold mb-2">10+</div>
@@ -679,7 +679,7 @@ export default function KimukaPage() {
               </div>
             </div>
             <div
-              className="impact-card reveal text-white"
+              className="impact-card text-white"
               style={{ background: "linear-gradient(135deg,#3a6e8c,#009e96)" }}
             >
               <div className="text-5xl font-display font-bold mb-2">6+</div>
@@ -691,7 +691,7 @@ export default function KimukaPage() {
               </div>
             </div>
             <div
-              className="impact-card reveal text-white"
+              className="impact-card text-white"
               style={{ background: "linear-gradient(135deg,#1a5c4a,#2d9e7a)" }}
             >
               <div className="text-5xl font-display font-bold mb-2">🚑</div>
