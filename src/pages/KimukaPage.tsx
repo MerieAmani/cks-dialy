@@ -353,9 +353,9 @@ export default function KimukaPage() {
               through comprehensive and innovative care.
             </p>
             <p>
-              We are located along Ngong–Suswa Road at Kimuka
-              Trading Centre, providing accessible, affordable, and quality
-              healthcare services to Kimuka and the surrounding communities.
+              We are located along Ngong–Suswa Road at Kimuka Trading Centre,
+              providing accessible, affordable, and quality healthcare services
+              to Kimuka and the surrounding communities.
             </p>
             <p>
               The hospital is equipped with modern medical facilities and is
@@ -655,51 +655,39 @@ export default function KimukaPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             <div
               className="impact-card reveal text-white"
               style={{ background: "linear-gradient(135deg,#2d5f80,#4a7fa5)" }}
             >
-              <div className="text-5xl font-display font-bold mb-2">24/7</div>
+              <div className="text-5xl font-display font-bold mb-2">237+</div>
               <div className="text-sm font-semibold opacity-90 mb-1">
-                We Operate 24/7
+                Monthly Patients
               </div>
-              <div className="text-xs opacity-70">Open every day of the year</div>
+              <div className="text-xs opacity-70">As of June 2025</div>
             </div>
             <div
               className="impact-card reveal text-white"
               style={{ background: "linear-gradient(135deg,#007269,#26bdb5)" }}
             >
-              <div className="text-5xl font-display font-bold mb-2">10+</div>
+              <div className="text-5xl font-display font-bold mb-2">500+</div>
               <div className="text-sm font-semibold opacity-90 mb-1">
-                Specialist Clinics
+                Free Camp Patients
               </div>
               <div className="text-xs opacity-70">
-                Covering a wide range of medical specialties
+                November 2024 medical outreach
               </div>
             </div>
             <div
-              className="impact-card reveal text-white"
+              className="impact-card reveal text-white sm:col-span-2 lg:col-span-1"
               style={{ background: "linear-gradient(135deg,#3a6e8c,#009e96)" }}
             >
-              <div className="text-5xl font-display font-bold mb-2">6+</div>
+              <div className="text-5xl font-display font-bold mb-2">36K</div>
               <div className="text-sm font-semibold opacity-90 mb-1">
-                Dialysis Bed Capacity
+                People Served
               </div>
               <div className="text-xs opacity-70">
-                Professional haemodialysis under qualified supervision
-              </div>
-            </div>
-            <div
-              className="impact-card reveal text-white"
-              style={{ background: "linear-gradient(135deg,#1a5c4a,#2d9e7a)" }}
-            >
-              <div className="text-5xl font-display font-bold mb-2">🚑</div>
-              <div className="text-sm font-semibold opacity-90 mb-1">
-                Emergency & Ambulance
-              </div>
-              <div className="text-xs opacity-70">
-                24-hour casualty unit with ambulance evacuation services
+                Kimuka & surrounding villages
               </div>
             </div>
           </div>
@@ -842,7 +830,7 @@ export default function KimukaPage() {
               {
                 title: "Specialist Clinics",
                 color: "linear-gradient(135deg,#e67e22,#f39c12)",
-                img: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=800&q=80",
+                img: "/images/specializedclinics.jpeg",
                 imgAlt: "Specialist doctor consultation at CKS Kimuka Hospital",
                 items: [
                   "Nephrology — weekly consultations",
@@ -857,7 +845,7 @@ export default function KimukaPage() {
               {
                 title: "Pharmacy",
                 color: "linear-gradient(135deg,#1a6e4a,#27ae60)",
-                img: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80",
+                img: "/images/pharmacy.jpeg",
                 imgAlt: "In-house 24-hour pharmacy at CKS Kimuka Hospital",
                 items: [
                   "Fully stocked in-house pharmacy — open 24/7",
