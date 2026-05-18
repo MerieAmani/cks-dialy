@@ -506,7 +506,7 @@ export default function KimukaPage() {
                 </p>
               </div>
               <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Specific Objectives</p>
-              <div className="grid gap-3">
+              <div className="grid grid-cols-2 gap-3">
                 {[
                   "To offer quality outpatient and emergency medical services for timely diagnosis and treatment of patients.",
                   "To provide reliable dialysis services for patients with kidney-related conditions under professional supervision.",
@@ -521,7 +521,7 @@ export default function KimukaPage() {
                 ].map((obj, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-3 p-3 rounded-xl border border-blue-100 bg-blue-50"
+                    className="flex items-start gap-2 p-3 rounded-xl border border-blue-100 bg-blue-50"
                   >
                     <span
                       className="text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center text-white flex-shrink-0 mt-0.5"
