@@ -293,27 +293,27 @@ export default function KimukaPage() {
           <div>
             <div className="font-display text-3xl font-bold">24/7</div>
             <div className="text-xs font-medium opacity-80 mt-0.5 uppercase tracking-widest">
-              Services
+              Emergency Care & OPD
             </div>
           </div>
           <div>
-            <div className="font-display text-3xl font-bold">Dialysis</div>
+            <div className="font-display text-3xl font-bold">Full Service</div>
             <div className="text-xs font-medium opacity-80 mt-0.5 uppercase tracking-widest">
-              Services Available
+              Lab & Pharmacy
             </div>
           </div>
           <div>
             <div className="font-display text-3xl font-bold">
-              Lab and Pharmacy
+              Maternal
             </div>
             <div className="text-xs font-medium opacity-80 mt-0.5 uppercase tracking-widest">
-              Available
+              & Child Health
             </div>
           </div>
           <div>
-            <div className="font-display text-3xl font-bold">10+</div>
+            <div className="font-display text-3xl font-bold">Specialist</div>
             <div className="text-xs font-medium opacity-80 mt-0.5 uppercase tracking-widest">
-              Services Available
+               Medical Clinics
             </div>
           </div>
         </div>
