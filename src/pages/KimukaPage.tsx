@@ -323,9 +323,7 @@ export default function KimukaPage() {
             </div>
           </div>
           <div>
-            <div className="font-display text-3xl font-bold">
-              Maternal
-            </div>
+            <div className="font-display text-3xl font-bold">Maternal</div>
             <div className="text-xs font-medium opacity-80 mt-0.5 uppercase tracking-widest">
               & Child Health
             </div>
@@ -333,7 +331,7 @@ export default function KimukaPage() {
           <div>
             <div className="font-display text-3xl font-bold">Specialist</div>
             <div className="text-xs font-medium opacity-80 mt-0.5 uppercase tracking-widest">
-               Medical Clinics
+              Medical Clinics
             </div>
           </div>
         </div>
@@ -349,14 +347,27 @@ export default function KimukaPage() {
           {/* About description */}
           <div className="text-left max-w-3xl mx-auto mt-8 space-y-5 text-gray-700 text-base leading-relaxed">
             <p>
-              CKS Kimuka Hospital is located along Ngong–Suswa Road at Kimuka Trading Centre, providing accessible, affordable, and quality healthcare services to Kimuka and the surrounding communities.
+              CKS Kimuka Hospital is dedicated to providing compassionate,
+              accessible, and high-quality healthcare services to improve the
+              well-being of our community. Our mission is to empower patients
+              through comprehensive and innovative care.
             </p>
             <p>
-              The hospital is equipped with modern medical facilities and is staffed by qualified and dedicated healthcare professionals committed to delivering patient-centered care in a safe and friendly environment.
+              We are located along Ngong–Suswa Road at Kimuka
+              Trading Centre, providing accessible, affordable, and quality
+              healthcare services to Kimuka and the surrounding communities.
+            </p>
+            <p>
+              The hospital is equipped with modern medical facilities and is
+              staffed by qualified and dedicated healthcare professionals
+              committed to delivering patient-centered care in a safe and
+              friendly environment.
             </p>
 
             <div>
-              <p className="font-semibold text-gray-800 mb-2">Our services include:</p>
+              <p className="font-semibold text-gray-800 mb-2">
+                Our services include:
+              </p>
               <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
                 {[
                   "Maternity services",
@@ -376,15 +387,23 @@ export default function KimukaPage() {
             </div>
 
             <p>
-              Our emergency and casualty unit operates 24 hours a day and is equipped for emergency response, patient stabilization, and urgent medical care before referral or transfer to higher-level facilities when necessary. We also offer ambulance services for emergency evacuation and patient referrals to ensure timely and safe transportation.
+              Our emergency and casualty unit operates 24 hours a day and is
+              equipped for emergency response, patient stabilization, and urgent
+              medical care before referral or transfer to higher-level
+              facilities when necessary. We also offer ambulance services for
+              emergency evacuation and patient referrals to ensure timely and
+              safe transportation.
             </p>
             <p>
-              Our dialysis unit provides professional haemodialysis services under qualified medical supervision to ensure quality care and comfort for patients with kidney-related conditions.
+              Our dialysis unit provides professional haemodialysis services
+              under qualified medical supervision to ensure quality care and
+              comfort for patients with kidney-related conditions.
             </p>
 
             <div className="p-5 rounded-2xl border border-teal-100 bg-teal-50 space-y-3">
               <p className="font-semibold text-gray-800">
-                We are accredited by the Social Health Authority (SHA) and accept all major insurance providers. SHA coverage includes:
+                We are accredited by the Social Health Authority (SHA) and
+                accept all major insurance providers. SHA coverage includes:
               </p>
               <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
                 <li>Civil Servants Scheme</li>
@@ -393,12 +412,17 @@ export default function KimukaPage() {
               </ul>
               <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
                 <li>SHA covers Maternity Package at KES 10,000</li>
-                <li>SHA fully covers two haemodialysis sessions weekly at KES 10,650 per session.</li>
+                <li>
+                  SHA fully covers two haemodialysis sessions weekly at KES
+                  10,650 per session.
+                </li>
               </ul>
             </div>
 
             <p>
-              At CKS Kimuka Hospital, we are committed to improving community health through compassionate care, professionalism, and reliable medical services available 24 hours a day, 7 days a week.
+              At CKS Kimuka Hospital, we are committed to improving community
+              health through compassionate care, professionalism, and reliable
+              medical services available 24 hours a day, 7 days a week.
             </p>
           </div>
 
@@ -433,11 +457,9 @@ export default function KimukaPage() {
                 Our Mission
               </p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                To provide compassionate, accessible, and
-                high-quality healthcare services to improve the
-                well-being of our community, empowering
-                patients through comprehensive and innovative
-                care
+                To provide compassionate, accessible, and high-quality
+                healthcare services to improve the well-being of our community,
+                empowering patients through comprehensive and innovative care
               </p>
             </div>
 
@@ -449,10 +471,9 @@ export default function KimukaPage() {
                 Our Vision
               </p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                To be a leading healthcare provider in the region,
-                known for excellence in patient care, advanced
-                medical services, and a commitment to
-                community health and well-being.
+                To be a leading healthcare provider in the region, known for
+                excellence in patient care, advanced medical services, and a
+                commitment to community health and well-being.
               </p>
             </div>
           </div>
@@ -507,10 +528,10 @@ export default function KimukaPage() {
                     value: "Commitment to Growth",
                     desc: "We are dedicated to expanding our services and improving infrastructure to meet the evolving needs of the community.",
                   },
-      {
-        value: "Community Focus",
-        desc: "We work to address the unique health challenges of our community, promoting wellness and preventive care.",
-      }
+                  {
+                    value: "Community Focus",
+                    desc: "We work to address the unique health challenges of our community, promoting wellness and preventive care.",
+                  },
                 ].map((item, i) => (
                   <div
                     key={i}
@@ -547,12 +568,19 @@ export default function KimukaPage() {
                 Objectives
               </h3>
               <div className="p-4 rounded-xl border border-teal-200 bg-teal-50 mb-4">
-                <p className="text-xs font-semibold text-teal-700 uppercase tracking-wider mb-1">General Objective</p>
+                <p className="text-xs font-semibold text-teal-700 uppercase tracking-wider mb-1">
+                  General Objective
+                </p>
                 <p className="text-sm text-gray-700 leading-relaxed">
-                  To provide accessible, affordable, high-quality, and patient-centered healthcare services to the community through professional medical care, modern diagnostic services, preventive healthcare, and specialized treatment.
+                  To provide accessible, affordable, high-quality, and
+                  patient-centered healthcare services to the community through
+                  professional medical care, modern diagnostic services,
+                  preventive healthcare, and specialized treatment.
                 </p>
               </div>
-              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Specific Objectives</p>
+              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                Specific Objectives
+              </p>
               <div className="grid grid-cols-2 gap-3">
                 {[
                   "To offer quality outpatient and emergency medical services for timely diagnosis and treatment of patients.",
@@ -576,7 +604,9 @@ export default function KimukaPage() {
                     >
                       {i + 1}
                     </span>
-                    <p className="text-xs text-gray-700 leading-relaxed">{obj}</p>
+                    <p className="text-xs text-gray-700 leading-relaxed">
+                      {obj}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -625,39 +655,51 @@ export default function KimukaPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <div
               className="impact-card reveal text-white"
               style={{ background: "linear-gradient(135deg,#2d5f80,#4a7fa5)" }}
             >
-              <div className="text-5xl font-display font-bold mb-2">237+</div>
+              <div className="text-5xl font-display font-bold mb-2">24/7</div>
               <div className="text-sm font-semibold opacity-90 mb-1">
-                Monthly Patients
+                We Operate 24/7
               </div>
-              <div className="text-xs opacity-70">As of June 2025</div>
+              <div className="text-xs opacity-70">Open every day of the year</div>
             </div>
             <div
               className="impact-card reveal text-white"
               style={{ background: "linear-gradient(135deg,#007269,#26bdb5)" }}
             >
-              <div className="text-5xl font-display font-bold mb-2">500+</div>
+              <div className="text-5xl font-display font-bold mb-2">10+</div>
               <div className="text-sm font-semibold opacity-90 mb-1">
-                Free Camp Patients
+                Specialist Clinics
               </div>
               <div className="text-xs opacity-70">
-                November 2024 medical outreach
+                Covering a wide range of medical specialties
               </div>
             </div>
             <div
-              className="impact-card reveal text-white sm:col-span-2 lg:col-span-1"
+              className="impact-card reveal text-white"
               style={{ background: "linear-gradient(135deg,#3a6e8c,#009e96)" }}
             >
-              <div className="text-5xl font-display font-bold mb-2">36K</div>
+              <div className="text-5xl font-display font-bold mb-2">6+</div>
               <div className="text-sm font-semibold opacity-90 mb-1">
-                People Served
+                Dialysis Bed Capacity
               </div>
               <div className="text-xs opacity-70">
-                Kimuka & surrounding villages
+                Professional haemodialysis under qualified supervision
+              </div>
+            </div>
+            <div
+              className="impact-card reveal text-white"
+              style={{ background: "linear-gradient(135deg,#1a5c4a,#2d9e7a)" }}
+            >
+              <div className="text-5xl font-display font-bold mb-2">🚑</div>
+              <div className="text-sm font-semibold opacity-90 mb-1">
+                Emergency & Ambulance
+              </div>
+              <div className="text-xs opacity-70">
+                24-hour casualty unit with ambulance evacuation services
               </div>
             </div>
           </div>
@@ -830,7 +872,8 @@ export default function KimukaPage() {
                 title: "Screening & Diagnostics",
                 color: "linear-gradient(135deg,#2d5f80,#4a7fa5)",
                 img: "/images/camp-anniversary-screening.jpg",
-                imgAlt: "CKS Kimuka comprehensive health screening and diagnostics",
+                imgAlt:
+                  "CKS Kimuka comprehensive health screening and diagnostics",
                 items: [
                   "Comprehensive health screening programmes",
                   "HIV testing, VCT & counselling",
@@ -1182,7 +1225,10 @@ export default function KimukaPage() {
       </section>
 
       {/* Insurance Partners */}
-      <section className="py-16 px-4 sm:px-6" style={{ background: "var(--silver-50)" }}>
+      <section
+        className="py-16 px-4 sm:px-6"
+        style={{ background: "var(--silver-50)" }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 reveal">
             <p className="section-label">Accepted Insurance Partners</p>
@@ -1192,28 +1238,68 @@ export default function KimukaPage() {
           </div>
           <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 reveal">
             {[
-              { name: "SHA", label: "Social Health Authority", logo: "/images/insurance/SHA.jpg" },
-              { name: "Jubilee Health", label: "Jubilee Health Insurance", logo: "/images/insurance/Jubilee.jpg" },
-              { name: "AAR Healthcare", label: "AAR Healthcare", logo: "/images/insurance/AAR.png" },
+              {
+                name: "SHA",
+                label: "Social Health Authority",
+                logo: "/images/insurance/SHA.jpg",
+              },
+              {
+                name: "Jubilee Health",
+                label: "Jubilee Health Insurance",
+                logo: "/images/insurance/Jubilee.jpg",
+              },
+              {
+                name: "AAR Healthcare",
+                label: "AAR Healthcare",
+                logo: "/images/insurance/AAR.png",
+              },
               { name: "CIC Insurance", label: "CIC Group", logo: null },
-              { name: "Cigna", label: "Cigna Healthcare", logo: "/images/insurance/Cigna.png" },
-              { name: "KCB", label: "KCB Insurance", logo: "/images/insurance/KCB.png" },
-              { name: "Old Mutual", label: "Old Mutual Kenya", logo: "/images/insurance/OldMutual.png" },
-              { name: "Minet Kenya", label: "Minet — Secure Tomorrow", logo: "/images/insurance/Minet.png" },
-              { name: "APA Insurance", label: "APA Insurance", logo: "/images/insurance/APA.png" },
+              {
+                name: "Cigna",
+                label: "Cigna Healthcare",
+                logo: "/images/insurance/Cigna.png",
+              },
+              {
+                name: "KCB",
+                label: "KCB Insurance",
+                logo: "/images/insurance/KCB.png",
+              },
+              {
+                name: "Old Mutual",
+                label: "Old Mutual Kenya",
+                logo: "/images/insurance/OldMutual.png",
+              },
+              {
+                name: "Minet Kenya",
+                label: "Minet — Secure Tomorrow",
+                logo: "/images/insurance/Minet.png",
+              },
+              {
+                name: "APA Insurance",
+                label: "APA Insurance",
+                logo: "/images/insurance/APA.png",
+              },
             ].map((ins) => (
               <div
                 key={ins.name}
                 className="flex flex-col items-center gap-2 p-4 bg-white border border-gray-200 rounded-xl hover:border-teal-300 hover:shadow-sm transition-all text-center"
               >
                 {ins.logo ? (
-                  <img src={ins.logo} alt={ins.label} className="h-12 w-full object-contain" />
+                  <img
+                    src={ins.logo}
+                    alt={ins.label}
+                    className="h-12 w-full object-contain"
+                  />
                 ) : (
                   <div className="h-12 flex items-center justify-center w-full bg-green-700 rounded-lg">
-                    <span className="text-sm font-bold text-white tracking-wide">CIC</span>
+                    <span className="text-sm font-bold text-white tracking-wide">
+                      CIC
+                    </span>
                   </div>
                 )}
-                <span className="text-xs text-gray-500 leading-tight">{ins.name}</span>
+                <span className="text-xs text-gray-500 leading-tight">
+                  {ins.name}
+                </span>
               </div>
             ))}
           </div>
