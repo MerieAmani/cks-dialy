@@ -277,7 +277,7 @@ export default function HomePage() {
         role="region"
         aria-label="Key statistics"
       >
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-3 gap-4 text-center text-white">
           <div>
             <div className="font-display text-3xl font-bold">4</div>
             <div className="text-xs font-medium opacity-80 mt-0.5 uppercase tracking-widest">
@@ -288,12 +288,6 @@ export default function HomePage() {
             <div className="font-display text-3xl font-bold">10+</div>
             <div className="text-xs font-medium opacity-80 mt-0.5 uppercase tracking-widest">
               Years Experience
-            </div>
-          </div>
-          <div>
-            <div className="font-display text-3xl font-bold">80%</div>
-            <div className="text-xs font-medium opacity-80 mt-0.5 uppercase tracking-widest">
-              SHA Coverage
             </div>
           </div>
           <div>

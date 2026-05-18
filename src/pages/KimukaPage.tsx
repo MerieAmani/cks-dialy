@@ -442,6 +442,12 @@ export default function KimukaPage() {
             </p>
           </div>
 
+          <div className="mt-6 max-w-3xl mx-auto">
+            <div className="p-5 rounded-xl border border-gray-200 bg-gray-50 text-center inline-block">
+              <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Founded</p>
+              <p className="font-semibold text-gray-800">September 23, 2024</p>
+            </div>
+          </div>
 
           <div className="mt-10 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto text-left">
             <div className="p-6 rounded-2xl border border-teal-100 bg-teal-50">
