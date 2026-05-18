@@ -346,14 +346,61 @@ export default function KimukaPage() {
           <h2 className="font-display text-3xl md:text-4xl text-gray-800 mb-5 ruled-heading inline-block">
             Welcome to CKS Kimuka Hospital
           </h2>
-          <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mt-6">
-            CKS Kimuka Hospital is dedicated to providing
-            compassionate, accessible, and high-quality
-            healthcare services to improve the well-being of
-            our community. Our mission is to empower
-            patients through comprehensive and innovative
-            care.
-          </p>
+          {/* About description */}
+          <div className="text-left max-w-3xl mx-auto mt-8 space-y-5 text-gray-700 text-base leading-relaxed">
+            <p>
+              CKS Kimuka Hospital is located along Ngong–Suswa Road at Kimuka Trading Centre, providing accessible, affordable, and quality healthcare services to Kimuka and the surrounding communities.
+            </p>
+            <p>
+              The hospital is equipped with modern medical facilities and is staffed by qualified and dedicated healthcare professionals committed to delivering patient-centered care in a safe and friendly environment.
+            </p>
+
+            <div>
+              <p className="font-semibold text-gray-800 mb-2">Our services include:</p>
+              <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
+                {[
+                  "Maternity services",
+                  "Dialysis unit",
+                  "Laboratory services",
+                  "Radiology and ultrasound services",
+                  "Daycare services",
+                  "Casualty and emergency care",
+                  "24/7 outpatient services",
+                  "Specialist clinics",
+                  "Ambulance and evacuation services",
+                  "Immunization",
+                ].map((svc) => (
+                  <li key={svc}>{svc}</li>
+                ))}
+              </ul>
+            </div>
+
+            <p>
+              Our emergency and casualty unit operates 24 hours a day and is equipped for emergency response, patient stabilization, and urgent medical care before referral or transfer to higher-level facilities when necessary. We also offer ambulance services for emergency evacuation and patient referrals to ensure timely and safe transportation.
+            </p>
+            <p>
+              Our dialysis unit provides professional haemodialysis services under qualified medical supervision to ensure quality care and comfort for patients with kidney-related conditions.
+            </p>
+
+            <div className="p-5 rounded-2xl border border-teal-100 bg-teal-50 space-y-3">
+              <p className="font-semibold text-gray-800">
+                We are accredited by the Social Health Authority (SHA) and accept all major insurance providers. SHA coverage includes:
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
+                <li>Civil Servants Scheme</li>
+                <li>Mwalimu Scheme</li>
+                <li>Primary Health Care (PHC)</li>
+              </ul>
+              <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
+                <li>SHA covers Maternity Package at KES 10,000</li>
+                <li>SHA fully covers two haemodialysis sessions weekly at KES 10,650 per session.</li>
+              </ul>
+            </div>
+
+            <p>
+              At CKS Kimuka Hospital, we are committed to improving community health through compassionate care, professionalism, and reliable medical services available 24 hours a day, 7 days a week.
+            </p>
+          </div>
 
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
             <div className="p-5 rounded-xl border border-gray-200 bg-gray-50 text-center">
