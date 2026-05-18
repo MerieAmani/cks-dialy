@@ -750,56 +750,21 @@ export default function KimukaPage() {
             </div>
           </div>
 
-          {/* Timeline */}
-          <div className="max-w-3xl mx-auto bg-white border border-gray-200 rounded-2xl p-6 md:p-8 reveal">
+          {/* Our Story */}
+          <div className="max-w-3xl mx-auto bg-white border border-gray-200 rounded-2xl p-6 md:p-8">
             <h3 className="font-display text-xl text-gray-800 mb-5">
               Our Story
             </h3>
-            <div className="space-y-5">
-              {[
-                {
-                  year: "2018 — Foundation",
-                  text: "Dr. Jonathan Wala and Mrs. Alice Wala established the foundation of CKS, launching dedicated dialysis units in Pangani and Buruburu to provide life-saving, compassionate renal care within Nairobi.",
-                },
-                {
-                  year: "2024 — The Vision",
-                  text: "Witnessing exhausted patients and anxious families travel over 100km from rural Kajiado to Nairobi—enduring grueling journeys just to access basic, routine dialysis—the founders committed to bringing dignity and care directly to the doorstep of the community.",
-                },
-                {
-                  year: "September 23, 2024 — Kimuka Opens",
-                  text: "CKS Hospital Kimuka opened its doors as a 24-hour sanctuary of healing. It immediately became a vital lifeline for the surrounding villages, ensuring that critical daytime emergencies and vulnerable midnight medical crises no longer went unanswered.",
-                },
-                {
-                  year: "2025 — Deepening Roots",
-                  text: "Moving beyond hospital walls, the team engaged directly with families through extensive free medical camps and regional wellness roadshows, building lasting trust and expanding healthcare access across the entire county.",
-                },
-              ].map((item, i, arr) => (
-                <div key={i} className="flex gap-4">
-                  <div className="flex flex-col items-center">
-                    <div
-                      className="w-3 h-3 rounded-full mt-1 flex-shrink-0"
-                      style={{ background: "var(--teal-600)" }}
-                    />
-                    {i < arr.length - 1 && (
-                      <div
-                        className="w-0.5 flex-1 mt-1"
-                        style={{ background: "var(--silver-200)" }}
-                      />
-                    )}
-                  </div>
-                  <div className={i < arr.length - 1 ? "pb-5" : ""}>
-                    <p
-                      className="text-xs font-semibold uppercase tracking-wide mb-1"
-                      style={{ color: "var(--teal-600)" }}
-                    >
-                      {item.year}
-                    </p>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {item.text}
-                    </p>
-                  </div>
-                </div>
-              ))}
+            <div className="space-y-4">
+              <p className="text-sm text-gray-600 leading-relaxed">
+                CKS Group of Hospitals is a trusted healthcare provider committed to delivering quality, affordable, and patient-centered medical services. The journey began with specialised renal care through CKS Dialysis Centre Limited, and has since grown into a full-service healthcare network dedicated to improving access to essential and specialised treatment across our communities.
+              </p>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Our flagship facility, CKS Hospital Kimuka, offers comprehensive 24/7 services including emergency and casualty care, maternity services, dialysis, laboratory and radiology diagnostics, outpatient consultations, pharmacy services, physiotherapy, and specialist clinics.
+              </p>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                We are SHA accredited and accept major insurance providers, ensuring accessible healthcare for individuals, families, civil servants, teachers (mwalimu cover), and PHC beneficiaries. At CKS, our dedicated multidisciplinary team works around the clock to deliver safe, reliable, and compassionate care when it matters most.
+              </p>
             </div>
           </div>
         </div>
