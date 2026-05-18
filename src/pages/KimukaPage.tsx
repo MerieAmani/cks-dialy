@@ -488,47 +488,40 @@ export default function KimukaPage() {
               </div>
             </div>
 
-            {/* STRATEGIC OBJECTIVES */}
+            {/* OBJECTIVES */}
             <div className="reveal">
-              <h3 className="font-display text-xl text-gray-800 mb-6 flex items-center gap-2">
+              <h3 className="font-display text-xl text-gray-800 mb-4 flex items-center gap-2">
                 <span
                   className="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
                   style={{ background: "var(--steel)" }}
                 >
                   ◎
                 </span>
-                Strategic Objectives
+                Objectives
               </h3>
-              <div className="grid gap-4">
+              <div className="p-4 rounded-xl border border-teal-200 bg-teal-50 mb-4">
+                <p className="text-xs font-semibold text-teal-700 uppercase tracking-wider mb-1">General Objective</p>
+                <p className="text-sm text-gray-700 leading-relaxed">
+                  To provide accessible, affordable, high-quality, and patient-centered healthcare services to the community through professional medical care, modern diagnostic services, preventive healthcare, and specialized treatment.
+                </p>
+              </div>
+              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Specific Objectives</p>
+              <div className="grid gap-3">
                 {[
-                  {
-                    obj: "24-Hour Accessible Care",
-                    desc: "Provide round-the-clock, high-quality kidney care and emergency services to every resident of Kajiado County.",
-                  },
-                  {
-                    obj: "SHA Accreditation & Coverage",
-                    desc: "Maintain SHA accreditation and expand insurance partnerships to ensure full cover for all eligible patients.",
-                  },
-                  {
-                    obj: "Capacity Expansion",
-                    desc: "Grow dialysis capacity and recruit additional nephrological and nursing expertise to serve a rapidly increasing patient base.",
-                  },
-                  {
-                    obj: "Community Outreach",
-                    desc: "Conduct quarterly health outreach programmes, awareness campaigns, and free medical camps across Kajiado County.",
-                  },
-                  {
-                    obj: "Transplant Partnerships",
-                    desc: "Strengthen collaborative pathways with Aga Khan and MP Shah hospitals for seamless kidney transplant referral and work-up.",
-                  },
-                  {
-                    obj: "Technology & Infrastructure",
-                    desc: "Invest in modern medical technology and hospital infrastructure to match international standards in renal and primary care.",
-                  },
-                ].map((item, i) => (
+                  "To offer quality outpatient and emergency medical services for timely diagnosis and treatment of patients.",
+                  "To provide reliable dialysis services for patients with kidney-related conditions under professional supervision.",
+                  "To improve maternal and child health through antenatal care, postnatal care, family planning, immunization, and child wellness clinics.",
+                  "To provide accurate laboratory and imaging services that support effective diagnosis and treatment.",
+                  "To ensure availability of specialist clinics for comprehensive management of various medical conditions.",
+                  "To promote preventive healthcare and community health education on hygiene, nutrition, chronic diseases, and healthy lifestyles.",
+                  "To provide efficient ambulance and evacuation services for emergency response and patient referrals.",
+                  "To maintain high standards of professionalism, ethics, patient safety, and confidentiality in all hospital operations.",
+                  "To create a friendly, safe, and easily accessible healthcare environment for all patients and families.",
+                  "To collaborate with healthcare partners, insurance providers, and community organizations to improve healthcare access and outcomes within Kimuka and surrounding areas.",
+                ].map((obj, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-3 p-4 rounded-xl border border-blue-100 bg-blue-50"
+                    className="flex items-start gap-3 p-3 rounded-xl border border-blue-100 bg-blue-50"
                   >
                     <span
                       className="text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center text-white flex-shrink-0 mt-0.5"
@@ -536,14 +529,7 @@ export default function KimukaPage() {
                     >
                       {i + 1}
                     </span>
-                    <div>
-                      <p className="text-sm font-semibold text-gray-800 mb-0.5">
-                        {item.obj}
-                      </p>
-                      <p className="text-xs text-gray-600 leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
+                    <p className="text-xs text-gray-700 leading-relaxed">{obj}</p>
                   </div>
                 ))}
               </div>
