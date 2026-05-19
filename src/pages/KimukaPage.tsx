@@ -18,7 +18,6 @@ import Nav from "@/components/Nav";
 import SHABadge from "@/components/SHABadge";
 import Footer from "@/components/Footer";
 import MobileCTA from "@/components/MobileCTA";
-import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 function useReveal() {
   useEffect(() => {
@@ -1452,7 +1451,6 @@ export default function KimukaPage() {
         whatsapp="254753372814"
         homePath="/kimuka"
       />
-      <WhatsAppWidget />
 
       {/* LIGHTBOX */}
       {lightboxImg && (

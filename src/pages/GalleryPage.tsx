@@ -4,7 +4,6 @@ import { X, ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import MobileCTA from "@/components/MobileCTA";
-import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 
 // Named featured images (non-gallery folder)
@@ -634,7 +633,6 @@ export default function GalleryPage() {
 
       <Footer />
       <MobileCTA />
-      <WhatsAppWidget />
 
       {/* LIGHTBOX */}
       {lightboxIdx !== null && (

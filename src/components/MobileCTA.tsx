@@ -26,6 +26,17 @@ const HomeIcon = () => (
 export default function MobileCTA({ phone = "+254757614036", whatsapp = "254757614036", homePath = "/" }: MobileCTAProps) {
   return (
     <>
+      {/* FLOATING WHATSAPP BUTTON — all pages, above thumb nav */}
+      <a
+        href={`https://wa.me/${whatsapp}?text=Hi%20CKS%2C%20I%27d%20like%20to%20book%20an%20appointment`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="floating-wa md:hidden"
+        aria-label="Chat on WhatsApp"
+      >
+        <WaIcon />
+      </a>
+
       {/* GLASSMORPHISM THUMB NAV BAR — mobile only */}
       <nav className="thumb-nav md:hidden" aria-label="Quick actions">
         <a href={homePath} className="thumb-nav-item" aria-label="Home">
