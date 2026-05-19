@@ -446,7 +446,6 @@ const categories = [
 
 export default function GalleryPage() {
   const [filter, setFilter] = useState("All");
-  const [visibleCount, setVisibleCount] = useState(20);
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
   useReveal();
 
@@ -569,7 +568,7 @@ export default function GalleryPage() {
             {filtered.length} photos
           </p>
           <div className="gallery-grid">
-            {filtered.slice(0, visibleCount).map((img, i) => (
+            {filtered.map((img, i) => (
               <div
                 key={i}
                 className="gallery-item reveal"
@@ -597,17 +596,6 @@ export default function GalleryPage() {
             </div>
           )}
 
-          {visibleCount < filtered.length && (
-            <div className="text-center mt-10">
-              <button
-                onClick={() => setVisibleCount(v => v + 20)}
-                className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-full border-2 transition-colors"
-                style={{ borderColor: "var(--teal-600)", color: "var(--teal-600)" }}
-              >
-                Load More · {filtered.length - visibleCount} more photos
-              </button>
-            </div>
-          )}
         </div>
       </section>
 
