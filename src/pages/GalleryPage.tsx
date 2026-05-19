@@ -134,11 +134,6 @@ const featuredImages = [
     category: "Events",
   },
   {
-    src: "/images/img5.jpg",
-    alt: "World Kideny Day March",
-    category: "Events",
-  },
-  {
     src: "/images/img6.jpg",
     alt: "CKS Hospital Kimuka WKD March",
     category: "Events",

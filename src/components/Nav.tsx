@@ -174,7 +174,7 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
 
       {/* MOBILE MENU */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-gray-200 bg-white px-4 py-4">
+        <div className="md:hidden border-t border-blue-900 px-4 py-4" style={{ background: "#1a2e6e" }}>
           <nav className="flex flex-col gap-2" aria-label="Mobile navigation">
             {subPage && isKimuka ? (
               /* Kimuka mobile — double home */
