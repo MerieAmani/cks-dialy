@@ -65,7 +65,7 @@ export default function DialysisPage() {
               "linear-gradient(135deg, rgba(0,40,35,0.88) 0%, rgba(0,90,84,0.72) 100%)",
           }}
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-24 md:py-32 text-white">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-24 lg:py-32 text-white">
           <div className="max-w-2xl">
             <Link
               href="/"
@@ -73,10 +73,10 @@ export default function DialysisPage() {
             >
               ← Back to Home
             </Link>
-            <h1 className="font-display text-4xl md:text-5xl leading-tight mb-4">
+            <h1 className="font-display text-3xl md:text-5xl leading-tight mb-4">
               Dialysis & Renal Care
             </h1>
-            <p className="text-white/80 text-lg leading-relaxed mb-8">
+            <p className="text-white/80 text-base md:text-lg leading-relaxed mb-8">
               Round-the-clock haemodialysis, managed by an in-house
               nephrologist, with state-of-the-art machines and a patient-first
               philosophy.

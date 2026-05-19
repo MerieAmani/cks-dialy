@@ -51,7 +51,7 @@ export default function ScreeningPage() {
               "linear-gradient(135deg, rgba(20,10,60,0.88) 0%, rgba(40,50,150,0.72) 100%)",
           }}
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-24 md:py-32 text-white">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-24 lg:py-32 text-white">
           <div className="max-w-2xl">
             <Link
               href="/"
@@ -59,10 +59,10 @@ export default function ScreeningPage() {
             >
               ← Back to Home
             </Link>
-            <h1 className="font-display text-4xl md:text-5xl leading-tight mb-4">
+            <h1 className="font-display text-3xl md:text-5xl leading-tight mb-4">
               Screening & Diagnostics
             </h1>
-            <p className="text-white/80 text-lg leading-relaxed mb-8">
+            <p className="text-white/80 text-base md:text-lg leading-relaxed mb-8">
               Early detection saves lives. Our comprehensive diagnostics lab,
               imaging suite, and screening clinics bring specialist-grade
               testing available across all CKS branches.

@@ -271,7 +271,7 @@ export default function KimukaPage() {
                 </p>
                 <h1
                   id={i === 0 ? "kimuka-hero-heading" : undefined}
-                  className="font-display text-4xl md:text-5xl lg:text-6xl leading-tight mb-4"
+                  className="font-display text-3xl md:text-5xl lg:text-6xl leading-tight mb-4"
                 >
                   {s.heading.split("\n").map((line, li) => (
                     <span key={li}>
@@ -284,7 +284,7 @@ export default function KimukaPage() {
                     </span>
                   ))}
                 </h1>
-                <p className="text-white/80 text-lg leading-relaxed mb-8 max-w-xl">
+                <p className="text-white/80 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
                   {s.subtext}
                 </p>
                 <div className="flex flex-wrap gap-3">
@@ -590,7 +590,7 @@ export default function KimukaPage() {
               <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
                 Specific Objectives
               </p>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   "To offer quality outpatient and emergency medical services for timely diagnosis and treatment of patients.",
                   "To provide reliable dialysis services for patients with kidney-related conditions under professional supervision.",
@@ -669,7 +669,7 @@ export default function KimukaPage() {
               className="impact-card text-white"
               style={{ background: "linear-gradient(135deg,#2d5f80,#4a7fa5)" }}
             >
-              <div className="text-5xl font-display font-bold mb-2">24/7</div>
+              <div className="text-3xl sm:text-5xl font-display font-bold mb-2">24/7</div>
               <div className="text-sm font-semibold opacity-90 mb-1">
                 We Operate 24/7
               </div>
@@ -681,7 +681,7 @@ export default function KimukaPage() {
               className="impact-card text-white"
               style={{ background: "linear-gradient(135deg,#007269,#26bdb5)" }}
             >
-              <div className="text-5xl font-display font-bold mb-2">10+</div>
+              <div className="text-3xl sm:text-5xl font-display font-bold mb-2">10+</div>
               <div className="text-sm font-semibold opacity-90 mb-1">
                 Specialist Clinics
               </div>
@@ -693,7 +693,7 @@ export default function KimukaPage() {
               className="impact-card text-white"
               style={{ background: "linear-gradient(135deg,#3a6e8c,#009e96)" }}
             >
-              <div className="text-5xl font-display font-bold mb-2">6+</div>
+              <div className="text-3xl sm:text-5xl font-display font-bold mb-2">6+</div>
               <div className="text-sm font-semibold opacity-90 mb-1">
                 Dialysis Bed Capacity
               </div>
@@ -705,7 +705,7 @@ export default function KimukaPage() {
               className="impact-card text-white"
               style={{ background: "linear-gradient(135deg,#1a5c4a,#2d9e7a)" }}
             >
-              <div className="text-5xl font-display font-bold mb-2">🚑</div>
+              <div className="text-3xl sm:text-5xl font-display font-bold mb-2">🚑</div>
               <div className="text-sm font-semibold opacity-90 mb-1">
                 Emergency & Ambulance
               </div>

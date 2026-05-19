@@ -40,7 +40,7 @@ const heroSlides = [
     alt: "CKS Pangani Dialysis Centre",
     heading: "Haemodialysis You\nCan Count On",
     subtext:
-      "Modern machines, experienced nurses, and in-house nephrologist care — three sessions per week at a branch near you.",
+      "Modern machines, experienced nurses, and in-house nephrologist care — two sessions per week at a branch near you.",
   },
   {
     bg: "/images/homepagefacility.jpeg",
@@ -201,7 +201,7 @@ export default function HomePage() {
             }}
           />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-28 md:py-36">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-28 lg:py-36">
           {/* Fixed-height container prevents layout shifts during slide transitions */}
           <div className="relative" style={{ minHeight: "300px" }}>
             {heroSlides.map((s, i) => (
@@ -221,7 +221,7 @@ export default function HomePage() {
                 </p>
                 <h1
                   id={i === 0 ? "hero-heading" : undefined}
-                  className="font-display text-4xl md:text-5xl lg:text-6xl leading-tight mb-6"
+                  className="font-display text-3xl md:text-5xl lg:text-6xl leading-tight mb-6"
                 >
                   {s.heading.split("\n").map((line, li) => (
                     <span key={li}>
@@ -708,7 +708,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="p-6">
-                <div className="grid grid-cols-2 gap-3 text-sm mb-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mb-5">
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
                       Phone / WhatsApp
@@ -798,7 +798,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="p-6">
-                <div className="grid grid-cols-2 gap-3 text-sm mb-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mb-5">
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
                       Phone / WhatsApp
@@ -888,7 +888,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="p-6">
-                <div className="grid grid-cols-2 gap-3 text-sm mb-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mb-5">
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
                       Phone / WhatsApp
@@ -998,7 +998,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="p-6">
-                <div className="grid grid-cols-2 gap-3 text-sm mb-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mb-5">
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
                       Phone / WhatsApp

@@ -500,7 +500,7 @@ export default function GalleryPage() {
           <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-teal-300">
             Our Story in Photos
           </p>
-          <h1 className="font-display text-4xl md:text-5xl mb-4">
+          <h1 className="font-display text-3xl md:text-5xl mb-4">
             Photo Gallery
           </h1>
           <p className="text-white/70 text-base max-w-xl mx-auto mb-6">
