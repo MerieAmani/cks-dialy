@@ -22,8 +22,8 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
   return (
     <header
       role="banner"
-      className="sticky top-0 z-50 backdrop-blur border-b border-teal-900 shadow-sm nav-dark"
-      style={{ background: "#003d38" }}
+      className="sticky top-0 z-50 backdrop-blur border-b border-blue-900 shadow-sm nav-dark"
+      style={{ background: "#1a2e6e" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">

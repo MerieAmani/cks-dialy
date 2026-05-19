@@ -1301,7 +1301,7 @@ export default function HomePage() {
               className="contact-row"
             >
               <div className="contact-icon bg-green-50">
-                <span className="text-xl">💬</span>
+                <MessageCircle className="w-5 h-5 text-green-500" />
               </div>
               <div>
                 <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
