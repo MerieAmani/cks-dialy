@@ -19,6 +19,8 @@ import {
   Tv,
   Armchair,
   Car,
+  Copy,
+  Check,
 } from "lucide-react";
 import Nav from "@/components/Nav";
 import SHABadge from "@/components/SHABadge";
@@ -154,6 +156,12 @@ function useReveal() {
 export default function HomePage() {
   const [slide, setSlide] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [copiedPhone, setCopiedPhone] = useState<string | null>(null);
+  const copyPhone = (num: string) => {
+    navigator.clipboard.writeText(num);
+    setCopiedPhone(num);
+    setTimeout(() => setCopiedPhone(null), 2000);
+  };
   useReveal();
 
   useEffect(() => {
@@ -310,33 +318,46 @@ export default function HomePage() {
                 About CKS Dialysis Centre
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                CKS Dialysis Centre is a Health Care Provider managed by our in-house Nephrologist,{" "}
-                <strong>Dr. Jonathan Wala</strong>, who has extensive experience in the management of
-                Chronic Kidney Disease patients in Haemodialysis. Our objectives are patient-centric
-                and are geared towards a Holistic Management of the dialysis patient.
+                CKS Dialysis Centre is a Health Care Provider managed by our
+                in-house Nephrologist, <strong>Dr. Jonathan Wala</strong>, who
+                has extensive experience in the management of Chronic Kidney
+                Disease patients in Haemodialysis. Our objectives are
+                patient-centric and are geared towards a Holistic Management of
+                the dialysis patient.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Over the last five years, CKS Dialysis Centre has partnered with several hospitals to
-                fill in this crucial gap in the management of haemodialysis patients. We currently run
-                our flagship dialysis unit located at KCDF House 5th floor in Pangani, Nairobi;
-                Buruburu Phase 5 House 431, Nairobi; Aga Khan Doctor's Plaza; and our Kimuka branch
-                in Kajiado County — open 24 hours, 365 days a year.
+                Over the last five years, CKS Dialysis Centre has partnered with
+                several hospitals to fill in this crucial gap in the management
+                of haemodialysis patients. We currently run our flagship
+                dialysis unit located at KCDF House 5th floor in Pangani,
+                Nairobi; Buruburu Phase 5 House 431, Nairobi; Aga Khan Doctor's
+                Plaza; and our Kimuka branch in Kajiado County — open 24 hours,
+                365 days a year.
               </p>
 
               <div className="space-y-4 mb-6">
                 <div className="rounded-xl border border-teal-100 bg-teal-50 p-4">
-                  <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: "var(--teal-600)" }}>Our Vision</p>
+                  <p
+                    className="text-xs font-bold uppercase tracking-widest mb-1"
+                    style={{ color: "var(--teal-600)" }}
+                  >
+                    Our Vision
+                  </p>
                   <p className="text-sm text-gray-700 leading-relaxed">
-                    At CKS Dialysis Centre, we strive to become a World Class Provider of Renal
-                    Services to improve the Survival and Quality of Life of our Patients.
+                    At CKS Dialysis Centre, we strive to become a World Class
+                    Provider of Renal Services to improve the Survival and
+                    Quality of Life of our Patients.
                   </p>
                 </div>
                 <div className="rounded-xl border border-blue-100 bg-blue-50 p-4">
-                  <p className="text-xs font-bold uppercase tracking-widest mb-1 text-blue-700">Our Mission</p>
+                  <p className="text-xs font-bold uppercase tracking-widest mb-1 text-blue-700">
+                    Our Mission
+                  </p>
                   <p className="text-sm text-gray-700 leading-relaxed">
-                    Our Dedicated Staff work round the clock to provide Affordable and Holistic
-                    services to our Kidney Patients, enabling them to enjoy better Quality of Life
-                    and Live Longer.
+                    Our Dedicated Staff work round the clock to provide
+                    Affordable and Holistic services to our Kidney Patients,
+                    enabling them to enjoy better Quality of Life and Live
+                    Longer.
                   </p>
                 </div>
               </div>
@@ -367,29 +388,44 @@ export default function HomePage() {
             {/* RIGHT: Core Values + Objectives */}
             <div className="reveal space-y-6">
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "var(--teal-600)" }}>Core Values</p>
+                <p
+                  className="text-xs font-bold uppercase tracking-widest mb-3"
+                  style={{ color: "var(--teal-600)" }}
+                >
+                  Core Values
+                </p>
                 <div className="space-y-3">
                   {[
                     "Quality Renal Services that meet World Class Standards.",
                     "Holistic approach to the Management of our patients that combines all Aspects of Care.",
                     "Affordable Renal Services that are accessible to Kenyans.",
                   ].map((val, i) => (
-                    <div key={i} className="flex items-start gap-3 p-3 rounded-xl border border-teal-100 bg-teal-50">
+                    <div
+                      key={i}
+                      className="flex items-start gap-3 p-3 rounded-xl border border-teal-100 bg-teal-50"
+                    >
                       <span
                         className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5"
                         style={{ background: "var(--teal-600)" }}
                       >
                         {i + 1}
                       </span>
-                      <p className="text-sm text-gray-700 leading-relaxed">{val}</p>
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        {val}
+                      </p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest mb-1 text-gray-500">Objectives</p>
-                <p className="text-xs text-gray-500 mb-3">At CKS Dialysis Centre, we aim our efforts at achieving the following:</p>
+                <p className="text-xs font-bold uppercase tracking-widest mb-1 text-gray-500">
+                  Objectives
+                </p>
+                <p className="text-xs text-gray-500 mb-3">
+                  At CKS Dialysis Centre, we aim our efforts at achieving the
+                  following:
+                </p>
                 <div className="space-y-2">
                   {[
                     "Good and Quality Dialysis Services.",
@@ -399,14 +435,19 @@ export default function HomePage() {
                     "Proper and prompt Counselling of end stage kidney disease patients regarding viable options of management, including haemodialysis, peritoneal dialysis and transplantation.",
                     "Continued professional development of our members of staff to ensure quality service provision.",
                   ].map((obj, i) => (
-                    <div key={i} className="flex items-start gap-3 p-3 rounded-xl border border-gray-200 bg-gray-50">
+                    <div
+                      key={i}
+                      className="flex items-start gap-3 p-3 rounded-xl border border-gray-200 bg-gray-50"
+                    >
                       <span
                         className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5"
                         style={{ background: "var(--steel)" }}
                       >
                         {i + 1}
                       </span>
-                      <p className="text-sm text-gray-700 leading-relaxed">{obj}</p>
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        {obj}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -416,7 +457,12 @@ export default function HomePage() {
 
           {/* Leadership */}
           <div className="mt-16">
-            <p className="text-xs font-bold uppercase tracking-widest mb-6 text-center" style={{ color: "var(--teal-600)" }}>Leadership & Governance</p>
+            <p
+              className="text-xs font-bold uppercase tracking-widest mb-6 text-center"
+              style={{ color: "var(--teal-600)" }}
+            >
+              Leadership & Governance
+            </p>
             <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
               <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
                 <img
@@ -425,10 +471,19 @@ export default function HomePage() {
                   className="w-full h-56 object-cover object-top"
                 />
                 <div className="p-5">
-                  <p className="text-xs font-semibold uppercase tracking-wide mb-1" style={{ color: "var(--teal-600)" }}>Medical Director</p>
-                  <p className="font-semibold text-gray-800 mb-1">Dr. Jonathan Wala</p>
+                  <p
+                    className="text-xs font-semibold uppercase tracking-wide mb-1"
+                    style={{ color: "var(--teal-600)" }}
+                  >
+                    Medical Director
+                  </p>
+                  <p className="font-semibold text-gray-800 mb-1">
+                    Dr. Jonathan Wala
+                  </p>
                   <p className="text-xs text-gray-500 leading-relaxed">
-                    Nephrologist and President of the Kenya Renal Association. Co-founder of the CKS Group of Hospitals and the medical visionary behind its growth in renal care across Kenya.
+                    Nephrologist and President of the Kenya Renal Association.
+                    Co-founder of the CKS Group of Hospitals and the medical
+                    visionary behind its growth in renal care across Kenya.
                   </p>
                 </div>
               </div>
@@ -439,10 +494,19 @@ export default function HomePage() {
                   className="w-full h-56 object-cover object-top"
                 />
                 <div className="p-5">
-                  <p className="text-xs font-semibold uppercase tracking-wide mb-1" style={{ color: "var(--steel)" }}>Group Chief Executive Officer</p>
-                  <p className="font-semibold text-gray-800 mb-1">Alice Sakuda</p>
+                  <p
+                    className="text-xs font-semibold uppercase tracking-wide mb-1"
+                    style={{ color: "var(--steel)" }}
+                  >
+                    Group Chief Executive Officer
+                  </p>
+                  <p className="font-semibold text-gray-800 mb-1">
+                    Alice Sakuda
+                  </p>
                   <p className="text-xs text-gray-500 leading-relaxed">
-                    Accomplished healthcare administrator and co-founder of CKS Group of Hospitals. She leads the strategic growth, operations, and expansion of the organisation across Kenya.
+                    Accomplished healthcare administrator and co-founder of CKS
+                    Group of Hospitals. She leads the strategic growth,
+                    operations, and expansion of the organisation across Kenya.
                   </p>
                 </div>
               </div>
@@ -452,8 +516,13 @@ export default function HomePage() {
           {/* Company Profile Download */}
           <div className="mt-10 max-w-3xl mx-auto rounded-2xl border border-teal-100 bg-teal-50 p-6 flex flex-col sm:flex-row items-center gap-4">
             <div className="flex-1">
-              <p className="font-semibold text-gray-800 mb-1">Want to read more about us?</p>
-              <p className="text-sm text-gray-500 leading-relaxed">Download our Company Profile for a detailed story about CKS Group of Hospitals — our history, services, and leadership.</p>
+              <p className="font-semibold text-gray-800 mb-1">
+                Want to read more about us?
+              </p>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Download our Company Profile for a detailed story about CKS
+                Group of Hospitals — our history, services, and leadership.
+              </p>
             </div>
             <a
               href="/CKS-Company-Profile.pdf"
@@ -461,11 +530,23 @@ export default function HomePage() {
               className="flex-shrink-0 inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full text-white transition-opacity hover:opacity-90 whitespace-nowrap"
               style={{ background: "var(--teal-600)" }}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-4 h-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
               Download Company Profile
             </a>
           </div>
-
         </div>
       </section>
 
@@ -639,6 +720,9 @@ export default function HomePage() {
                       >
                         0757 614 036
                       </a>
+                      <button onClick={() => copyPhone("0757614036")} className="text-gray-400 hover:text-teal-600 transition-colors" title="Copy number">
+                        {copiedPhone === "0757614036" ? <Check className="w-3 h-3 text-green-500" /> : <Copy className="w-3 h-3" />}
+                      </button>
                       <a
                         href="https://wa.me/254757614036?text=Hi%20CKS%20Pangani%2C%20I%27d%20like%20to%20book%20an%20appointment"
                         target="_blank"
@@ -666,9 +750,10 @@ export default function HomePage() {
                 <div className="flex flex-wrap gap-2 mb-5">
                   {[
                     "Pangani Police Station",
-                    "Globe Cinema Roundabout",
-                    "Pangani Market",
-                    "TRM Drive",
+                    "Pangani Girls",
+                    "Pangani Shopping Center",
+                    "KDCF House",
+                    "Juja Road Hospital",
                   ].map((l) => (
                     <span key={l} className="landmark-chip">
                       <MapPin className="w-3 h-3" />
@@ -678,7 +763,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   <a
-                    href="https://maps.app.goo.gl/Ms9B9yy7nrSwt7Wg8"
+                    href="https://maps.app.goo.gl/nTJw3Q5uk9UYi4nr7"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border-2 transition-colors"
@@ -725,6 +810,9 @@ export default function HomePage() {
                       >
                         0717 385 797
                       </a>
+                      <button onClick={() => copyPhone("0717385797")} className="text-gray-400 hover:text-teal-600 transition-colors" title="Copy number">
+                        {copiedPhone === "0717385797" ? <Check className="w-3 h-3 text-green-500" /> : <Copy className="w-3 h-3" />}
+                      </button>
                       <a
                         href="https://wa.me/254717385797?text=Hi%20CKS%20Buruburu%2C%20I%27d%20like%20to%20book%20an%20appointment"
                         target="_blank"
@@ -751,10 +839,10 @@ export default function HomePage() {
                 </p>
                 <div className="flex flex-wrap gap-2 mb-5">
                   {[
-                    "Buruburu Shopping Centre",
-                    "Nairobi East Hospital",
-                    "Buruburu Primary School",
-                    "Eastlands Stage",
+                    "The Point Mall",
+                    "Rubis Petrol Station",
+                    "Naivas FoodMarket",
+                    "Martin Luther Primary School",
                   ].map((l) => (
                     <span key={l} className="landmark-chip">
                       <MapPin className="w-3 h-3" />
@@ -764,7 +852,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   <a
-                    href="https://maps.app.goo.gl/3Ghv6R24v3sLeKSy9"
+                    href="https://maps.app.goo.gl/6U8aimXTbuTvS5T38"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border-2 transition-colors"
@@ -792,7 +880,8 @@ export default function HomePage() {
                       CKS Aga Khan
                     </h3>
                     <p className="text-sm opacity-80 mt-1">
-                      Aga Khan Doctor's Plaza, 3rd Parklands Ave
+                      Aga Khan Doctor's Plaza, 4th Floor Room 421, 3rd Parklands
+                      Ave
                     </p>
                   </div>
                   <MapPin className="w-8 h-8 opacity-40 flex-shrink-0" />
@@ -811,6 +900,9 @@ export default function HomePage() {
                       >
                         0790 602 291
                       </a>
+                      <button onClick={() => copyPhone("0790602291")} className="text-gray-400 hover:text-teal-600 transition-colors" title="Copy number">
+                        {copiedPhone === "0790602291" ? <Check className="w-3 h-3 text-green-500" /> : <Copy className="w-3 h-3" />}
+                      </button>
                       <a
                         href="https://wa.me/254790602291?text=Hi%20CKS%20Aga%20Khan%2C%20I%27d%20like%20to%20book%20an%20appointment"
                         target="_blank"
@@ -850,7 +942,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   <a
-                    href="https://maps.app.goo.gl/24JUpjpK5bP5njZd6"
+                    href="https://maps.app.goo.gl/bQewB9VeEvLYn44M6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border-2 transition-colors"
@@ -918,6 +1010,9 @@ export default function HomePage() {
                       >
                         0753 372 814
                       </a>
+                      <button onClick={() => copyPhone("0753372814")} className="text-gray-400 hover:text-teal-600 transition-colors" title="Copy number">
+                        {copiedPhone === "0753372814" ? <Check className="w-3 h-3 text-green-500" /> : <Copy className="w-3 h-3" />}
+                      </button>
                       <a
                         href="https://wa.me/254753372814?text=Hi%20CKS%20Kimuka%2C%20I%27d%20like%20to%20book%20an%20appointment"
                         target="_blank"

@@ -523,7 +523,7 @@ export default function KimukaPage() {
                   },
                   {
                     value: "Patient-Centered Care",
-                    desc: "We prioritize the needs of our patients, ensuringpersonalized and holistic care.",
+                    desc: "We prioritize the needs of our patients, ensuring personalized and holistic care.",
                   },
                   {
                     value: "Commitment to Growth",
@@ -747,7 +747,7 @@ export default function KimukaPage() {
               {
                 title: "Dialysis & Renal Care",
                 color: "linear-gradient(135deg,#005c54,#009e96)",
-                img: "/images/facility-dialysis-unit.jpg",
+                img: "/images/dialysis.jpeg",
                 imgAlt:
                   "State-of-the-art haemodialysis unit at CKS Hospital Kimuka",
                 items: [
@@ -838,7 +838,7 @@ export default function KimukaPage() {
               {
                 title: "Screening & Diagnostics",
                 color: "linear-gradient(135deg,#2d5f80,#4a7fa5)",
-                img: "/images/camp-anniversary-screening.jpg",
+                img: "/images/ultrasound.jpeg",
                 imgAlt:
                   "CKS Kimuka comprehensive health screening and diagnostics",
                 items: [
@@ -920,6 +920,20 @@ export default function KimukaPage() {
                   we held a World Kidney Day roadshow across Ngong Town.
                   Community health is at the core of everything we do.
                 </p>
+                <div className="mt-4 grid grid-cols-2 gap-3">
+                  <img
+                    src="/images/wkd-roadshow-truck.jpg"
+                    alt="CKS World Kidney Day roadshow truck in Ngong Town"
+                    className="w-full h-40 object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => setLightboxImg({ src: "/images/wkd-roadshow-truck.jpg", alt: "CKS World Kidney Day roadshow truck in Ngong Town" })}
+                  />
+                  <img
+                    src="/images/ckswkddrone.jpeg"
+                    alt="Aerial drone view of CKS World Kidney Day community event"
+                    className="w-full h-40 object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => setLightboxImg({ src: "/images/ckswkddrone.jpeg", alt: "Aerial drone view of CKS World Kidney Day community event" })}
+                  />
+                </div>
               </div>
             </div>
           </div>

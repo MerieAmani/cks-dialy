@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Calendar } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 interface NavProps {
   subPage?: boolean;
@@ -22,7 +22,8 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
   return (
     <header
       role="banner"
-      className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200 shadow-sm"
+      className="sticky top-0 z-50 backdrop-blur border-b border-teal-900 shadow-sm nav-dark"
+      style={{ background: "#003d38" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -39,12 +40,12 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
                 className="w-10 h-10 rounded-lg object-cover"
               />
               <div className="leading-tight">
-                <span className="block font-display font-bold text-lg text-gray-800 leading-none">
+                <span className="block font-display font-bold text-lg text-white leading-none">
                   CKS
                 </span>
                 <span
                   className="block text-xs font-medium tracking-wide"
-                  style={{ color: "var(--teal-600)" }}
+                  style={{ color: "rgba(255,255,255,0.65)" }}
                 >
                   {brandSub}
                 </span>
@@ -146,26 +147,26 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
 
           <div className="hidden md:flex items-center gap-3 flex-shrink-0">
             <a
-              href="https://wa.me/254757614036?text=Hi%20CKS%2C%20I%27d%20like%20to%20book%20an%20appointment"
+              href="https://wa.me/254757614036?text=Hi%20CKS%2C%20I%27d%20like%20to%20get%20in%20touch"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full text-white whitespace-nowrap"
               style={{ background: "var(--teal-600)" }}
             >
-              <Calendar className="w-4 h-4" />
-              Book Appointment
+              <Phone className="w-4 h-4" />
+              Contact Us
             </a>
           </div>
 
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-teal-800 transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
             {mobileOpen ? (
-              <X className="w-5 h-5 text-gray-700" />
+              <X className="w-5 h-5 text-white" />
             ) : (
-              <Menu className="w-5 h-5 text-gray-700" />
+              <Menu className="w-5 h-5 text-white" />
             )}
           </button>
         </div>

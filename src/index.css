@@ -121,6 +121,12 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .nav-link:hover { color: var(--teal-600); border-bottom-color: var(--teal-400); }
 .nav-link.active { color: var(--teal-600); border-bottom-color: var(--teal-400); }
 
+.nav-dark .nav-link { color: rgba(255,255,255,0.8); }
+.nav-dark .nav-link:hover { color: #fff; border-bottom-color: rgba(255,255,255,0.4); }
+.nav-dark .nav-link.active { color: #fff; border-bottom-color: rgba(255,255,255,0.6); }
+.nav-dark .nav-link-back { color: rgba(255,255,255,0.8); }
+.nav-dark .nav-link-back:hover { color: #fff; }
+
 .nav-link-back {
   display: inline-flex;
   align-items: center;

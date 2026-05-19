@@ -80,7 +80,7 @@ const featuredImages = [
   {
     src: "/images/ambulance+entry.jpeg",
     alt: "CKS Hospital Ambulance at the hospital entry",
-    category: "Facilities",
+    category: "Hospital",
   },
   {
     src: "/images/camp-nurses-lab.jpg",
@@ -130,7 +130,7 @@ const featuredImages = [
   {
     src: "/images/ckscakecutting.jpeg",
     alt: "CKS Cake Cutting",
-    category: "Team",
+    category: "Event",
   },
   {
     src: "/images/img2.jpg",
@@ -156,6 +156,11 @@ const featuredImages = [
     src: "/images/img6.jpg",
     alt: "CKS Hospital Kimuka WKD March",
     category: "Community",
+  },
+  {
+    src: "/images/ckswkddrone.jpeg",
+    alt: "CKS World Kidney day March",
+    category: "Event",
   },
   {
     src: "/images/img7.jpg",
@@ -208,13 +213,23 @@ const featuredImages = [
     category: "Community",
   },
   {
+    src: "/images/ultrasound2.jpeg",
+    alt: "CKS Hospital Kimuka Ultrasound Machine",
+    category: "Facilities",
+  },
+  {
+    src: "/images/cksstaffwalking.jpeg",
+    alt: "CKS Hospital Kimuka Staff during WKD 2025",
+    category: "Team",
+  },
+  {
     src: "/images/staff.jpeg",
     alt: "CKS Staff",
     category: "Team",
   },
   {
     src: "/images/technician.jpeg",
-    alt: "CKS Technician",
+    alt: "CKS Technician Innocent Malingu",
     category: "Team",
   },
   {
@@ -231,6 +246,11 @@ const featuredImages = [
     src: "/images/dialysis.jpeg",
     alt: "CKS Kimuka Dialysis Facility",
     category: "Facilities",
+  },
+  {
+    src: "/images/cksstaffcake.jpeg",
+    alt: "CKS Staff Cake",
+    category: "Event",
   },
   {
     src: "/images/teambuilding1.jpeg",
@@ -279,11 +299,6 @@ const featuredImages = [
   },
   {
     src: "/images/teambuilding10.jpeg",
-    alt: "CKS staff",
-    category: "Team Building Event",
-  },
-  {
-    src: "/images/teambuilding11.jpeg",
     alt: "CKS staff",
     category: "Team Building Event",
   },
@@ -370,7 +385,7 @@ const featuredImages = [
   {
     src: "/images/team14.jpeg",
     alt: "CKS staff",
-    category: "Team",
+    category: "Event",
   },
   {
     src: "/images/team15.jpeg",
@@ -395,7 +410,7 @@ const featuredImages = [
   {
     src: "/images/team19.jpeg",
     alt: "CKS staff",
-    category: "Team",
+    category: "Event",
   },
   {
     src: "/images/team20.jpeg",
@@ -432,6 +447,7 @@ const categories = [
 
 export default function GalleryPage() {
   const [filter, setFilter] = useState("All");
+  const [visibleCount, setVisibleCount] = useState(20);
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
   useReveal();
 
@@ -522,7 +538,7 @@ export default function GalleryPage() {
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setFilter(cat)}
+              onClick={() => { setFilter(cat); setVisibleCount(20); }}
               className="text-sm font-medium px-4 py-1.5 rounded-full border transition-all"
               style={
                 filter === cat
@@ -554,7 +570,7 @@ export default function GalleryPage() {
             {filtered.length} photos
           </p>
           <div className="gallery-grid">
-            {filtered.map((img, i) => (
+            {filtered.slice(0, visibleCount).map((img, i) => (
               <div
                 key={i}
                 className="gallery-item reveal"
@@ -579,6 +595,18 @@ export default function GalleryPage() {
           {filtered.length === 0 && (
             <div className="text-center py-20 text-gray-400">
               No photos in this category yet.
+            </div>
+          )}
+
+          {visibleCount < filtered.length && (
+            <div className="text-center mt-10">
+              <button
+                onClick={() => setVisibleCount(v => v + 20)}
+                className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-full border-2 transition-colors"
+                style={{ borderColor: "var(--teal-600)", color: "var(--teal-600)" }}
+              >
+                Load More · {filtered.length - visibleCount} more photos
+              </button>
             </div>
           )}
         </div>

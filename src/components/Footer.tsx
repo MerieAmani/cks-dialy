@@ -1,7 +1,15 @@
+import { useState } from "react";
 import { Link } from "wouter";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Copy, Check, MessageCircle } from "lucide-react";
 
 export default function Footer() {
+  const [copiedNum, setCopiedNum] = useState<string | null>(null);
+  const copyPhone = (num: string) => {
+    navigator.clipboard.writeText(num);
+    setCopiedNum(num);
+    setTimeout(() => setCopiedNum(null), 2000);
+  };
+
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
@@ -91,34 +99,26 @@ export default function Footer() {
               Contact
             </h4>
             <div className="flex flex-col gap-3">
-              <a
-                href="tel:+254757614036"
-                className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
-              >
-                <Phone className="w-4 h-4 flex-shrink-0 text-teal-400" />
-                0757 614 036 (HQ)
-              </a>
-              <a
-                href="tel:+254753372814"
-                className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
-              >
-                <Phone className="w-4 h-4 flex-shrink-0 text-teal-400" />
-                0753 372 814 (Kimuka)
-              </a>
-              <a
-                href="tel:+254790602291"
-                className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
-              >
-                <Phone className="w-4 h-4 flex-shrink-0 text-teal-400" />
-                0790 602 291 (Aga Khan)
-              </a>
-              <a
-                href="tel:+254717385797"
-                className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
-              >
-                <Phone className="w-4 h-4 flex-shrink-0 text-teal-400" />
-                0717 385 797 (Buruburu)
-              </a>
+              {[
+                { num: "0757614036", label: "0757 614 036 (HQ)", href: "tel:+254757614036" },
+                { num: "0753372814", label: "0753 372 814 (Kimuka)", href: "tel:+254753372814" },
+                { num: "0790602291", label: "0790 602 291 (Aga Khan)", href: "tel:+254790602291" },
+                { num: "0717385797", label: "0717 385 797 (Buruburu)", href: "tel:+254717385797" },
+              ].map(({ num, label, href }) => (
+                <div key={num} className="flex items-center gap-2">
+                  <a href={href} className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
+                    <Phone className="w-4 h-4 flex-shrink-0 text-teal-400" />
+                    {label}
+                  </a>
+                  <button
+                    onClick={() => copyPhone(num)}
+                    className="text-gray-600 hover:text-teal-400 transition-colors flex-shrink-0"
+                    title="Copy number"
+                  >
+                    {copiedNum === num ? <Check className="w-3 h-3 text-green-400" /> : <Copy className="w-3 h-3" />}
+                  </button>
+                </div>
+              ))}
               <a
                 href="mailto:info@cksdialysis.co.ke"
                 className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
@@ -138,10 +138,31 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-500">
-            © {new Date().getFullYear()} CKS Dialysis Centre. All rights
-            reserved.
-          </p>
+          <div className="flex flex-col gap-1.5 items-center sm:items-start">
+            <p className="text-xs text-gray-500">
+              © {new Date().getFullYear()} CKS Dialysis Centre. All rights reserved.
+            </p>
+            <div className="flex items-center gap-2 text-xs text-gray-600">
+              <span>Website design by Matthew Amani Merie</span>
+              <a
+                href="https://wa.me/254797719612?text=Hello%20Matthew%2C%20I%20would%20like%20to%20inquire%20about%20your%20website%20design%20services"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-500 hover:text-green-400 transition-colors"
+                title="WhatsApp Matthew"
+              >
+                <MessageCircle className="w-3.5 h-3.5" />
+              </a>
+              <button
+                onClick={() => copyPhone("0797719612")}
+                className="flex items-center gap-1 text-gray-600 hover:text-teal-400 transition-colors"
+                title="Copy number"
+              >
+                <span>0797 719 612</span>
+                {copiedNum === "0797719612" ? <Check className="w-3 h-3 text-green-400" /> : <Copy className="w-3 h-3" />}
+              </button>
+            </div>
+          </div>
           <div className="flex items-center gap-4 text-xs text-gray-500">
             <span>SHA Accredited</span>
             <span>•</span>
