@@ -1,24 +1,10 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "wouter";
 import { X, ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import MobileCTA from "@/components/MobileCTA";
 
-function useReveal() {
-  useEffect(() => {
-    const els = document.querySelectorAll(".reveal");
-    const io = new IntersectionObserver(
-      (entries) =>
-        entries.forEach(
-          (e) => e.isIntersecting && e.target.classList.add("visible"),
-        ),
-      { threshold: 0.08 },
-    );
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, []);
-}
 
 // Named featured images (non-gallery folder)
 const featuredImages = [
@@ -45,7 +31,7 @@ const featuredImages = [
   {
     src: "/images/main.jpeg",
     alt: "CKS Hospital Kimuka Entrance",
-    category: "Facilities",
+    category: "Hospital",
   },
   {
     src: "/images/facility-dialysis-unit.jpg",
@@ -60,7 +46,7 @@ const featuredImages = [
   {
     src: "/images/cksleadership.jpeg",
     alt: "CKS Leadership",
-    category: "Team",
+    category: "Events",
   },
   {
     src: "/images/facility-waiting-area.jpg",
@@ -125,7 +111,7 @@ const featuredImages = [
   {
     src: "/images/img1.jpg",
     alt: "CKS Hospital Kimuka WKD march",
-    category: "Facilities",
+    category: "Events",
   },
   {
     src: "/images/ckscakecutting.jpeg",
@@ -135,12 +121,12 @@ const featuredImages = [
   {
     src: "/images/img2.jpg",
     alt: "CKS Hospital Kimuka WKD March",
-    category: "Facilities",
+    category: "Events",
   },
   {
     src: "/images/img3.jpg",
     alt: "WKD March led by the Admin Director",
-    category: "Team",
+    category: "Events",
   },
   {
     src: "/images/img4.jpg",
@@ -165,7 +151,7 @@ const featuredImages = [
   {
     src: "/images/img7.jpg",
     alt: "CKS Hospital Kimuka WKD March Ngong Town",
-    category: "Facilities",
+    category: "Events",
   },
   {
     src: "/images/img8.jpg",
@@ -220,7 +206,7 @@ const featuredImages = [
   {
     src: "/images/cksstaffwalking.jpeg",
     alt: "CKS Hospital Kimuka Staff during WKD 2025",
-    category: "Team",
+    category: "Events",
   },
   {
     src: "/images/staff.jpeg",
@@ -360,7 +346,7 @@ const featuredImages = [
   {
     src: "/images/team9.jpeg",
     alt: "CKS staff",
-    category: "Team",
+    category: "Events",
   },
   {
     src: "/images/team10.jpeg",
@@ -447,11 +433,17 @@ const categories = [
 export default function GalleryPage() {
   const [filter, setFilter] = useState("All");
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
-  useReveal();
+  const galleryRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     document.title = "Photo Gallery | CKS Dialysis Centre & Hospital Kimuka";
   }, []);
+
+  useEffect(() => {
+    if (galleryRef.current) {
+      galleryRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [filter]);
 
   const filtered =
     filter === "All"
@@ -536,7 +528,7 @@ export default function GalleryPage() {
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => { setFilter(cat); setVisibleCount(20); }}
+              onClick={() => setFilter(cat)}
               className="text-sm font-medium px-4 py-1.5 rounded-full border transition-all"
               style={
                 filter === cat
@@ -560,6 +552,7 @@ export default function GalleryPage() {
 
       {/* GALLERY GRID */}
       <section
+        ref={galleryRef}
         className="py-12 px-4 sm:px-6"
         style={{ background: "var(--silver-100)", minHeight: "60vh" }}
       >
@@ -567,11 +560,12 @@ export default function GalleryPage() {
           <p className="text-xs text-gray-400 text-right mb-4">
             {filtered.length} photos
           </p>
-          <div className="gallery-grid">
+          <div className="gallery-grid" key={filter}>
             {filtered.map((img, i) => (
               <div
-                key={i}
-                className="gallery-item reveal"
+                key={img.src}
+                className="gallery-item"
+                style={{ animationDelay: `${Math.min(i * 0.04, 1)}s` }}
                 onClick={() => openLightbox(i)}
                 role="button"
                 tabIndex={0}
@@ -580,7 +574,14 @@ export default function GalleryPage() {
                   if (e.key === "Enter" || e.key === " ") openLightbox(i);
                 }}
               >
-                <img src={img.src} alt={img.alt} loading="lazy" />
+                <div className="gallery-skeleton" />
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="gallery-img"
+                  onLoad={(e) => e.currentTarget.classList.add("loaded")}
+                />
                 <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-all flex items-end p-3 opacity-0 hover:opacity-100">
                   <span className="text-white text-xs font-medium bg-black/50 rounded-full px-2 py-0.5">
                     {img.category}
