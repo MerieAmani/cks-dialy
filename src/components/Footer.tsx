@@ -154,12 +154,7 @@ export default function Footer() {
                 <MessageCircle className="w-3.5 h-3.5" />
                 <span>WhatsApp</span>
               </a>
-              <a
-                href="tel:+254797719612"
-                className="text-gray-600 hover:text-teal-400 transition-colors"
-              >
-                Call me: 0797 719 612
-              </a>
+              <span className="text-gray-600">Call me: <a href="tel:+254797719612" className="hover:text-teal-400 transition-colors">0797 719 612</a></span>
               <button
                 onClick={() => copyPhone("0797719612")}
                 className="text-gray-500 hover:text-teal-400 transition-colors"
