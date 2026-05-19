@@ -1237,7 +1237,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="max-w-xl mx-auto grid gap-4">
-            <a href="tel:+254757614036" className="contact-row">
+            <div className="contact-row">
               <div
                 className="contact-icon"
                 style={{ background: "var(--teal-50)" }}
@@ -1247,14 +1247,19 @@ export default function HomePage() {
                   style={{ color: "var(--teal-600)" }}
                 />
               </div>
-              <div>
+              <div className="flex-1">
                 <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
                   Main Line
                 </p>
-                <p className="font-semibold text-gray-800">0757 614 036</p>
+                <div className="flex items-center gap-2">
+                  <a href="tel:+254757614036" className="font-semibold text-gray-800 hover:text-teal-600 transition-colors">0757 614 036</a>
+                  <button onClick={() => copyPhone("0757614036")} className="text-gray-400 hover:text-teal-600 transition-colors" title="Copy number">
+                    {copiedPhone === "0757614036" ? <Check className="w-3.5 h-3.5 text-green-500" /> : <Copy className="w-3.5 h-3.5" />}
+                  </button>
+                </div>
               </div>
-            </a>
-            <a href="tel:+254790602291" className="contact-row">
+            </div>
+            <div className="contact-row">
               <div
                 className="contact-icon"
                 style={{ background: "var(--teal-50)" }}
@@ -1264,13 +1269,18 @@ export default function HomePage() {
                   style={{ color: "var(--teal-600)" }}
                 />
               </div>
-              <div>
+              <div className="flex-1">
                 <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
                   Alternative
                 </p>
-                <p className="font-semibold text-gray-800">0790 602 291</p>
+                <div className="flex items-center gap-2">
+                  <a href="tel:+254790602291" className="font-semibold text-gray-800 hover:text-teal-600 transition-colors">0790 602 291</a>
+                  <button onClick={() => copyPhone("0790602291")} className="text-gray-400 hover:text-teal-600 transition-colors" title="Copy number">
+                    {copiedPhone === "0790602291" ? <Check className="w-3.5 h-3.5 text-green-500" /> : <Copy className="w-3.5 h-3.5" />}
+                  </button>
+                </div>
               </div>
-            </a>
+            </div>
             <a href="mailto:info@cksdialysis.co.ke" className="contact-row">
               <div className="contact-icon" style={{ background: "#e6f0f8" }}>
                 <Mail className="w-5 h-5" style={{ color: "var(--steel)" }} />

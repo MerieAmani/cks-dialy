@@ -70,12 +70,12 @@ const featuredImages = [
   {
     src: "/images/camp-anniversary-screening.jpg",
     alt: "Free medical screening camp — CKS anniversary 2024",
-    category: "Community",
+    category: "Events",
   },
   {
     src: "/images/camp-doctor-treating.jpg",
     alt: "Doctor treating patient at CKS free community camp",
-    category: "Community",
+    category: "Events",
   },
   {
     src: "/images/ambulance+entry.jpeg",
@@ -85,7 +85,7 @@ const featuredImages = [
   {
     src: "/images/camp-nurses-lab.jpg",
     alt: "Nurses and lab team at CKS screening outreach",
-    category: "Community",
+    category: "Events",
   },
   {
     src: "/images/team-outreach-staff.jpg",
@@ -130,7 +130,7 @@ const featuredImages = [
   {
     src: "/images/ckscakecutting.jpeg",
     alt: "CKS Cake Cutting",
-    category: "Event",
+    category: "Events",
   },
   {
     src: "/images/img2.jpg",
@@ -145,22 +145,22 @@ const featuredImages = [
   {
     src: "/images/img4.jpg",
     alt: "World Kidney Day Cake Cutting",
-    category: "Community",
+    category: "Events",
   },
   {
     src: "/images/img5.jpg",
     alt: "World Kideny Day March",
-    category: "Community",
+    category: "Events",
   },
   {
     src: "/images/img6.jpg",
     alt: "CKS Hospital Kimuka WKD March",
-    category: "Community",
+    category: "Events",
   },
   {
     src: "/images/ckswkddrone.jpeg",
     alt: "CKS World Kidney day March",
-    category: "Event",
+    category: "Events",
   },
   {
     src: "/images/img7.jpg",
@@ -180,17 +180,17 @@ const featuredImages = [
   {
     src: "/images/img10.jpg",
     alt: "CKS Hospital Kimuka WKD 2025",
-    category: "Community",
+    category: "Events",
   },
   {
     src: "/images/ckswkd.jpeg",
     alt: "CKS Hospital Kimuka WKD 2025",
-    category: "Community",
+    category: "Events",
   },
   {
     src: "/images/img11.jpg",
     alt: "World Kidney Day March 2025",
-    category: "Community",
+    category: "Events",
   },
   {
     src: "/images/img12.jpg",
@@ -210,7 +210,7 @@ const featuredImages = [
   {
     src: "/images/img15.jpg",
     alt: "CKS Hospital Kimuka Roadshow",
-    category: "Community",
+    category: "Events",
   },
   {
     src: "/images/ultrasound2.jpeg",
@@ -250,7 +250,7 @@ const featuredImages = [
   {
     src: "/images/cksstaffcake.jpeg",
     alt: "CKS Staff Cake",
-    category: "Event",
+    category: "Events",
   },
   {
     src: "/images/teambuilding1.jpeg",
@@ -385,7 +385,7 @@ const featuredImages = [
   {
     src: "/images/team14.jpeg",
     alt: "CKS staff",
-    category: "Event",
+    category: "Events",
   },
   {
     src: "/images/team15.jpeg",
@@ -410,7 +410,7 @@ const featuredImages = [
   {
     src: "/images/team19.jpeg",
     alt: "CKS staff",
-    category: "Event",
+    category: "Events",
   },
   {
     src: "/images/team20.jpeg",
@@ -439,7 +439,6 @@ const categories = [
   "All",
   "Hospital",
   "Facilities",
-  "Community",
   "Team",
   "Events",
   "Team Building Event",

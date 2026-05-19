@@ -11,6 +11,8 @@ import {
   Stethoscope,
   Microscope,
   Camera,
+  Copy,
+  Check,
 } from "lucide-react";
 import Nav from "@/components/Nav";
 import SHABadge from "@/components/SHABadge";
@@ -117,6 +119,12 @@ export default function KimukaPage() {
     alt: string;
   } | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [copiedPhone, setCopiedPhone] = useState<string | null>(null);
+  const copyPhone = (num: string) => {
+    navigator.clipboard.writeText(num);
+    setCopiedPhone(num);
+    setTimeout(() => setCopiedPhone(null), 2000);
+  };
   const [apptName, setApptName] = useState("");
   const [apptPhone, setApptPhone] = useState("");
   const [apptService, setApptService] = useState("");
@@ -1352,7 +1360,7 @@ export default function KimukaPage() {
           <div className="flex flex-col md:flex-row gap-8 reveal">
             {/* LEFT — Contact details */}
             <div className="flex flex-col gap-4 md:w-2/5">
-              <a href="tel:+254753372814" className="contact-row">
+              <div className="contact-row">
                 <div
                   className="contact-icon"
                   style={{ background: "var(--teal-50)" }}
@@ -1362,13 +1370,18 @@ export default function KimukaPage() {
                     style={{ color: "var(--teal-600)" }}
                   />
                 </div>
-                <div>
+                <div className="flex-1">
                   <p className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
                     Phone
                   </p>
-                  <p className="font-semibold text-gray-800">0753 372 814</p>
+                  <div className="flex items-center gap-2">
+                    <a href="tel:+254753372814" className="font-semibold text-gray-800 hover:text-teal-600 transition-colors">0753 372 814</a>
+                    <button onClick={() => copyPhone("0753372814")} className="text-gray-400 hover:text-teal-600 transition-colors" title="Copy number">
+                      {copiedPhone === "0753372814" ? <Check className="w-3.5 h-3.5 text-green-500" /> : <Copy className="w-3.5 h-3.5" />}
+                    </button>
+                  </div>
                 </div>
-              </a>
+              </div>
               <a href="mailto:ckskimuka@gmail.com" className="contact-row">
                 <div className="contact-icon" style={{ background: "#e6f0f8" }}>
                   <Mail className="w-5 h-5" style={{ color: "var(--steel)" }} />

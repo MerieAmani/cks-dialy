@@ -148,17 +148,18 @@ export default function Footer() {
                 href="https://wa.me/254797719612?text=Hello%20Matthew%2C%20I%20would%20like%20to%20inquire%20about%20your%20website%20design%20services"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-500 hover:text-green-400 transition-colors"
+                className="flex items-center gap-1 text-green-500 hover:text-green-400 transition-colors font-medium"
                 title="WhatsApp Matthew"
               >
                 <MessageCircle className="w-3.5 h-3.5" />
+                <span>WhatsApp</span>
               </a>
               <button
                 onClick={() => copyPhone("0797719612")}
                 className="flex items-center gap-1 text-gray-600 hover:text-teal-400 transition-colors"
                 title="Copy number"
               >
-                <span>0797 719 612</span>
+                <span>Call me: 0797 719 612</span>
                 {copiedNum === "0797719612" ? <Check className="w-3 h-3 text-green-400" /> : <Copy className="w-3 h-3" />}
               </button>
             </div>

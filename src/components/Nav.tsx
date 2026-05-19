@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 
 interface NavProps {
   subPage?: boolean;
@@ -153,7 +153,7 @@ export default function Nav({ subPage = false, isKimuka = false }: NavProps) {
               className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full text-white whitespace-nowrap"
               style={{ background: "var(--teal-600)" }}
             >
-              <Phone className="w-4 h-4" />
+              <MessageCircle className="w-4 h-4" />
               Contact Us
             </a>
           </div>
