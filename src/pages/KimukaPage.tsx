@@ -932,13 +932,13 @@ export default function KimukaPage() {
                   <img
                     src="/images/wkd-roadshow-truck.jpg"
                     alt="CKS World Kidney Day roadshow truck in Ngong Town"
-                    className="w-full h-40 object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                    className="w-full h-64 object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
                     onClick={() => setLightboxImg({ src: "/images/wkd-roadshow-truck.jpg", alt: "CKS World Kidney Day roadshow truck in Ngong Town" })}
                   />
                   <img
                     src="/images/ckswkddrone.jpeg"
                     alt="Aerial drone view of CKS World Kidney Day community event"
-                    className="w-full h-40 object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                    className="w-full h-64 object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
                     onClick={() => setLightboxImg({ src: "/images/ckswkddrone.jpeg", alt: "Aerial drone view of CKS World Kidney Day community event" })}
                   />
                 </div>
