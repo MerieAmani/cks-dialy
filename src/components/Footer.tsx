@@ -137,12 +137,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="border-t border-gray-800 pt-6 pb-24 md:pb-0 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex flex-col gap-1.5 items-center sm:items-start">
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-500 text-center sm:text-left">
               © {new Date().getFullYear()} CKS Dialysis Centre. All rights reserved.
             </p>
-            <div className="flex items-center gap-2 text-xs text-gray-600">
+            <div className="flex flex-wrap justify-center sm:justify-start items-center gap-x-2 gap-y-1 text-xs text-gray-600">
               <span>Website design by Matthew Amani Merie</span>
               <a
                 href="https://wa.me/254797719612?text=Hello%20Matthew%2C%20I%20would%20like%20to%20inquire%20about%20your%20website%20design%20services"
@@ -154,7 +154,12 @@ export default function Footer() {
                 <MessageCircle className="w-3.5 h-3.5" />
                 <span>WhatsApp</span>
               </a>
-              <span className="text-gray-600">Call me: <a href="tel:+254797719612" className="hover:text-teal-400 transition-colors">0797 719 612</a></span>
+              <span className="text-gray-600">
+                Call me:{" "}
+                <a href="tel:+254797719612" className="hover:text-teal-400 transition-colors">
+                  0797 719 612
+                </a>
+              </span>
               <button
                 onClick={() => copyPhone("0797719612")}
                 className="text-gray-500 hover:text-teal-400 transition-colors"
@@ -164,11 +169,11 @@ export default function Footer() {
               </button>
             </div>
           </div>
-          <div className="flex items-center gap-4 text-xs text-gray-500">
+          <div className="flex flex-wrap justify-center sm:justify-end items-center gap-x-3 gap-y-1 text-xs text-gray-500">
             <span>SHA Accredited</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>Private Insurance Accepted</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>24/7 Kimuka</span>
           </div>
         </div>

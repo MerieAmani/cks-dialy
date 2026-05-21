@@ -199,7 +199,7 @@ export default function ScreeningPage() {
               {
                 title: "Laboratory Services",
                 color: "linear-gradient(135deg,#c0392b,#e74c3c)",
-                img: "/images/laboratory.jpeg",
+                img: "/images/lab-scientist2.jpeg",
                 imgAlt: "CKS Kimuka laboratory scientists conducting tests",
                 items: [
                   "Full Blood Count (FBC / Haemogram)",
@@ -317,21 +317,6 @@ export default function ScreeningPage() {
                   "TB-HIV co-infection assessment",
                   "DOTS (directly observed therapy) linkage",
                   "Contact tracing support",
-                ],
-              },
-              {
-                title: "Community Camps",
-                color: "linear-gradient(135deg,#1a6e4a,#27ae60)",
-                img: "/images/camp-doctor-treating.jpg",
-                imgAlt: "CKS community outreach medical camp — Kajiado County",
-                items: [
-                  "Free mass screening events in Kajiado villages",
-                  "Blood pressure & sugar testing",
-                  "Kidney disease awareness & screening",
-                  "HIV, Hep B & STI screening",
-                  "TB & respiratory health screening",
-                  "World Kidney Day outreach (March annually)",
-                  "Mother & Child Health camps",
                 ],
               },
             ].map((cat, i) => (

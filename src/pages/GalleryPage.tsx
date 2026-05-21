@@ -323,6 +323,11 @@ const featuredImages = [
     category: "Facilities",
   },
   {
+    src: "/images/lab-scientist2.jpeg",
+    alt: "CKS Kimuka Lab Scientist - Newton Khatende",
+    category: "Team",
+  },
+  {
     src: "/images/team3.jpeg",
     alt: "CKS staff",
     category: "Team",
