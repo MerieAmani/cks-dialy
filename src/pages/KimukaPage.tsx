@@ -839,11 +839,8 @@ export default function KimukaPage() {
                 imgAlt: "In-house 24-hour pharmacy at CKS Hospital Kimuka",
                 items: [
                   "Fully stocked in-house pharmacy — open 24/7",
-                  "Medication for Hypertension",
-                  "Medication for Diabetes",
+                  "Medication for Hypertension and Diabetes",
                   "Essential drugs & emergency supplies",
-                  "Affordable prices",
-                  "Guidance from licensed pharmacists",
                 ],
               },
               {
@@ -859,8 +856,6 @@ export default function KimukaPage() {
                   "Cervical & breast cancer screening",
                   "Hepatitis B & C testing",
                   "Renal function (creatinine, GFR) screening",
-                  "Community outreach & free medical camps",
-                  "Early detection diagnostics",
                 ],
               },
             ].map((cat, i) => (
